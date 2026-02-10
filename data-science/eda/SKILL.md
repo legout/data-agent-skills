@@ -83,10 +83,10 @@ profile.to_file("profile_report.html")
 
 ## Progressive disclosure
 
-- `references/automated-profiling.md` — ydata-profiling, Sweetviz, D-Tale
-- `references/visualization-patterns.md` — Matplotlib, Seaborn, Plotly patterns
-- `references/statistical-tests.md` — Scipy statistical tests guide
-- `references/large-dataset-eda.md` — Sampling, Polars, Dask approaches
+- `../references/automated-profiling.md` — ydata-profiling, Sweetviz, D-Tale
+- `../references/visualization-patterns.md` — Matplotlib, Seaborn, Plotly patterns
+- `../references/statistical-tests.md` — Scipy statistical tests guide
+- `../references/large-dataset-eda.md` — Sampling, Polars, Dask approaches
 
 ## Related skills
 
