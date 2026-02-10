@@ -1,5 +1,6 @@
 # Installable Skills Package
-This directory is structured for `npx skills add` discovery.
+This directory is structured for `npx skills` discovery.
+
 ## Skills
 - `data-engineering`
 - `data-engineering-ai-ml`
@@ -23,4 +24,7 @@ This directory is structured for `npx skills add` discovery.
 - `data-engineering-storage-remote-access-libraries-obstore`
 - `data-engineering-storage-remote-access-libraries-pyarrow-fs`
 - `data-engineering-streaming`
+- `data-science-eda`
+- `data-science-feature-engineering`
+- `data-science-model-evaluation`
 - `flowerpower`
