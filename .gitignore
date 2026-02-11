@@ -1,3 +1,6 @@
+# Generated skills directory (build from source)
+skills/
+
 # Python
 __pycache__/
 *.pyc
@@ -5,7 +8,7 @@ __pycache__/
 # OS/editor
 .DS_Store
 
-# Dev-only project docs (intentionally excluded)
+# Dev-only project docs (intentionally excluded from repo)
 ARCHITECTURE_DECISIONS.md
 INTEGRATION_SUMMARY.md
 
