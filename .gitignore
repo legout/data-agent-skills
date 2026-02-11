@@ -1,6 +1,3 @@
-# Generated skills directory - now committed for npx skills compatibility
-# skills/
-
 # Python
 __pycache__/
 *.pyc
