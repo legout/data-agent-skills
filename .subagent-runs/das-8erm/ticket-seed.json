@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-8erm",
+  "primary_terms": ["skill_lint", "lint", "references", "markdown", "strict"],
+  "secondary_terms": ["missing local references", "hybrid @skill/path", "structural errors", "failure messages", "contributors"],
+  "file_hints": ["tools/skill_lint.py"],
+  "change_scope": "skill_lint.py module to add stricter validation for missing refs and hybrid @skill/path usage",
+  "ticket_summary": "Make skill_lint fail on missing refs and flag hybrid @skill/path links in strict mode"
+}

@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-3jql",
+  "primary_terms": ["skill map", "naming conventions", "trigger", "skill routing", "taxonomy"],
+  "secondary_terms": ["naming rules", "skill boundaries", "repo docs", "14-skill", "boundaries"],
+  "file_hints": ["README.md", "docs/", ".tf/", "skills"],
+  "change_scope": "Documentation files for skills taxonomy and naming conventions",
+  "ticket_summary": "Approve and record final 14-skill map with explicit naming rules and skill boundary definitions"
+}

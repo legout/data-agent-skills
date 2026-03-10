@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-b143",
+  "primary_terms": ["frontmatter", "metadata", "dependsOn", "skill", "documentation"],
+  "secondary_terms": ["authoring", "routing", "related-skill", "policy", "decision", "acceptance criteria"],
+  "file_hints": ["docs/", "SKILL_REFACTORING_PLAN.md", "skills/*/SKILL.md"],
+  "change_scope": "Documentation files for skill authoring guidelines and frontmatter standards",
+  "ticket_summary": "Document the standard frontmatter policy and the dependsOn decision for skills"
+}

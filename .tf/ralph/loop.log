@@ -1,0 +1,43 @@
+{"ts":"2026-03-10T16:33:00Z","level":"INFO","msg":"Initialization complete (mode: interactive)"}
+{"ts":"2026-03-10T16:33:00Z","level":"INFO","msg":"Starting main loop (mode: interactive, interval: 5s, once)"}
+{"ts":"2026-03-10T16:33:00Z","level":"INFO","msg":"Found 1 ready ticket(s)"}
+{"ts":"2026-03-10T16:33:00Z","level":"INFO","msg":"Processing ticket: das-3jql"}
+{"ts":"2026-03-10T16:33:00Z","level":"INFO","msg":"Executing: pi \"/tk-implement das-3jql --interactive\""}
+{"ts":"2026-03-10T16:34:27Z","level":"INFO","msg":"Received shutdown signal, cleaning up..."}
+{"ts":"2026-03-10T16:34:27Z","level":"INFO","msg":"Loop shutdown complete"}
+{"ts":"2026-03-10T17:01:22Z","level":"INFO","msg":"Mode: clarify"}
+{"ts":"2026-03-10T17:01:22Z","level":"INFO","msg":"Dry run: false"}
+{"ts":"2026-03-10T17:01:22Z","level":"INFO","msg":"Run once: false"}
+{"ts":"2026-03-10T17:01:22Z","level":"INFO","msg":"Poll interval: 5s"}
+{"ts":"2026-03-10T17:01:22Z","level":"INFO","msg":"State directory: .tf/ralph"}
+{"ts":"2026-03-10T17:01:22Z","level":"INFO","msg":"Starting tf-ralph-loop v1.0.0"}
+{"ts":"2026-03-10T17:01:22Z","level":"INFO","msg":"Dependencies OK: tk=/opt/homebrew/bin/tk, pi=/opt/homebrew/opt/node/bin/pi"}
+{"ts":"2026-03-10T17:01:22Z","level":"INFO","msg":"Initialization complete (mode: clarify)"}
+{"ts":"2026-03-10T17:01:22Z","level":"INFO","msg":"Starting main loop (mode: clarify, interval: 5s, once)"}
+{"ts":"2026-03-10T17:01:22Z","level":"INFO","msg":"Found 4 ready ticket(s)"}
+{"ts":"2026-03-10T17:01:22Z","level":"INFO","msg":"Processing ticket: das-8erm"}
+{"ts":"2026-03-10T17:01:22Z","level":"INFO","msg":"Executing: pi \"/tf-implement das-8erm --clarify\""}
+{"ts":"2026-03-10T17:03:45Z","level":"INFO","msg":"Received shutdown signal, cleaning up..."}
+{"ts":"2026-03-10T17:03:49Z","level":"INFO","msg":"Starting tf-ralph-loop v1.0.0"}
+{"ts":"2026-03-10T17:03:49Z","level":"INFO","msg":"Initialization complete (mode: clarify)"}
+{"ts":"2026-03-10T17:03:49Z","level":"INFO","msg":"Starting main loop (mode: clarify, interval: 5s, once)"}
+{"ts":"2026-03-10T17:03:49Z","level":"INFO","msg":"Found 4 ready ticket(s)"}
+{"ts":"2026-03-10T17:03:49Z","level":"INFO","msg":"Processing ticket: das-8erm"}
+{"ts":"2026-03-10T17:03:49Z","level":"INFO","msg":"Executing: pi \"/tf-implement das-8erm --clarify\""}
+{"ts":"2026-03-10T17:03:58Z","level":"INFO","msg":"Received shutdown signal, cleaning up..."}
+{"ts":"2026-03-10T17:03:58Z","level":"INFO","msg":"Loop shutdown complete"}
+{"ts":"2026-03-10T17:16:02Z","level":"INFO","msg":"Starting tf-ralph-loop v1.0.0"}
+{"ts":"2026-03-10T17:16:02Z","level":"INFO","msg":"Initialization complete (mode: clarify)"}
+{"ts":"2026-03-10T17:16:02Z","level":"INFO","msg":"Starting main loop (mode: clarify, interval: 5s, once)"}
+{"ts":"2026-03-10T17:16:02Z","level":"INFO","msg":"Found 3 ready ticket(s)"}
+{"ts":"2026-03-10T17:16:02Z","level":"INFO","msg":"Processing ticket: das-b143"}
+{"ts":"2026-03-10T17:16:02Z","level":"INFO","msg":"Executing: pi \"/tf-implement das-b143 --clarify\""}
+{"ts":"2026-03-10T17:16:05Z","level":"INFO","msg":"Received shutdown signal, cleaning up..."}
+{"ts":"2026-03-10T17:16:05Z","level":"INFO","msg":"Loop shutdown complete"}
+{"ts":"2026-03-10T17:17:42Z","level":"ERROR","msg":"Must specify one mode: --clarify, --hands-free, --dispatch, or --interactive"}
+{"ts":"2026-03-10T17:20:41Z","level":"INFO","msg":"Starting tf-ralph-loop v1.0.0"}
+{"ts":"2026-03-10T17:20:42Z","level":"INFO","msg":"Initialization complete (mode: default)"}
+{"ts":"2026-03-10T17:20:42Z","level":"INFO","msg":"Starting main loop (mode: default, interval: 5s, once)"}
+{"ts":"2026-03-10T17:20:42Z","level":"INFO","msg":"Found 3 ready ticket(s)"}
+{"ts":"2026-03-10T17:20:42Z","level":"INFO","msg":"Processing ticket: das-b143"}
+{"ts":"2026-03-10T17:20:42Z","level":"INFO","msg":"Executing: pi \"/tf-implement das-b143\""}
