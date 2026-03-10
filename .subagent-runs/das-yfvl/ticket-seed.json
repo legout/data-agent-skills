@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-yfvl",
+  "primary_terms": ["eval", "trigger", "manifest", "engineering-skill", "skeleton"],
+  "secondary_terms": ["data-engineering", "skill-refactor", "positive-cases", "near-miss-cases", "eval-layout"],
+  "file_hints": ["eval/", "eval/manifests/", "eval/triggers/"],
+  "change_scope": "eval directory - engineering skill eval manifests and trigger cases",
+  "ticket_summary": "Create initial eval coverage files (manifests and triggers) for future data-engineering skills following the agreed eval layout"
+}
