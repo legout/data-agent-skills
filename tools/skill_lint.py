@@ -148,6 +148,104 @@ def lint_python_fences(md_file: Path, findings: list[Finding]) -> None:
             findings.append(Finding("error", md_file, f"python fence syntax error at line {line}: {e.msg}"))
 
 
+def extract_content_blocks(text: str) -> list[tuple[str, int]]:
+    """Extract content blocks: code fences and bullet lists with their line numbers."""
+    blocks: list[tuple[str, int]] = []
+    # Code blocks ```...```
+    for m in re.finditer(r"```[a-z]*\n(.*?)\n```", text, re.S):
+        block = m.group(1).strip()
+        start_line = text[: m.start()].count("\n") + 1
+        blocks.append((block, start_line))
+    # Bullet lists (consecutive lines starting with -, *, or number.)
+    list_pattern = r"(?:^[ \t]*(?:[-*]|\d+\.)[ \t]+.+\n?)+"
+    for m in re.finditer(list_pattern, text, re.M):
+        block = m.group(0).strip()
+        if len(block.splitlines()) > 1:  # Only multi-line lists
+            start_line = text[: m.start()].count("\n") + 1
+            blocks.append((block, start_line))
+    return blocks
+
+
+def lint_duplicate_content(all_md_files: list[Path], findings: list[Finding]) -> None:
+    """Find markdown content blocks appearing in 3+ files with >100 identical lines total."""
+    # Map of content block -> list of (file, line) where it appears
+    block_locations: dict[str, list[tuple[Path, int]]] = {}
+
+    for md_file in all_md_files:
+        text = md_file.read_text(errors="replace")
+        blocks = extract_content_blocks(text)
+        for block, line_num in blocks:
+            if len(block.splitlines()) > 5:  # Only blocks >5 lines
+                if block not in block_locations:
+                    block_locations[block] = []
+                block_locations[block].append((md_file, line_num))
+
+    # Flag blocks appearing in 3+ unique files with >100 total lines
+    for block, locations in block_locations.items():
+        unique_files = list(dict.fromkeys(loc[0] for loc in locations))  # Preserve order, dedupe
+        if len(unique_files) >= 3:
+            # Use unique file count for total_lines to match "3+ files with >100 lines"
+            total_lines = len(block.splitlines()) * len(unique_files)
+            if total_lines > 100:
+                # Show grandparent/parent/name to distinguish files with same name in different dirs
+                def file_location(f: Path) -> str:
+                    parts = f.parts
+                    return "/".join(parts[-3:]) if len(parts) >= 3 else str(f)
+                files_str = ", ".join(file_location(f) for f in unique_files[:3])
+                if len(unique_files) > 3:
+                    files_str += f" and {len(unique_files) - 3} more"
+                first_file = unique_files[0]
+                findings.append(
+                    Finding(
+                        "warn",
+                        first_file,
+                        f"duplicate content block ({len(unique_files)} files, {total_lines} lines): appears in {files_str}",
+                    )
+                )
+
+
+def lint_toc_required(md_file: Path, findings: list[Finding]) -> None:
+    """Flag reference markdown files >100 lines without a Table of Contents."""
+    # Only apply to reference documents (references/**/*.md), not SKILL.md files
+    if "references" not in md_file.parts:
+        return
+
+    text = md_file.read_text(errors="replace")
+    lines = text.splitlines()
+
+    if len(lines) > 100:
+        # Check for Table of Contents heading (various formats)
+        has_toc = any(
+            re.search(r"^#{1,4}\s*(?:Table of Contents|TOC|Contents)\s*$", line, re.I)
+            for line in lines
+        )
+        if not has_toc:
+            findings.append(
+                Finding(
+                    "warn",
+                    md_file,
+                    f"file has {len(lines)} lines but no Table of Contents (## Table of Contents)",
+                )
+            )
+
+
+def lint_stale_year(md_file: Path, findings: list[Finding]) -> None:
+    """Detect (YYYY) year markers in h1/h2 headings."""
+    text = md_file.read_text(errors="replace")
+    # Find h1/h2 headings with year markers (2020-2029)
+    for m in re.finditer(r"^(#{1,2} .*)\((202[0-9])\)", text, re.M):
+        heading = m.group(0)
+        year = m.group(2)
+        line_num = text[: m.start()].count("\n") + 1
+        findings.append(
+            Finding(
+                "warn",
+                md_file,
+                f"stale year marker '({year})' in heading at line {line_num}: {heading[:50]}...",
+            )
+        )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Lint agent skills and markdown references")
     parser.add_argument("--strict", action="store_true", help="treat warnings as errors")
@@ -162,9 +260,17 @@ def main() -> int:
         if skill.name == "SKILL.md":
             lint_frontmatter(skill, findings)
 
-    for md_file in sorted(iter_files(root, ".md")):
+    # Collect all markdown files for duplicate detection
+    all_md_files = list(sorted(iter_files(root, ".md")))
+
+    for md_file in all_md_files:
         lint_markdown_references(md_file, all_files, findings, args.strict)
         lint_python_fences(md_file, findings)
+        lint_toc_required(md_file, findings)
+        lint_stale_year(md_file, findings)
+
+    # Cross-file duplicate content check
+    lint_duplicate_content(all_md_files, findings)
 
     errors = [f for f in findings if f.level == "error"]
     warns = [f for f in findings if f.level == "warn"]
