@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-gp3f",
+  "primary_terms": ["data-science-skill", "eval manifests", "trigger cases"],
+  "secondary_terms": ["eval coverage", "positive triggers", "near-miss triggers", "data-science", "skeleton"],
+  "file_hints": ["evals/", "skills/"],
+  "change_scope": "Create eval files for data-science skills with manifests and trigger test cases",
+  "ticket_summary": "Add initial eval coverage files (manifests + positive/near-miss triggers) for future data-science skills"
+}
