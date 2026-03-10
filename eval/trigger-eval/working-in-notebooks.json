@@ -1,0 +1,110 @@
+{
+  "skill_name": "working-in-notebooks",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "Set up JupyterLab for data science",
+      "expected_trigger": true,
+      "rationale": "Direct Jupyter setup question",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "Use marimo for reactive notebooks",
+      "expected_trigger": true,
+      "rationale": "marimo notebook question",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "Add tests to my notebook",
+      "expected_trigger": true,
+      "rationale": "Notebook testing",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "Export notebook to HTML",
+      "expected_trigger": true,
+      "rationale": "Notebook export",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "Make my notebook reproducible",
+      "expected_trigger": true,
+      "rationale": "Reproducibility",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "Use Jupyter magic commands",
+      "expected_trigger": true,
+      "rationale": "Jupyter-specific feature",
+      "category": "positive"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "Build a Streamlit app",
+      "expected_trigger": false,
+      "rationale": "Streamlit is for building-data-apps",
+      "category": "negative"
+    },
+    {
+      "id": "trig-008",
+      "prompt": "Create an interactive dashboard",
+      "expected_trigger": false,
+      "rationale": "Dashboard is for building-data-apps",
+      "category": "negative"
+    },
+    {
+      "id": "trig-009",
+      "prompt": "Deploy my app",
+      "expected_trigger": false,
+      "rationale": "Deployment is for building-data-apps",
+      "category": "negative"
+    },
+    {
+      "id": "trig-010",
+      "prompt": "Build a data pipeline",
+      "expected_trigger": false,
+      "rationale": "Pipeline is for building-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-011",
+      "prompt": "Visualize my data",
+      "expected_trigger": false,
+      "rationale": "Visualization is for analyzing-data",
+      "category": "negative"
+    },
+    {
+      "id": "trig-012",
+      "prompt": "Perform EDA",
+      "expected_trigger": false,
+      "rationale": "EDA is for analyzing-data",
+      "category": "negative"
+    },
+    {
+      "id": "trig-013",
+      "prompt": "Clean output cells before git commit",
+      "expected_trigger": true,
+      "rationale": "Notebook git workflow",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-014",
+      "prompt": "Use Google Colab",
+      "expected_trigger": true,
+      "rationale": "Cloud notebook environment",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-015",
+      "prompt": "Share my notebook with collaborators",
+      "expected_trigger": true,
+      "rationale": "Notebook sharing workflow",
+      "category": "near-miss"
+    }
+  ]
+}

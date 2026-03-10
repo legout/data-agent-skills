@@ -1,0 +1,75 @@
+{
+  "skill_name": "managing-data-catalogs",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Hive Metastore Setup",
+      "description": "Tests Hive Metastore configuration",
+      "prompt": "How do I set up and configure Hive Metastore for my data lake to enable table discovery?",
+      "expected_behavior": "The skill should provide Hive Metastore setup, configuration, and integration patterns.",
+      "success_criteria": [
+        "Shows deployment options",
+        "Covers configuration parameters",
+        "Explains storage backend choices",
+        "Includes client integration"
+      ],
+      "tags": ["hive", "metastore", "catalog", "configuration"]
+    },
+    {
+      "id": "eval-002",
+      "name": "AWS Glue Catalog",
+      "description": "Tests AWS Glue Data Catalog usage",
+      "prompt": "Use AWS Glue Data Catalog to register tables and enable querying across multiple services.",
+      "expected_behavior": "The skill should explain Glue Catalog integration, table registration, and cross-service querying.",
+      "success_criteria": [
+        "Shows table registration patterns",
+        "Covers crawler configuration",
+        "Explains cross-service access",
+        "Includes IAM permissions"
+      ],
+      "tags": ["aws", "glue", "catalog", "integration"]
+    },
+    {
+      "id": "eval-003",
+      "name": "REST Catalog with Iceberg",
+      "description": "Tests REST catalog for Iceberg",
+      "prompt": "Configure a REST catalog for Apache Iceberg tables with proper authentication and multi-engine access.",
+      "expected_behavior": "The skill should provide REST catalog setup, authentication patterns, and engine integration.",
+      "success_criteria": [
+        "Shows REST catalog deployment",
+        "Covers authentication setup",
+        "Demonstrates multi-engine access",
+        "Includes Tabular/Nessie patterns"
+      ],
+      "tags": ["iceberg", "rest", "catalog", "authentication"]
+    },
+    {
+      "id": "eval-004",
+      "name": "DuckDB as Catalog",
+      "description": "Tests DuckDB multi-source catalog pattern",
+      "prompt": "How can I use DuckDB as a lightweight catalog to attach multiple data sources and create a unified query layer?",
+      "expected_behavior": "The skill should explain DuckDB's attach pattern, multi-source queries, and catalog-like usage.",
+      "success_criteria": [
+        "Shows ATTACH patterns",
+        "Covers multiple storage backends",
+        "Demonstrates cross-source queries",
+        "Includes credential management"
+      ],
+      "tags": ["duckdb", "catalog", "multi-source", "attach"]
+    },
+    {
+      "id": "eval-005",
+      "name": "Catalog Comparison",
+      "description": "Tests catalog system comparison",
+      "prompt": "Compare Hive Metastore, AWS Glue, and open-source alternatives like DataHub for my data platform.",
+      "expected_behavior": "The skill should provide comprehensive catalog comparison with selection guidance.",
+      "success_criteria": [
+        "Compares major catalog options",
+        "Explains tradeoffs clearly",
+        "Provides selection framework",
+        "Covers migration considerations"
+      ],
+      "tags": ["comparison", "catalog", "hive", "glue", "datahub"]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "skill_name": "building-streaming-pipelines",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Kafka Producer Consumer",
+      "description": "Tests Kafka producer and consumer patterns",
+      "prompt": "Build a Kafka producer and consumer pipeline with proper serialization, partitioning, and error handling.",
+      "expected_behavior": "The skill should provide Kafka client patterns, configuration, and production best practices.",
+      "success_criteria": [
+        "Shows producer patterns",
+        "Covers consumer groups",
+        "Demonstrates serialization",
+        "Includes error handling"
+      ],
+      "tags": ["kafka", "streaming", "producer", "consumer"]
+    },
+    {
+      "id": "eval-002",
+      "name": "MQTT IoT Pipeline",
+      "description": "Tests MQTT for IoT data streaming",
+      "prompt": "Design an MQTT-based pipeline for IoT sensor data ingestion with topic hierarchy and QoS configuration.",
+      "expected_behavior": "The skill should explain MQTT patterns, topic design, and IoT-specific considerations.",
+      "success_criteria": [
+        "Shows MQTT client setup",
+        "Covers topic hierarchy",
+        "Explains QoS levels",
+        "Includes IoT patterns"
+      ],
+      "tags": ["mqtt", "iot", "streaming", "sensors"]
+    },
+    {
+      "id": "eval-003",
+      "name": "NATS JetStream",
+      "description": "Tests NATS JetStream for streaming",
+      "prompt": "Implement a streaming solution using NATS JetStream with streams, consumers, and persistence.",
+      "expected_behavior": "The skill should provide JetStream setup, stream configuration, and consumer patterns.",
+      "success_criteria": [
+        "Shows stream creation",
+        "Covers consumer patterns",
+        "Demonstrates persistence",
+        "Includes delivery policies"
+      ],
+      "tags": ["nats", "jetstream", "streaming", "persistence"]
+    },
+    {
+      "id": "eval-004",
+      "name": "Streaming Architecture",
+      "description": "Tests streaming architecture patterns",
+      "prompt": "Design a streaming data architecture with backpressure handling, exactly-once semantics, and fault tolerance.",
+      "expected_behavior": "The skill should explain streaming architecture patterns and reliability mechanisms.",
+      "success_criteria": [
+        "Covers backpressure strategies",
+        "Explains delivery guarantees",
+        "Shows fault tolerance patterns",
+        "Includes scaling considerations"
+      ],
+      "tags": ["architecture", "streaming", "backpressure", "reliability"]
+    },
+    {
+      "id": "eval-005",
+      "name": "Streaming Platform Selection",
+      "description": "Tests streaming platform comparison",
+      "prompt": "How do I choose between Kafka, Pulsar, NATS, and cloud streaming services for my use case?",
+      "expected_behavior": "The skill should compare streaming platforms with selection guidance.",
+      "success_criteria": [
+        "Compares major platforms",
+        "Explains tradeoffs",
+        "Provides decision framework",
+        "Covers operational considerations"
+      ],
+      "tags": ["comparison", "kafka", "pulsar", "nats", "selection"]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "skill_name": "working-in-notebooks",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Jupyter Workflow",
+      "description": "Tests productive Jupyter workflow",
+      "prompt": "Set up a productive Jupyter workflow with extensions, debugging, and best practices for data science.",
+      "expected_behavior": "The skill should provide Jupyter setup, extension recommendations, and workflow patterns.",
+      "success_criteria": [
+        "Shows extension setup",
+        "Covers debugging patterns",
+        "Demonstrates magic commands",
+        "Includes productivity tips"
+      ],
+      "tags": ["jupyter", "workflow", "extensions", "productivity"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Marimo Notebook",
+      "description": "Tests marimo reactive notebooks",
+      "prompt": "Create a reactive notebook using marimo with proper cell structure, state management, and UI elements.",
+      "expected_behavior": "The skill should explain marimo concepts, reactive patterns, and notebook structure.",
+      "success_criteria": [
+        "Shows marimo structure",
+        "Covers reactive execution",
+        "Demonstrates UI elements",
+        "Includes state management"
+      ],
+      "tags": ["marimo", "reactive", "notebook", "ui"]
+    },
+    {
+      "id": "eval-003",
+      "name": "Notebook Testing",
+      "description": "Tests notebook validation and testing",
+      "prompt": "Add tests and validation to my Jupyter notebooks to ensure reproducibility and correctness.",
+      "expected_behavior": "The skill should provide notebook testing patterns, assertion strategies, and validation tools.",
+      "success_criteria": [
+        "Shows testing frameworks",
+        "Covers assertion patterns",
+        "Demonstrates testbook usage",
+        "Includes CI integration"
+      ],
+      "tags": ["testing", "notebook", "validation", "reproducibility"]
+    },
+    {
+      "id": "eval-004",
+      "name": "Notebook Sharing",
+      "description": "Tests notebook publication and sharing",
+      "prompt": "Export and share my notebook as HTML, PDF, or interactive format for stakeholders.",
+      "expected_behavior": "The skill should explain export options, publication platforms, and sharing patterns.",
+      "success_criteria": [
+        "Shows nbconvert usage",
+        "Covers HTML/PDF export",
+        "Demonstrates Voila deployment",
+        "Includes cloud platform options"
+      ],
+      "tags": ["sharing", "export", "nbconvert", "publication"]
+    },
+    {
+      "id": "eval-005",
+      "name": "Reproducible Research",
+      "description": "Tests reproducible notebook practices",
+      "prompt": "Make my notebook fully reproducible with dependency pinning, random seed control, and environment documentation.",
+      "expected_behavior": "The skill should provide reproducibility patterns, environment management, and documentation.",
+      "success_criteria": [
+        "Shows dependency management",
+        "Covers seed setting",
+        "Demonstrates environment docs",
+        "Includes data versioning"
+      ],
+      "tags": ["reproducibility", "dependencies", "environment", "best-practices"]
+    }
+  ]
+}

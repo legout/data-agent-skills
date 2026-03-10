@@ -1,0 +1,110 @@
+{
+  "skill_name": "accessing-cloud-storage",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "How do I read files from S3 with Python?",
+      "expected_trigger": true,
+      "rationale": "Direct question about cloud storage access",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "Configure AWS authentication for my data pipeline",
+      "expected_trigger": true,
+      "rationale": "Cloud storage authentication request",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "Use fsspec to access GCS buckets",
+      "expected_trigger": true,
+      "rationale": "Specific fsspec cloud access request",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "How do I set up Azure credentials?",
+      "expected_trigger": true,
+      "rationale": "Azure cloud storage authentication",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "Read Parquet from S3 into Polars",
+      "expected_trigger": true,
+      "rationale": "Cloud I/O with specific tool",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "Configure DuckDB HTTPFS for cloud storage",
+      "expected_trigger": true,
+      "rationale": "DuckDB cloud access configuration",
+      "category": "positive"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "How do I design a data lake architecture?",
+      "expected_trigger": false,
+      "rationale": "Architecture design is for designing-data-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-008",
+      "prompt": "What's the difference between Parquet and ORC?",
+      "expected_trigger": false,
+      "rationale": "Format comparison is for designing-data-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-009",
+      "prompt": "How do I implement Delta Lake?",
+      "expected_trigger": false,
+      "rationale": "Lakehouse implementation is for designing-data-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-010",
+      "prompt": "Build an ETL pipeline with data transformations",
+      "expected_trigger": false,
+      "rationale": "ETL pipeline is for building-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-011",
+      "prompt": "How do I set up a data catalog?",
+      "expected_trigger": false,
+      "rationale": "Catalog setup is for managing-data-catalogs",
+      "category": "negative"
+    },
+    {
+      "id": "trig-012",
+      "prompt": "What's the best way to partition my data?",
+      "expected_trigger": false,
+      "rationale": "Partitioning strategy is for designing-data-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-013",
+      "prompt": "I need to read from S3 and transform the data",
+      "expected_trigger": true,
+      "rationale": "Primary focus is cloud access, transformation secondary",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-014",
+      "prompt": "How do I use pyarrow.fs for cloud access?",
+      "expected_trigger": true,
+      "rationale": "pyarrow.fs is a cloud storage library",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-015",
+      "prompt": "Configure MinIO access with Python",
+      "expected_trigger": true,
+      "rationale": "S3-compatible storage access pattern",
+      "category": "near-miss"
+    }
+  ]
+}

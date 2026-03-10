@@ -1,0 +1,75 @@
+{
+  "skill_name": "engineering-ai-pipelines",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Embedding Generation Pipeline",
+      "description": "Tests embedding generation at scale",
+      "prompt": "Build a pipeline that generates embeddings for a large document corpus using OpenAI or local models.",
+      "expected_behavior": "The skill should provide embedding generation patterns, batching strategies, and storage options.",
+      "success_criteria": [
+        "Shows batching patterns",
+        "Covers API rate limiting",
+        "Demonstrates local model option",
+        "Includes storage strategies"
+      ],
+      "tags": ["embeddings", "openai", "pipeline", "batching"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Vector Database Setup",
+      "description": "Tests vector database integration",
+      "prompt": "Set up and use a vector database (pgvector, Pinecone, or Weaviate) for similarity search.",
+      "expected_behavior": "The skill should explain vector DB setup, indexing, and query patterns.",
+      "success_criteria": [
+        "Shows database setup",
+        "Covers index configuration",
+        "Demonstrates insertion patterns",
+        "Includes query optimization"
+      ],
+      "tags": ["vector-db", "pgvector", "similarity", "indexing"]
+    },
+    {
+      "id": "eval-003",
+      "name": "RAG Pipeline Architecture",
+      "description": "Tests RAG pipeline design",
+      "prompt": "Design a RAG (Retrieval-Augmented Generation) pipeline with document chunking, embedding, retrieval, and generation.",
+      "expected_behavior": "The skill should provide RAG architecture patterns, chunking strategies, and integration guidance.",
+      "success_criteria": [
+        "Shows chunking strategies",
+        "Covers retrieval optimization",
+        "Demonstrates prompt engineering",
+        "Includes evaluation patterns"
+      ],
+      "tags": ["rag", "llm", "retrieval", "generation"]
+    },
+    {
+      "id": "eval-004",
+      "name": "LLM Monitoring",
+      "description": "Tests LLM pipeline monitoring",
+      "prompt": "Implement monitoring for LLM pipelines including cost tracking, latency metrics, and quality evaluation.",
+      "expected_behavior": "The skill should explain LLM observability patterns, cost tracking, and quality metrics.",
+      "success_criteria": [
+        "Shows cost tracking patterns",
+        "Covers latency monitoring",
+        "Demonstrates quality metrics",
+        "Includes alerting setup"
+      ],
+      "tags": ["llm", "monitoring", "cost-tracking", "observability"]
+    },
+    {
+      "id": "eval-005",
+      "name": "Batch Inference Pipeline",
+      "description": "Tests batch inference at scale",
+      "prompt": "Design a batch inference pipeline for ML models with queueing, distributed processing, and result storage.",
+      "expected_behavior": "The skill should provide batch inference patterns, scaling strategies, and operational guidance.",
+      "success_criteria": [
+        "Shows queueing patterns",
+        "Covers distributed processing",
+        "Demonstrates result storage",
+        "Includes error handling"
+      ],
+      "tags": ["batch-inference", "ml", "scaling", "distributed"]
+    }
+  ]
+}

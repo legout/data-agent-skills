@@ -1,0 +1,40 @@
+{
+  "skill_name": "data-engineering-storage-remote-access-integrations-delta-lake",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "How do I configure Delta Lake with S3?",
+      "expected_trigger": true,
+      "rationale": "Delta on S3 configuration - core to this skill",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "How do I write Delta tables to GCS?",
+      "expected_trigger": true,
+      "rationale": "Delta on GCS - directly relevant",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "How do I configure S3 locking for Delta Lake?",
+      "expected_trigger": true,
+      "rationale": "S3 locking - within skill scope",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "How do I use Delta Lake?",
+      "expected_trigger": false,
+      "rationale": "Generic Delta - handled by lakehouse skill",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "How do I read from S3?",
+      "expected_trigger": false,
+      "rationale": "Generic S3 access - handled by remote-access skill",
+      "category": "negative"
+    }
+  ]
+}

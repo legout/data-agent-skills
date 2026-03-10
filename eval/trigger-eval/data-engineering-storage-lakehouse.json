@@ -1,0 +1,54 @@
+{
+  "skill_name": "data-engineering-storage-lakehouse",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "Should I use Delta Lake or Apache Iceberg?",
+      "expected_trigger": true,
+      "rationale": "Lakehouse format comparison - core to this skill",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "How do I configure Delta Lake tables?",
+      "expected_trigger": true,
+      "rationale": "Delta Lake configuration - directly relevant",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "How do I use time travel with Iceberg?",
+      "expected_trigger": true,
+      "rationale": "Iceberg time travel - within skill scope",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "How do I handle schema evolution in Delta Lake?",
+      "expected_trigger": true,
+      "rationale": "Schema evolution - directly relevant",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "How do I optimize and vacuum my lakehouse tables?",
+      "expected_trigger": true,
+      "rationale": "Table maintenance - within skill scope",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "How do I create a data catalog?",
+      "expected_trigger": false,
+      "rationale": "Catalog question - handled by catalogs skill",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "How do I write SQL queries?",
+      "expected_trigger": false,
+      "rationale": "Generic SQL - not lakehouse-specific",
+      "category": "negative"
+    }
+  ]
+}

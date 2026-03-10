@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-lih7",
+  "primary_terms": ["eval directory layout", "manifest templates", "manifest format", "skill eval files"],
+  "secondary_terms": ["evals", "manifests", "skill-refactor", "foundation", "trigger-eval", "coverage"],
+  "file_hints": ["skills/", ".skills/", "eval/", "manifests/"],
+  "change_scope": "Create directory structure and manifest templates for skill evaluation system",
+  "ticket_summary": "Create eval directory layout and manifest templates for incremental skill coverage evaluation"
+}

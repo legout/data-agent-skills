@@ -1,0 +1,75 @@
+{
+  "skill_name": "accessing-cloud-storage",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "AWS S3 Authentication",
+      "description": "Tests AWS S3 authentication patterns",
+      "prompt": "How do I configure authentication for accessing S3 from my data pipeline using different methods (IAM, SSO, keys)?",
+      "expected_behavior": "The skill should explain AWS credential chains, IAM roles, SSO configuration, and secure best practices.",
+      "success_criteria": [
+        "Covers IAM role assumption",
+        "Explains credential provider chain",
+        "Shows SSO/OIDC patterns",
+        "Addresses security best practices"
+      ],
+      "tags": ["aws", "s3", "authentication", "iam"]
+    },
+    {
+      "id": "eval-002",
+      "name": "fsspec Cloud Access",
+      "description": "Tests fsspec for cloud storage access",
+      "prompt": "Use fsspec to read and write data files from S3, GCS, and Azure with proper configuration.",
+      "expected_behavior": "The skill should provide fsspec patterns for multiple cloud providers, including configuration and optimization.",
+      "success_criteria": [
+        "Shows S3, GCS, Azure patterns",
+        "Includes caching configuration",
+      "Covers protocol chaining",
+        "Demonstrates async operations"
+      ],
+      "tags": ["fsspec", "cloud", "s3", "gcs", "azure"]
+    },
+    {
+      "id": "eval-003",
+      "name": "Polars Cloud I/O",
+      "description": "Tests Polars integration with cloud storage",
+      "prompt": "How do I efficiently read Parquet files from S3 into Polars and write results back?",
+      "expected_behavior": "The skill should explain Polars cloud I/O patterns, credential passing, and optimization options.",
+      "success_criteria": [
+        "Shows native cloud scan patterns",
+        "Covers credential configuration",
+        "Explains predicate pushdown benefits",
+        "Includes partitioned write examples"
+      ],
+      "tags": ["polars", "cloud", "parquet", "s3"]
+    },
+    {
+      "id": "eval-004",
+      "name": "DuckDB HTTPFS",
+      "description": "Tests DuckDB HTTPFS extension for cloud access",
+      "prompt": "Configure DuckDB to query data directly from S3 and GCS using the HTTPFS extension.",
+      "expected_behavior": "The skill should provide DuckDB HTTPFS setup, credential configuration, and query patterns.",
+      "success_criteria": [
+        "Shows HTTPFS extension setup",
+        "Covers S3/GCS configuration",
+        "Demonstrates direct querying",
+        "Includes performance tips"
+      ],
+      "tags": ["duckdb", "httpfs", "s3", "gcs", "sql"]
+    },
+    {
+      "id": "eval-005",
+      "name": "Cross-Cloud Authentication",
+      "description": "Tests multi-cloud authentication scenarios",
+      "prompt": "How do I manage authentication when my pipeline needs to access both AWS S3 and GCS in the same workflow?",
+      "expected_behavior": "The skill should explain handling multiple cloud credentials, isolation patterns, and security considerations.",
+      "success_criteria": [
+        "Shows credential isolation patterns",
+        "Covers environment configuration",
+        "Explains secret management",
+        "Addresses security boundaries"
+      ],
+      "tags": ["multi-cloud", "authentication", "security", "credentials"]
+    }
+  ]
+}

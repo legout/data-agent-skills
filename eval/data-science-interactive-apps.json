@@ -1,0 +1,47 @@
+{
+  "skill_name": "data-science-interactive-apps",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Streamlit App",
+      "description": "Tests Streamlit application development",
+      "prompt": "How do I build an interactive dashboard with Streamlit for my data?",
+      "expected_behavior": "The skill should explain Streamlit app structure, widgets, layout, and deployment considerations.",
+      "success_criteria": [
+        "Shows app structure",
+        "Explains widget usage",
+        "Covers layout options",
+        "Mentions caching"
+      ],
+      "tags": ["streamlit", "dashboard", "widgets", "app"]
+    },
+    {
+      "id": "eval-002",
+      "name": "App Framework Selection",
+      "description": "Tests ability to select app frameworks",
+      "prompt": "Should I use Streamlit, Gradio, or Panel for my ML model demo?",
+      "expected_behavior": "The skill should compare app frameworks and recommend based on use case, complexity, and requirements.",
+      "success_criteria": [
+        "Compares frameworks",
+        "Discusses use cases",
+        "Mentions complexity levels",
+        "Provides selection guidance"
+      ],
+      "tags": ["framework-selection", "streamlit", "gradio", "panel"]
+    },
+    {
+      "id": "eval-003",
+      "name": "App Testing",
+      "description": "Tests app testing strategies",
+      "prompt": "How do I test my Streamlit application?",
+      "expected_behavior": "The skill should explain testing approaches for data apps including unit tests and integration tests.",
+      "success_criteria": [
+        "Explains testing approaches",
+        "Shows test examples",
+        "Covers integration testing",
+        "Mentions CI/CD"
+      ],
+      "tags": ["testing", "streamlit", "quality", "ci-cd"]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "skill_name": "data-science-eda",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Data Profiling",
+      "description": "Tests automated data profiling knowledge",
+      "prompt": "How do I quickly profile my dataset to understand its structure and quality?",
+      "expected_behavior": "The skill should explain automated profiling tools like ydata-profiling, Sweetviz, and manual profiling techniques.",
+      "success_criteria": [
+        "Mentions profiling libraries",
+        "Shows basic usage",
+        "Explains output interpretation",
+        "Covers quality checks"
+      ],
+      "tags": ["profiling", "eda", "quality", "exploration"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Statistical Analysis",
+      "description": "Tests statistical exploration patterns",
+      "prompt": "What statistical tests should I run to understand relationships in my data?",
+      "expected_behavior": "The skill should recommend appropriate statistical tests and exploration patterns for understanding data relationships.",
+      "success_criteria": [
+        "Recommends appropriate tests",
+        "Explains when to use each",
+        "Shows implementation",
+        "Covers interpretation"
+      ],
+      "tags": ["statistics", "tests", "relationships", "analysis"]
+    },
+    {
+      "id": "eval-003",
+      "name": "Large Dataset EDA",
+      "description": "Tests EDA techniques for large datasets",
+      "prompt": "How do I perform EDA on a dataset that's too large to fit in memory?",
+      "expected_behavior": "The skill should explain sampling, incremental analysis, and tools for large-scale EDA.",
+      "success_criteria": [
+        "Discusses sampling strategies",
+        "Mentions scalable tools",
+        "Covers incremental approaches",
+        "Provides practical solutions"
+      ],
+      "tags": ["large-data", "sampling", "scalable", "eda"]
+    }
+  ]
+}

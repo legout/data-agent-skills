@@ -1,0 +1,110 @@
+{
+  "skill_name": "evaluating-ml-models",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "Set up cross-validation for my model",
+      "expected_trigger": true,
+      "rationale": "Direct CV question",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "What metrics should I use for classification?",
+      "expected_trigger": true,
+      "rationale": "Metrics selection",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "Tune hyperparameters with Optuna",
+      "expected_trigger": true,
+      "rationale": "Hyperparameter tuning",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "Compare multiple models",
+      "expected_trigger": true,
+      "rationale": "Model comparison",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "Set up MLflow tracking",
+      "expected_trigger": true,
+      "rationale": "Experiment tracking",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "Handle imbalanced classes in evaluation",
+      "expected_trigger": true,
+      "rationale": "Imbalanced evaluation",
+      "category": "positive"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "Engineer features for my model",
+      "expected_trigger": false,
+      "rationale": "Feature engineering is for engineering-ml-features",
+      "category": "negative"
+    },
+    {
+      "id": "trig-008",
+      "prompt": "Build a data pipeline",
+      "expected_trigger": false,
+      "rationale": "Pipeline building is for building-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-009",
+      "prompt": "Create visualizations",
+      "expected_trigger": false,
+      "rationale": "Visualization is for analyzing-data",
+      "category": "negative"
+    },
+    {
+      "id": "trig-010",
+      "prompt": "Encode categorical variables",
+      "expected_trigger": false,
+      "rationale": "Encoding is for engineering-ml-features",
+      "category": "negative"
+    },
+    {
+      "id": "trig-011",
+      "prompt": "Scale my features",
+      "expected_trigger": false,
+      "rationale": "Scaling is for engineering-ml-features",
+      "category": "negative"
+    },
+    {
+      "id": "trig-012",
+      "prompt": "Deploy my model",
+      "expected_trigger": false,
+      "rationale": "Deployment not covered by these skills",
+      "category": "negative"
+    },
+    {
+      "id": "trig-013",
+      "prompt": "Perform statistical tests",
+      "expected_trigger": true,
+      "rationale": "Statistical testing for model comparison",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-014",
+      "prompt": "Debug model overfitting",
+      "expected_trigger": true,
+      "rationale": "Overfitting diagnosis is evaluation topic",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-015",
+      "prompt": "Select the best model",
+      "expected_trigger": true,
+      "rationale": "Model selection",
+      "category": "near-miss"
+    }
+  ]
+}

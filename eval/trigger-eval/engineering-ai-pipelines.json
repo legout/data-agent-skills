@@ -1,0 +1,110 @@
+{
+  "skill_name": "engineering-ai-pipelines",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "Generate embeddings for my documents",
+      "expected_trigger": true,
+      "rationale": "Direct embedding generation request",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "Set up a vector database for similarity search",
+      "expected_trigger": true,
+      "rationale": "Vector DB setup for AI",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "Build a RAG pipeline",
+      "expected_trigger": true,
+      "rationale": "RAG is AI pipeline pattern",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "Monitor LLM API costs and latency",
+      "expected_trigger": true,
+      "rationale": "LLM observability",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "Design batch inference for my ML model",
+      "expected_trigger": true,
+      "rationale": "Batch inference pipeline",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "Use pgvector for embeddings",
+      "expected_trigger": true,
+      "rationale": "Vector storage in PostgreSQL",
+      "category": "positive"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "Build a regular ETL pipeline",
+      "expected_trigger": false,
+      "rationale": "Standard ETL is for building-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-008",
+      "prompt": "Schedule data processing jobs",
+      "expected_trigger": false,
+      "rationale": "Scheduling is for orchestrating-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-009",
+      "prompt": "Set up data quality checks",
+      "expected_trigger": false,
+      "rationale": "Data quality is for assuring-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-010",
+      "prompt": "Evaluate my ML model performance",
+      "expected_trigger": false,
+      "rationale": "Model evaluation is for evaluating-ml-models",
+      "category": "negative"
+    },
+    {
+      "id": "trig-011",
+      "prompt": "Tune hyperparameters",
+      "expected_trigger": false,
+      "rationale": "Hyperparameter tuning is for evaluating-ml-models",
+      "category": "negative"
+    },
+    {
+      "id": "trig-012",
+      "prompt": "Engineer features for my model",
+      "expected_trigger": false,
+      "rationale": "Feature engineering is for engineering-ml-features",
+      "category": "negative"
+    },
+    {
+      "id": "trig-013",
+      "prompt": "Process documents for training",
+      "expected_trigger": true,
+      "rationale": "Document processing for AI - could overlap with pipelines",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-014",
+      "prompt": "Store embeddings efficiently",
+      "expected_trigger": true,
+      "rationale": "Embedding storage - AI-specific storage pattern",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-015",
+      "prompt": "Build a chatbot with retrieval",
+      "expected_trigger": true,
+      "rationale": "RAG chatbot application",
+      "category": "near-miss"
+    }
+  ]
+}

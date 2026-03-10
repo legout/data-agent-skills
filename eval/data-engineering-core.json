@@ -1,0 +1,47 @@
+{
+  "skill_name": "data-engineering-core",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Polars DataFrame Operations",
+      "description": "Tests ability to guide Polars data transformations",
+      "prompt": "How do I perform complex aggregations and joins with Polars?",
+      "expected_behavior": "The skill should provide guidance on Polars aggregations, groupby operations, and efficient join patterns.",
+      "success_criteria": [
+        "Covers lazy vs eager evaluation",
+        "Shows aggregation examples",
+        "Explains join optimization",
+        "Provides performant patterns"
+      ],
+      "tags": ["polars", "transformations", "aggregations", "joins"]
+    },
+    {
+      "id": "eval-002",
+      "name": "DuckDB SQL Pipelines",
+      "description": "Tests ability to build SQL-based pipelines with DuckDB",
+      "prompt": "Build a SQL pipeline with DuckDB that processes multiple CSV files and outputs aggregated results.",
+      "expected_behavior": "The skill should provide SQL patterns for reading CSV files, performing transformations, and writing results efficiently with DuckDB.",
+      "success_criteria": [
+        "Shows CSV reading patterns",
+        "Includes SQL transformation examples",
+        "Covers output writing options",
+        "Mentions performance considerations"
+      ],
+      "tags": ["duckdb", "sql", "csv", "pipeline"]
+    },
+    {
+      "id": "eval-003",
+      "name": "PyArrow Interchange",
+      "description": "Tests understanding of PyArrow as interchange format",
+      "prompt": "When and how should I use PyArrow for data interchange between tools?",
+      "expected_behavior": "The skill should explain PyArrow's role in zero-copy data interchange and integration with Polars, Pandas, and DuckDB.",
+      "success_criteria": [
+        "Explains zero-copy benefits",
+        "Shows interop with major tools",
+        "Covers Arrow IPC and Feather",
+        "Provides practical examples"
+      ],
+      "tags": ["pyarrow", "interchange", "zero-copy", "interop"]
+    }
+  ]
+}

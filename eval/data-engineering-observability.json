@@ -1,0 +1,47 @@
+{
+  "skill_name": "data-engineering-observability",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "OpenTelemetry Tracing",
+      "description": "Tests ability to instrument pipelines with OpenTelemetry",
+      "prompt": "How do I add distributed tracing to my data pipeline using OpenTelemetry?",
+      "expected_behavior": "The skill should explain how to instrument data pipelines with OpenTelemetry for tracing, including span creation and context propagation.",
+      "success_criteria": [
+        "Explains OpenTelemetry basics",
+        "Shows pipeline instrumentation",
+        "Covers span and trace concepts",
+        "Provides implementation examples"
+      ],
+      "tags": ["opentelemetry", "tracing", "instrumentation", "observability"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Prometheus Metrics",
+      "description": "Tests metrics collection with Prometheus",
+      "prompt": "What metrics should I collect for my data pipeline and how do I expose them to Prometheus?",
+      "expected_behavior": "The skill should recommend key data pipeline metrics and explain how to instrument and expose them for Prometheus scraping.",
+      "success_criteria": [
+        "Lists relevant pipeline metrics",
+        "Explains Prometheus client usage",
+        "Covers metric types (counters, gauges, histograms)",
+        "Shows exporter configuration"
+      ],
+      "tags": ["prometheus", "metrics", "monitoring", "exporter"]
+    },
+    {
+      "id": "eval-003",
+      "name": "Pipeline Alerting",
+      "description": "Tests ability to set up alerts for pipeline failures",
+      "prompt": "How do I set up alerts for data pipeline failures and anomalies?",
+      "expected_behavior": "The skill should explain alerting strategies, threshold configuration, and notification routing for data pipeline issues.",
+      "success_criteria": [
+        "Covers failure detection patterns",
+        "Explains threshold configuration",
+        "Discusses alert routing",
+        "Includes anomaly detection basics"
+      ],
+      "tags": ["alerting", "monitoring", "anomalies", "notifications"]
+    }
+  ]
+}

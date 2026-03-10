@@ -1,10 +1,10 @@
 {
-  "started_at": "2026-03-10T17:20:42Z",
+  "started_at": "2026-03-10T19:27:29Z",
   "mode": "default",
   "tickets_processed": 0,
   "tickets_failed": 0,
-  "current_ticket": "das-b143",
-  "last_poll_at": "2026-03-10T17:20:42Z",
-  "total_runtime_sec": 1,
-  "pid": 40112
+  "current_ticket": "das-lih7",
+  "last_poll_at": "2026-03-10T19:27:31Z",
+  "total_runtime_sec": 2,
+  "pid": 64157
 }

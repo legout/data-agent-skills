@@ -1,0 +1,110 @@
+{
+  "skill_name": "engineering-ml-features",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "How do I encode categorical variables?",
+      "expected_trigger": true,
+      "rationale": "Direct feature engineering question",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "Scale my numeric features",
+      "expected_trigger": true,
+      "rationale": "Feature scaling",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "Engineer features from datetime columns",
+      "expected_trigger": true,
+      "rationale": "Datetime feature engineering",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "Extract features from text data",
+      "expected_trigger": true,
+      "rationale": "Text feature engineering",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "Prevent data leakage in my pipeline",
+      "expected_trigger": true,
+      "rationale": "Leakage prevention in feature engineering",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "Use scikit-learn's ColumnTransformer",
+      "expected_trigger": true,
+      "rationale": "Feature transformation tool",
+      "category": "positive"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "Build an ETL pipeline",
+      "expected_trigger": false,
+      "rationale": "ETL is for building-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-008",
+      "prompt": "Tune my model hyperparameters",
+      "expected_trigger": false,
+      "rationale": "Hyperparameter tuning is for evaluating-ml-models",
+      "category": "negative"
+    },
+    {
+      "id": "trig-009",
+      "prompt": "Evaluate model performance",
+      "expected_trigger": false,
+      "rationale": "Evaluation is for evaluating-ml-models",
+      "category": "negative"
+    },
+    {
+      "id": "trig-010",
+      "prompt": "Create visualizations",
+      "expected_trigger": false,
+      "rationale": "Visualization is for analyzing-data",
+      "category": "negative"
+    },
+    {
+      "id": "trig-011",
+      "prompt": "Set up cross-validation",
+      "expected_trigger": false,
+      "rationale": "CV is for evaluating-ml-models",
+      "category": "negative"
+    },
+    {
+      "id": "trig-012",
+      "prompt": "Deploy my model",
+      "expected_trigger": false,
+      "rationale": "Deployment is not covered by these skills",
+      "category": "negative"
+    },
+    {
+      "id": "trig-013",
+      "prompt": "Handle missing values",
+      "expected_trigger": true,
+      "rationale": "Missing value handling is preprocessing/feature eng",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-014",
+      "prompt": "Select the best features",
+      "expected_trigger": true,
+      "rationale": "Feature selection is feature engineering topic",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-015",
+      "prompt": "Transform skewed distributions",
+      "expected_trigger": true,
+      "rationale": "Distribution transformation",
+      "category": "near-miss"
+    }
+  ]
+}

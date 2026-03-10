@@ -1,0 +1,75 @@
+{
+  "skill_name": "evaluating-ml-models",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Cross-Validation Strategy",
+      "description": "Tests cross-validation implementation",
+      "prompt": "Implement appropriate cross-validation for my dataset considering time series, groups, and stratification.",
+      "expected_behavior": "The skill should provide CV strategy selection and implementation patterns.",
+      "success_criteria": [
+        "Shows k-fold patterns",
+        "Covers stratified CV",
+        "Demonstrates time series CV",
+        "Includes group-based CV"
+      ],
+      "tags": ["cross-validation", "scikit-learn", "strategy", "resampling"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Metrics Selection",
+      "description": "Tests appropriate metrics selection",
+      "prompt": "What metrics should I use for evaluating my binary classification model with imbalanced classes?",
+      "expected_behavior": "The skill should explain metric selection for different problem types and class distributions.",
+      "success_criteria": [
+        "Covers classification metrics",
+        "Shows imbalanced class handling",
+        "Demonstrates regression metrics",
+        "Includes multi-class options"
+      ],
+      "tags": ["metrics", "evaluation", "classification", "imbalanced"]
+    },
+    {
+      "id": "eval-003",
+      "name": "Hyperparameter Tuning",
+      "description": "Tests hyperparameter optimization",
+      "prompt": "Perform hyperparameter tuning using Optuna or scikit-learn with proper search strategies and validation.",
+      "expected_behavior": "The skill should provide tuning patterns, search space definition, and optimization guidance.",
+      "success_criteria": [
+        "Shows search space definition",
+        "Covers Optuna integration",
+        "Demonstrates early stopping",
+        "Includes distributed tuning"
+      ],
+      "tags": ["hyperparameter-tuning", "optuna", "optimization", "search"]
+    },
+    {
+      "id": "eval-004",
+      "name": "Model Comparison",
+      "description": "Tests comparing multiple models",
+      "prompt": "Compare multiple ML models systematically with statistical significance testing and proper validation.",
+      "expected_behavior": "The skill should explain model comparison frameworks and statistical testing.",
+      "success_criteria": [
+        "Shows comparison framework",
+        "Covers statistical testing",
+        "Demonstrates proper baselines",
+        "Includes visualization patterns"
+      ],
+      "tags": ["model-comparison", "evaluation", "statistics", "baseline"]
+    },
+    {
+      "id": "eval-005",
+      "name": "Experiment Tracking",
+      "description": "Tests experiment tracking setup",
+      "prompt": "Set up experiment tracking with MLflow or Weights & Biases for my model training pipeline.",
+      "expected_behavior": "The skill should provide tracking setup, logging patterns, and experiment organization.",
+      "success_criteria": [
+        "Shows tracking initialization",
+        "Covers metric logging",
+        "Demonstrates artifact tracking",
+        "Includes experiment organization"
+      ],
+      "tags": ["experiment-tracking", "mlflow", "wandb", "logging"]
+    }
+  ]
+}

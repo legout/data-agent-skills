@@ -1,0 +1,33 @@
+{
+  "skill_name": "data-engineering-storage-remote-access-integrations-delta-lake",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Delta on S3",
+      "description": "Tests Delta Lake with S3 storage",
+      "prompt": "How do I configure Delta Lake to work with S3 storage including proper locking?",
+      "expected_behavior": "The skill should explain Delta Lake S3 configuration, including storage options, locking mechanisms, and credential setup.",
+      "success_criteria": [
+        "Explains storage_options configuration",
+        "Covers S3 locking mechanisms",
+        "Mentions credential handling",
+        "Provides complete setup examples"
+      ],
+      "tags": ["delta-lake", "s3", "locking", "configuration"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Delta Remote Write",
+      "description": "Tests writing Delta tables to cloud storage",
+      "prompt": "How do I write Delta tables to cloud storage with proper partitioning?",
+      "expected_behavior": "The skill should explain Delta write patterns to cloud storage, including partitioning and optimization.",
+      "success_criteria": [
+        "Shows write configuration",
+        "Explains partitioning on write",
+        "Covers optimization options",
+        "Includes error handling"
+      ],
+      "tags": ["delta-lake", "write", "partitioning", "cloud"]
+    }
+  ]
+}

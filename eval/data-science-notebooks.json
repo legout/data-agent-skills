@@ -1,0 +1,47 @@
+{
+  "skill_name": "data-science-notebooks",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Notebook Workflow",
+      "description": "Tests notebook development best practices",
+      "prompt": "What are the best practices for developing reproducible Jupyter notebooks?",
+      "expected_behavior": "The skill should explain notebook best practices including structure, versioning, and reproducibility.",
+      "success_criteria": [
+        "Covers notebook structure",
+        "Explains reproducibility",
+        "Mentions version control",
+        "Provides workflow guidance"
+      ],
+      "tags": ["jupyter", "best-practices", "reproducibility", "workflow"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Marimo Notebooks",
+      "description": "Tests marimo notebook knowledge",
+      "prompt": "How do marimo notebooks differ from Jupyter and when should I use them?",
+      "expected_behavior": "The skill should explain marimo's reactive execution model and comparison to Jupyter.",
+      "success_criteria": [
+        "Explains marimo features",
+        "Compares to Jupyter",
+        "Discusses use cases",
+        "Shows basic usage"
+      ],
+      "tags": ["marimo", "jupyter", "reactive", "notebooks"]
+    },
+    {
+      "id": "eval-003",
+      "name": "Notebook Testing",
+      "description": "Tests notebook validation approaches",
+      "prompt": "How do I test and validate my Jupyter notebooks?",
+      "expected_behavior": "The skill should explain notebook testing including nbval, papermill, and testing strategies.",
+      "success_criteria": [
+        "Explains testing tools",
+        "Shows test examples",
+        "Covers CI integration",
+        "Provides best practices"
+      ],
+      "tags": ["testing", "jupyter", "validation", "nbval"]
+    }
+  ]
+}

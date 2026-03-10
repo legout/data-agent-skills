@@ -1,0 +1,47 @@
+{
+  "skill_name": "data-engineering-storage-remote-access-libraries-fsspec",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "fsspec Basics",
+      "description": "Tests fundamental fsspec usage",
+      "prompt": "How do I use fsspec to abstract file operations across local and cloud storage?",
+      "expected_behavior": "The skill should explain fsspec's unified filesystem interface and basic usage patterns.",
+      "success_criteria": [
+        "Explains filesystem abstraction",
+        "Shows basic operations",
+        "Covers protocol handling",
+        "Provides usage examples"
+      ],
+      "tags": ["fsspec", "filesystem", "abstraction", "basics"]
+    },
+    {
+      "id": "eval-002",
+      "name": "fsspec Caching",
+      "description": "Tests fsspec caching mechanisms",
+      "prompt": "How do I configure fsspec caching for better performance with remote files?",
+      "expected_behavior": "The skill should explain fsspec caching options including block cache, whole file cache, and configuration.",
+      "success_criteria": [
+        "Explains caching options",
+        "Shows configuration syntax",
+        "Discusses when to use each",
+        "Provides performance tips"
+      ],
+      "tags": ["fsspec", "caching", "performance", "configuration"]
+    },
+    {
+      "id": "eval-003",
+      "name": "fsspec Protocol Chains",
+      "description": "Tests fsspec protocol chaining",
+      "prompt": "How do I chain protocols in fsspec like reading from zip on S3?",
+      "expected_behavior": "The skill should explain fsspec protocol chaining for complex access patterns.",
+      "success_criteria": [
+        "Explains protocol chaining",
+        "Shows chain syntax",
+        "Provides practical examples",
+        "Mentions supported chains"
+      ],
+      "tags": ["fsspec", "chaining", "protocols", "advanced"]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "skill_name": "data-engineering-streaming",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Kafka Producer",
+      "description": "Tests Kafka producer implementation",
+      "prompt": "How do I implement a robust Kafka producer for my event data?",
+      "expected_behavior": "The skill should explain Kafka producer configuration, error handling, and best practices.",
+      "success_criteria": [
+        "Shows producer configuration",
+        "Covers serialization options",
+        "Includes error handling",
+        "Mentions performance tuning"
+      ],
+      "tags": ["kafka", "producer", "events", "streaming"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Kafka Consumer",
+      "description": "Tests Kafka consumer patterns",
+      "prompt": "How do I build a Kafka consumer with proper offset management?",
+      "expected_behavior": "The skill should explain Kafka consumer configuration, group management, and offset commit strategies.",
+      "success_criteria": [
+        "Shows consumer configuration",
+        "Explains consumer groups",
+        "Covers offset management",
+        "Provides error handling patterns"
+      ],
+      "tags": ["kafka", "consumer", "offsets", "streaming"]
+    },
+    {
+      "id": "eval-003",
+      "name": "Streaming Architecture",
+      "description": "Tests streaming pipeline architecture",
+      "prompt": "What architecture should I use for a real-time data pipeline processing IoT events?",
+      "expected_behavior": "The skill should discuss streaming architecture patterns including Kafka, MQTT, and NATS JetStream selection.",
+      "success_criteria": [
+        "Compares streaming platforms",
+        "Discusses IoT considerations",
+        "Covers scalability patterns",
+        "Provides selection guidance"
+      ],
+      "tags": ["streaming", "architecture", "iot", "kafka"]
+    }
+  ]
+}

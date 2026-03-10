@@ -1,0 +1,47 @@
+{
+  "skill_name": "data-engineering-catalogs",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Catalog Selection",
+      "description": "Tests ability to recommend appropriate catalog solutions",
+      "prompt": "Should I use Hive Metastore, AWS Glue, or a REST catalog for my Iceberg tables?",
+      "expected_behavior": "The skill should compare catalog options for Iceberg, considering deployment environment, operational overhead, and feature requirements.",
+      "success_criteria": [
+        "Compares HMS, Glue, and REST catalogs",
+        "Considers deployment environment",
+        "Discusses operational aspects",
+        "Provides selection criteria"
+      ],
+      "tags": ["catalogs", "iceberg", "comparison", "architecture"]
+    },
+    {
+      "id": "eval-002",
+      "name": "DuckDB as Catalog",
+      "description": "Tests understanding of lightweight catalog patterns",
+      "prompt": "How can I use DuckDB as a lightweight multi-source catalog?",
+      "expected_behavior": "The skill should explain how to attach multiple databases to DuckDB and use it as a unified query layer across data sources.",
+      "success_criteria": [
+        "Explains ATTACH DATABASE functionality",
+        "Shows multi-source querying",
+        "Covers supported connectors",
+        "Provides practical examples"
+      ],
+      "tags": ["duckdb", "catalog", "multi-source", "lightweight"]
+    },
+    {
+      "id": "eval-003",
+      "name": "Data Discovery",
+      "description": "Tests data discovery and metadata management",
+      "prompt": "What are the best practices for data discovery and metadata management in a data catalog?",
+      "expected_behavior": "The skill should cover metadata collection, data lineage, tagging, and search/discovery patterns for data catalogs.",
+      "success_criteria": [
+        "Covers metadata collection strategies",
+        "Mentions lineage tracking",
+        "Discusses tagging and organization",
+        "Includes search and discovery patterns"
+      ],
+      "tags": ["metadata", "discovery", "lineage", "governance"]
+    }
+  ]
+}

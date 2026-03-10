@@ -1,0 +1,110 @@
+{
+  "skill_name": "building-data-pipelines",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "How do I build an ETL pipeline with Polars?",
+      "expected_trigger": true,
+      "rationale": "Direct question about building data pipelines with specific tool",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "Design a batch data processing pipeline with DuckDB",
+      "expected_trigger": true,
+      "rationale": "Pipeline design request for batch processing",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "What's the best way to transform data from CSV to Parquet?",
+      "expected_trigger": true,
+      "rationale": "Data transformation pipeline question",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "How do I handle errors in my data pipeline?",
+      "expected_trigger": true,
+      "rationale": "Pipeline error handling - core pipeline topic",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "Build a production ETL workflow with PostgreSQL",
+      "expected_trigger": true,
+      "rationale": "Production ETL workflow request",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "How do I optimize PyArrow for data interchange?",
+      "expected_trigger": true,
+      "rationale": "PyArrow interchange is a pipeline subtopic",
+      "category": "positive"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "Create a dashboard to visualize my data",
+      "expected_trigger": false,
+      "rationale": "Dashboard creation is for building-data-apps, not pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-008",
+      "prompt": "How do I deploy a Streamlit app?",
+      "expected_trigger": false,
+      "rationale": "Streamlit deployment is for building-data-apps",
+      "category": "negative"
+    },
+    {
+      "id": "trig-009",
+      "prompt": "What's the difference between Delta Lake and Iceberg?",
+      "expected_trigger": false,
+      "rationale": "Storage format comparison is for designing-data-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-010",
+      "prompt": "How do I configure S3 authentication?",
+      "expected_trigger": false,
+      "rationale": "Cloud storage auth is for accessing-cloud-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-011",
+      "prompt": "Should I use Prefect or Dagster?",
+      "expected_trigger": false,
+      "rationale": "Orchestrator selection is for orchestrating-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-012",
+      "prompt": "How do I set up Great Expectations?",
+      "expected_trigger": false,
+      "rationale": "Data quality setup is for assuring-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-013",
+      "prompt": "I need to process data from PostgreSQL with validation",
+      "expected_trigger": true,
+      "rationale": "Borderline case - data processing is primary, validation secondary",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-014",
+      "prompt": "Build a pipeline that reads from Kafka",
+      "expected_trigger": false,
+      "rationale": "Streaming pipeline should trigger building-streaming-pipelines",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-015",
+      "prompt": "How do I schedule my data pipeline to run daily?",
+      "expected_trigger": false,
+      "rationale": "Scheduling is orchestration, should trigger orchestrating-data-pipelines",
+      "category": "near-miss"
+    }
+  ]
+}

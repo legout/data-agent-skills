@@ -1,0 +1,33 @@
+{
+  "skill_name": "data-engineering-storage-remote-access-integrations-iceberg",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Iceberg S3 Catalog",
+      "description": "Tests Iceberg with S3-backed catalogs",
+      "prompt": "How do I configure Iceberg to use S3 with a REST catalog?",
+      "expected_behavior": "The skill should explain Iceberg REST catalog configuration with S3 storage, including warehouse paths and authentication.",
+      "success_criteria": [
+        "Explains REST catalog setup",
+        "Shows S3 configuration",
+        "Covers authentication",
+        "Provides complete examples"
+      ],
+      "tags": ["iceberg", "s3", "rest-catalog", "configuration"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Iceberg Cloud Tables",
+      "description": "Tests Iceberg table operations on cloud storage",
+      "prompt": "How do I create and query Iceberg tables stored on cloud storage?",
+      "expected_behavior": "The skill should explain Iceberg table creation and querying on cloud storage backends.",
+      "success_criteria": [
+        "Shows table creation",
+        "Explains catalog integration",
+        "Covers query patterns",
+        "Mentions maintenance"
+      ],
+      "tags": ["iceberg", "cloud", "tables", "catalogs"]
+    }
+  ]
+}

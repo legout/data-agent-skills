@@ -1,0 +1,47 @@
+{
+  "skill_name": "flowerpower",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Pipeline Definition",
+      "description": "Tests FlowerPower DAG definition",
+      "prompt": "How do I define a data pipeline DAG with FlowerPower and Hamilton?",
+      "expected_behavior": "The skill should explain FlowerPower pipeline definition using Hamilton, including functions, dependencies, and decorators.",
+      "success_criteria": [
+        "Explains Hamilton functions",
+        "Shows dependency injection",
+        "Covers decorators",
+        "Provides complete example"
+      ],
+      "tags": ["flowerpower", "hamilton", "dag", "definition"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Pipeline Execution",
+      "description": "Tests FlowerPower execution patterns",
+      "prompt": "How do I execute and monitor my FlowerPower pipeline?",
+      "expected_behavior": "The skill should explain FlowerPower execution, including drivers, visualization, and monitoring.",
+      "success_criteria": [
+        "Shows driver usage",
+        "Explains execution modes",
+        "Covers visualization",
+        "Mentions monitoring"
+      ],
+      "tags": ["flowerpower", "execution", "driver", "monitoring"]
+    },
+    {
+      "id": "eval-003",
+      "name": "Pipeline Testing",
+      "description": "Tests FlowerPower testing approaches",
+      "prompt": "How do I test my FlowerPower pipeline components?",
+      "expected_behavior": "The skill should explain testing strategies for Hamilton functions and FlowerPower pipelines.",
+      "success_criteria": [
+        "Explains unit testing",
+        "Shows integration testing",
+        "Covers data validation",
+        "Provides best practices"
+      ],
+      "tags": ["flowerpower", "testing", "validation", "hamilton"]
+    }
+  ]
+}

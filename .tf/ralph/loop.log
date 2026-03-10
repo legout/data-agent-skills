@@ -41,3 +41,15 @@
 {"ts":"2026-03-10T17:20:42Z","level":"INFO","msg":"Found 3 ready ticket(s)"}
 {"ts":"2026-03-10T17:20:42Z","level":"INFO","msg":"Processing ticket: das-b143"}
 {"ts":"2026-03-10T17:20:42Z","level":"INFO","msg":"Executing: pi \"/tf-implement das-b143\""}
+{"ts":"2026-03-10T17:35:19Z","level":"INFO","msg":"✓ Successfully processed ticket: das-b143"}
+{"ts":"2026-03-10T17:35:24Z","level":"INFO","msg":"Found 2 ready ticket(s)"}
+{"ts":"2026-03-10T17:35:24Z","level":"INFO","msg":"Processing ticket: das-lih7"}
+{"ts":"2026-03-10T17:35:24Z","level":"INFO","msg":"Executing: pi \"/tf-implement das-lih7\""}
+{"ts":"2026-03-10T17:49:17Z","level":"INFO","msg":"Received shutdown signal, cleaning up..."}
+{"ts":"2026-03-10T17:49:17Z","level":"INFO","msg":"Loop shutdown complete"}
+{"ts":"2026-03-10T19:27:29Z","level":"INFO","msg":"Starting tf-ralph-loop v1.0.0"}
+{"ts":"2026-03-10T19:27:30Z","level":"INFO","msg":"Initialization complete (mode: default)"}
+{"ts":"2026-03-10T19:27:30Z","level":"INFO","msg":"Starting main loop (mode: default, interval: 5s, once)"}
+{"ts":"2026-03-10T19:27:31Z","level":"INFO","msg":"Found 2 ready ticket(s)"}
+{"ts":"2026-03-10T19:27:31Z","level":"INFO","msg":"Processing ticket: das-lih7"}
+{"ts":"2026-03-10T19:27:31Z","level":"INFO","msg":"Executing: pi \"/tf-implement das-lih7\""}

@@ -1,0 +1,75 @@
+{
+  "skill_name": "using-flowerpower",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Hamilton DAG Creation",
+      "description": "Tests Hamilton DAG definition",
+      "prompt": "Create a Hamilton DAG for a data transformation pipeline with multiple functions and dependencies.",
+      "expected_behavior": "The skill should provide Hamilton function definition, DAG construction, and execution patterns.",
+      "success_criteria": [
+        "Shows function definition patterns",
+        "Covers dependency injection",
+        "Demonstrates DAG visualization",
+        "Includes execution modes"
+      ],
+      "tags": ["hamilton", "dag", "transformations", "dependencies"]
+    },
+    {
+      "id": "eval-002",
+      "name": "FlowerPower Pipeline Setup",
+      "description": "Tests FlowerPower project setup",
+      "prompt": "Set up a new FlowerPower project with proper structure, configuration, and initial pipeline.",
+      "expected_behavior": "The skill should explain FlowerPower initialization, project structure, and configuration.",
+      "success_criteria": [
+        "Shows project initialization",
+        "Covers configuration options",
+        "Demonstrates structure conventions",
+        "Includes first pipeline setup"
+      ],
+      "tags": ["flowerpower", "setup", "configuration", "project"]
+    },
+    {
+      "id": "eval-003",
+      "name": "Pipeline Execution",
+      "description": "Tests FlowerPower pipeline execution",
+      "prompt": "Execute a FlowerPower pipeline with different runners, parameters, and output targets.",
+      "expected_behavior": "The skill should provide execution patterns, runner configuration, and parameter passing.",
+      "success_criteria": [
+        "Shows execution commands",
+        "Covers runner selection",
+        "Demonstrates parameter passing",
+        "Includes output configuration"
+      ],
+      "tags": ["flowerpower", "execution", "runners", "parameters"]
+    },
+    {
+      "id": "eval-004",
+      "name": "uv Integration",
+      "description": "Tests uv integration with FlowerPower",
+      "prompt": "How do I use uv for dependency management and execution in a FlowerPower project?",
+      "expected_behavior": "The skill should explain uv integration, dependency management, and execution workflows.",
+      "success_criteria": [
+        "Shows uv setup",
+        "Covers dependency management",
+        "Demonstrates execution with uv",
+        "Includes environment handling"
+      ],
+      "tags": ["flowerpower", "uv", "dependencies", "execution"]
+    },
+    {
+      "id": "eval-005",
+      "name": "Testing Hamilton Pipelines",
+      "description": "Tests Hamilton pipeline testing patterns",
+      "prompt": "Write tests for a Hamilton DAG including unit tests for functions and integration tests for the full pipeline.",
+      "expected_behavior": "The skill should provide testing patterns for Hamilton functions and DAG validation.",
+      "success_criteria": [
+        "Shows unit test patterns",
+        "Covers DAG validation",
+        "Demonstrates mocking strategies",
+        "Includes integration testing"
+      ],
+      "tags": ["hamilton", "testing", "validation", "pytest"]
+    }
+  ]
+}

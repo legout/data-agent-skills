@@ -1,0 +1,75 @@
+{
+  "skill_name": "building-data-apps",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Streamlit Dashboard",
+      "description": "Tests Streamlit app development",
+      "prompt": "Build an interactive data dashboard using Streamlit with widgets, charts, and data display.",
+      "expected_behavior": "The skill should provide Streamlit patterns, widget usage, and app structure.",
+      "success_criteria": [
+        "Shows app structure",
+        "Covers widget patterns",
+        "Demonstrates chart integration",
+        "Includes caching strategies"
+      ],
+      "tags": ["streamlit", "dashboard", "widgets", "caching"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Panel Application",
+      "description": "Tests Panel for data apps",
+      "prompt": "Create a data application using Panel with reactive components, layouts, and parameterized classes.",
+      "expected_behavior": "The skill should explain Panel concepts, reactive patterns, and layout options.",
+      "success_criteria": [
+        "Shows parameterized classes",
+        "Covers reactive patterns",
+        "Demonstrates layout options",
+        "Includes widget binding"
+      ],
+      "tags": ["panel", "reactive", "parameterized", "layout"]
+    },
+    {
+      "id": "eval-003",
+      "name": "Gradio ML Demo",
+      "description": "Tests Gradio for ML model demos",
+      "prompt": "Build a Gradio interface for my ML model with inputs, outputs, and example cases.",
+      "expected_behavior": "The skill should provide Gradio patterns, interface types, and deployment options.",
+      "success_criteria": [
+        "Shows interface definition",
+        "Covers input/output types",
+        "Demonstrates examples",
+        "Includes sharing/deployment"
+      ],
+      "tags": ["gradio", "ml", "demo", "interface"]
+    },
+    {
+      "id": "eval-004",
+      "name": "App Framework Selection",
+      "description": "Tests framework comparison",
+      "prompt": "How do I choose between Streamlit, Panel, Gradio, Dash, and NiceGUI for my data application?",
+      "expected_behavior": "The skill should compare app frameworks with selection guidance.",
+      "success_criteria": [
+        "Compares all major frameworks",
+        "Explains tradeoffs clearly",
+        "Provides selection framework",
+        "Includes use case guidance"
+      ],
+      "tags": ["comparison", "streamlit", "panel", "gradio", "selection"]
+    },
+    {
+      "id": "eval-005",
+      "name": "App Deployment",
+      "description": "Tests data app deployment",
+      "prompt": "Deploy my Streamlit/Panel/Gradio app to cloud platforms with proper configuration.",
+      "expected_behavior": "The skill should provide deployment patterns for cloud platforms and containers.",
+      "success_criteria": [
+        "Shows Streamlit Cloud deployment",
+        "Covers Docker containerization",
+        "Demonstrates cloud platforms",
+        "Includes configuration patterns"
+      ],
+      "tags": ["deployment", "cloud", "docker", "production"]
+    }
+  ]
+}

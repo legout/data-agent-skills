@@ -1,0 +1,75 @@
+{
+  "skill_name": "assuring-data-pipelines",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Great Expectations Suite",
+      "description": "Tests Great Expectations for data validation",
+      "prompt": "Create a comprehensive data quality suite using Great Expectations with expectations, checkpoints, and documentation.",
+      "expected_behavior": "The skill should provide GE suite creation, expectation patterns, and integration guidance.",
+      "success_criteria": [
+        "Shows suite creation patterns",
+        "Covers expectation types",
+        "Demonstrates checkpoint setup",
+        "Includes validation actions"
+      ],
+      "tags": ["great-expectations", "validation", "quality", "suites"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Pandera Schema Validation",
+      "description": "Tests Pandera for runtime validation",
+      "prompt": "Implement runtime data validation using Pandera with schemas, checks, and error handling.",
+      "expected_behavior": "The skill should explain Pandera schema definitions, validation patterns, and integration.",
+      "success_criteria": [
+        "Shows schema definition patterns",
+        "Covers validation checks",
+        "Demonstrates error handling",
+        "Includes statistical validation"
+      ],
+      "tags": ["pandera", "validation", "schema", "runtime"]
+    },
+    {
+      "id": "eval-003",
+      "name": "OpenTelemetry Instrumentation",
+      "description": "Tests OpenTelemetry for pipeline observability",
+      "prompt": "Instrument a data pipeline with OpenTelemetry for distributed tracing and performance monitoring.",
+      "expected_behavior": "The skill should provide OTel instrumentation patterns, span creation, and export configuration.",
+      "success_criteria": [
+        "Shows instrumentation setup",
+        "Covers span creation",
+        "Demonstrates context propagation",
+        "Includes exporter configuration"
+      ],
+      "tags": ["opentelemetry", "tracing", "observability", "instrumentation"]
+    },
+    {
+      "id": "eval-004",
+      "name": "Metrics and Alerting",
+      "description": "Tests metrics collection and alerting",
+      "prompt": "Set up metrics collection with Prometheus and alerting for data pipeline health and data quality.",
+      "expected_behavior": "The skill should explain metrics design, Prometheus integration, and alerting rules.",
+      "success_criteria": [
+        "Shows metrics definition",
+        "Covers Prometheus setup",
+        "Demonstrates alert rules",
+        "Includes Grafana dashboards"
+      ],
+      "tags": ["prometheus", "metrics", "alerting", "monitoring"]
+    },
+    {
+      "id": "eval-005",
+      "name": "Quality Validation Loop",
+      "description": "Tests integrated quality validation workflow",
+      "prompt": "Design an integrated data quality workflow that combines validation, observability, and automated remediation.",
+      "expected_behavior": "The skill should provide end-to-end quality assurance patterns with multiple tools.",
+      "success_criteria": [
+        "Shows integrated workflow",
+        "Covers validation gates",
+        "Demonstrates observability links",
+        "Includes remediation patterns"
+      ],
+      "tags": ["quality", "workflow", "integration", "automation"]
+    }
+  ]
+}

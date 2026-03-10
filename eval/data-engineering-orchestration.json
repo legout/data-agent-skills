@@ -1,0 +1,47 @@
+{
+  "skill_name": "data-engineering-orchestration",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Prefect Workflow",
+      "description": "Tests ability to build workflows with Prefect",
+      "prompt": "How do I build a scheduled data pipeline with Prefect including retries and notifications?",
+      "expected_behavior": "The skill should provide Prefect workflow patterns including task definition, scheduling, retry configuration, and notification setup.",
+      "success_criteria": [
+        "Shows Prefect task and flow definition",
+        "Includes scheduling configuration",
+        "Covers retry and error handling",
+        "Mentions notification options"
+      ],
+      "tags": ["prefect", "orchestration", "scheduling", "retries"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Dagster Assets",
+      "description": "Tests understanding of Dagster's software-defined assets",
+      "prompt": "How do I model my data pipeline using Dagster's software-defined assets?",
+      "expected_behavior": "The skill should explain Dagster's asset-based approach, including asset definitions, dependencies, and materialization patterns.",
+      "success_criteria": [
+        "Explains software-defined assets concept",
+        "Shows asset definition patterns",
+        "Covers asset dependencies",
+        "Includes materialization strategies"
+      ],
+      "tags": ["dagster", "assets", "orchestration", "data-assets"]
+    },
+    {
+      "id": "eval-003",
+      "name": "dbt Transformations",
+      "description": "Tests ability to structure dbt projects",
+      "prompt": "How should I structure my dbt project for a medium-sized data warehouse?",
+      "expected_behavior": "The skill should provide dbt project structure guidance, including folder organization, model layers, and testing patterns.",
+      "success_criteria": [
+        "Recommends project structure",
+        "Explains model layering (staging, marts)",
+        "Covers testing and documentation",
+        "Mentions best practices"
+      ],
+      "tags": ["dbt", "transformation", "structure", "testing"]
+    }
+  ]
+}

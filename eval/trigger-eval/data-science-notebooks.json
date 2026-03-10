@@ -1,0 +1,54 @@
+{
+  "skill_name": "data-science-notebooks",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "What are best practices for Jupyter notebooks?",
+      "expected_trigger": true,
+      "rationale": "Jupyter best practices - core to this skill",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "Should I use Jupyter or marimo?",
+      "expected_trigger": true,
+      "rationale": "Notebook comparison - directly relevant",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "How do I version control my notebooks?",
+      "expected_trigger": true,
+      "rationale": "Notebook versioning - within skill scope",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "How do I test my Jupyter notebooks?",
+      "expected_trigger": true,
+      "rationale": "Notebook testing - directly relevant",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "How do I publish my notebooks?",
+      "expected_trigger": true,
+      "rationale": "Notebook publishing - within skill scope",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "How do I build a Streamlit app?",
+      "expected_trigger": false,
+      "rationale": "App building - handled by interactive-apps skill",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "How do I write Python code?",
+      "expected_trigger": false,
+      "rationale": "Generic Python - not notebook-specific",
+      "category": "negative"
+    }
+  ]
+}

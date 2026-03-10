@@ -1,0 +1,33 @@
+{
+  "skill_name": "data-engineering-storage-remote-access-integrations-pyarrow",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "PyArrow Dataset Cloud",
+      "description": "Tests PyArrow dataset API with cloud storage",
+      "prompt": "How do I use PyArrow datasets to read partitioned data from S3?",
+      "expected_behavior": "The skill should explain PyArrow dataset API for cloud storage, including partitioning and filtering.",
+      "success_criteria": [
+        "Shows dataset API usage",
+        "Explains partitioning support",
+        "Covers filter pushdown",
+        "Provides S3 configuration"
+      ],
+      "tags": ["pyarrow", "dataset", "s3", "partitioning"]
+    },
+    {
+      "id": "eval-002",
+      "name": "PyArrow Cloud Write",
+      "description": "Tests writing datasets to cloud with PyArrow",
+      "prompt": "How do I write a PyArrow Table to Parquet on cloud storage with partitioning?",
+      "expected_behavior": "The skill should explain PyArrow write operations to cloud storage with partitioning options.",
+      "success_criteria": [
+        "Shows write_dataset usage",
+        "Explains partitioning config",
+        "Covers cloud filesystem",
+        "Provides complete examples"
+      ],
+      "tags": ["pyarrow", "write", "dataset", "cloud"]
+    }
+  ]
+}

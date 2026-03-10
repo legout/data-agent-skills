@@ -1,0 +1,110 @@
+{
+  "skill_name": "building-streaming-pipelines",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "Build a Kafka streaming pipeline",
+      "expected_trigger": true,
+      "rationale": "Direct streaming platform question",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "How do I set up Kafka producers and consumers?",
+      "expected_trigger": true,
+      "rationale": "Kafka client setup",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "Design an MQTT pipeline for IoT data",
+      "expected_trigger": true,
+      "rationale": "IoT streaming with MQTT",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "Use NATS JetStream for persistence",
+      "expected_trigger": true,
+      "rationale": "NATS JetStream streaming",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "How do I handle backpressure in streams?",
+      "expected_trigger": true,
+      "rationale": "Streaming architecture pattern",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "Compare Kafka vs Pulsar",
+      "expected_trigger": true,
+      "rationale": "Streaming platform comparison",
+      "category": "positive"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "Build a batch ETL pipeline",
+      "expected_trigger": false,
+      "rationale": "Batch is for building-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-008",
+      "prompt": "Schedule my data pipeline",
+      "expected_trigger": false,
+      "rationale": "Scheduling is batch orchestration",
+      "category": "negative"
+    },
+    {
+      "id": "trig-009",
+      "prompt": "How do I read from S3?",
+      "expected_trigger": false,
+      "rationale": "Storage access is for accessing-cloud-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-010",
+      "prompt": "Set up Delta Lake",
+      "expected_trigger": false,
+      "rationale": "Storage format is for designing-data-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-011",
+      "prompt": "Validate data quality",
+      "expected_trigger": false,
+      "rationale": "Quality is for assuring-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-012",
+      "prompt": "Use Prefect for workflows",
+      "expected_trigger": false,
+      "rationale": "Prefect is for orchestrating-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-013",
+      "prompt": "Stream data from Kafka to Delta Lake",
+      "expected_trigger": true,
+      "rationale": "Streaming to storage - primary is streaming",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-014",
+      "prompt": "Handle exactly-once semantics",
+      "expected_trigger": true,
+      "rationale": "Delivery semantics is streaming topic",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-015",
+      "prompt": "Design a real-time analytics system",
+      "expected_trigger": true,
+      "rationale": "Real-time implies streaming",
+      "category": "near-miss"
+    }
+  ]
+}

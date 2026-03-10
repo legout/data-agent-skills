@@ -1,0 +1,75 @@
+{
+  "skill_name": "designing-data-storage",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Parquet Optimization",
+      "description": "Tests Parquet file optimization patterns",
+      "prompt": "How do I optimize Parquet files for analytics workloads including compression, row group sizing, and partitioning?",
+      "expected_behavior": "The skill should provide guidance on Parquet tuning, compression codecs, and layout optimization.",
+      "success_criteria": [
+        "Explains compression tradeoffs",
+        "Covers row group sizing",
+        "Shows partitioning strategies",
+        "Includes column pruning benefits"
+      ],
+      "tags": ["parquet", "optimization", "compression", "partitioning"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Delta Lake Implementation",
+      "description": "Tests Delta Lake table implementation",
+      "prompt": "Design a data lake using Delta Lake with ACID transactions, time travel, and schema evolution capabilities.",
+      "expected_behavior": "The skill should explain Delta Lake architecture, table creation, and advanced features.",
+      "success_criteria": [
+        "Shows table creation patterns",
+        "Explains ACID guarantees",
+        "Covers time travel queries",
+        "Demonstrates schema evolution"
+      ],
+      "tags": ["delta-lake", "lakehouse", "acid", "time-travel"]
+    },
+    {
+      "id": "eval-003",
+      "name": "Apache Iceberg Design",
+      "description": "Tests Apache Iceberg table design",
+      "prompt": "When should I choose Apache Iceberg over Delta Lake, and how do I design tables for partitioning and evolution?",
+      "expected_behavior": "The skill should compare Iceberg vs Delta, explain hidden partitioning, and provide design patterns.",
+      "success_criteria": [
+        "Provides Iceberg vs Delta comparison",
+        "Explains hidden partitioning",
+        "Shows schema evolution patterns",
+        "Covers catalog integration"
+      ],
+      "tags": ["iceberg", "lakehouse", "partitioning", "comparison"]
+    },
+    {
+      "id": "eval-004",
+      "name": "Format Selection",
+      "description": "Tests data format selection guidance",
+      "prompt": "I need to choose between Parquet, Avro, ORC, and Arrow IPC for my data storage. What are the tradeoffs?",
+      "expected_behavior": "The skill should provide comprehensive format comparison with use case recommendations.",
+      "success_criteria": [
+        "Compares all major formats",
+        "Explains read/write tradeoffs",
+        "Covers ecosystem compatibility",
+        "Provides decision framework"
+      ],
+      "tags": ["formats", "parquet", "avro", "orc", "arrow", "comparison"]
+    },
+    {
+      "id": "eval-005",
+      "name": "Lakehouse Architecture",
+      "description": "Tests lakehouse architecture design",
+      "prompt": "Design a lakehouse architecture with bronze/silver/gold layers using Delta Lake or Iceberg.",
+      "expected_behavior": "The skill should explain medallion architecture, layer design, and implementation patterns.",
+      "success_criteria": [
+        "Explains medallion architecture",
+        "Shows layer separation patterns",
+        "Covers data quality by layer",
+        "Includes governance considerations"
+      ],
+      "tags": ["lakehouse", "architecture", "medallion", "governance"]
+    }
+  ]
+}

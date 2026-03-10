@@ -1,0 +1,110 @@
+{
+  "skill_name": "orchestrating-data-pipelines",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "Should I use Prefect or Dagster?",
+      "expected_trigger": true,
+      "rationale": "Direct orchestrator comparison",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "How do I schedule my data pipeline?",
+      "expected_trigger": true,
+      "rationale": "Pipeline scheduling is orchestration",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "Set up dbt for data transformations",
+      "expected_trigger": true,
+      "rationale": "dbt is an orchestration/transform tool",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "Build a workflow with retry logic",
+      "expected_trigger": true,
+      "rationale": "Workflow resilience is orchestration",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "Deploy my pipeline to production",
+      "expected_trigger": true,
+      "rationale": "Pipeline deployment is orchestration topic",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "How do I manage task dependencies?",
+      "expected_trigger": true,
+      "rationale": "Dependency management is orchestration",
+      "category": "positive"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "Build a Polars transformation pipeline",
+      "expected_trigger": false,
+      "rationale": "Pipeline building is for building-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-008",
+      "prompt": "How do I read from S3?",
+      "expected_trigger": false,
+      "rationale": "Storage access is for accessing-cloud-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-009",
+      "prompt": "Set up Delta Lake",
+      "expected_trigger": false,
+      "rationale": "Storage format is for designing-data-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-010",
+      "prompt": "Configure data quality checks",
+      "expected_trigger": false,
+      "rationale": "Data quality is for assuring-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-011",
+      "prompt": "Monitor my pipeline health",
+      "expected_trigger": false,
+      "rationale": "Monitoring could be observability or orchestration",
+      "category": "negative"
+    },
+    {
+      "id": "trig-012",
+      "prompt": "Set up Hive Metastore",
+      "expected_trigger": false,
+      "rationale": "Catalog is for managing-data-catalogs",
+      "category": "negative"
+    },
+    {
+      "id": "trig-013",
+      "prompt": "Use FlowerPower for my pipeline",
+      "expected_trigger": false,
+      "rationale": "FlowerPower has its own dedicated skill",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-014",
+      "prompt": "How do I handle pipeline failures?",
+      "expected_trigger": true,
+      "rationale": "Failure handling is orchestration topic",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-015",
+      "prompt": "Set up backfill for my DAG",
+      "expected_trigger": true,
+      "rationale": "Backfill is orchestration concept",
+      "category": "near-miss"
+    }
+  ]
+}

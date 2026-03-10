@@ -1,0 +1,54 @@
+{
+  "skill_name": "data-engineering-best-practices",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "What is medallion architecture and when should I use it?",
+      "expected_trigger": true,
+      "rationale": "Direct question about medallion architecture - core to this skill",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "How should I partition my data lake tables?",
+      "expected_trigger": true,
+      "rationale": "Partitioning strategy question - directly relevant",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "What's the best file size for Parquet files in a data lake?",
+      "expected_trigger": true,
+      "rationale": "File sizing question - data engineering best practice",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "How do I handle schema evolution in my data pipelines?",
+      "expected_trigger": true,
+      "rationale": "Schema evolution question - directly relevant",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "Should I use append, overwrite, or merge for my incremental loads?",
+      "expected_trigger": true,
+      "rationale": "Load pattern question - data engineering best practice",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "How do I write a SQL query?",
+      "expected_trigger": false,
+      "rationale": "Generic SQL question - not about best practices",
+      "category": "negative"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "What's the difference between Delta Lake and Iceberg?",
+      "expected_trigger": false,
+      "rationale": "Format comparison - better handled by lakehouse skill",
+      "category": "near-miss"
+    }
+  ]
+}

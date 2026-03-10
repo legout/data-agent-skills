@@ -19,3 +19,14 @@
 - Tests: skipped (lint tool enhancement)
 - Commit: 671199e
 - Chain: .subagent-runs/das-8erm/49f94629
+
+## 2026-03-10T18:30:00+01:00 | das-b143 | in_progress
+
+- Path: A
+- Research: no
+- Summary: Created docs/skill-authoring.md documenting frontmatter policy (required/optional/prohibited fields), dependsOn removal decision with rationale, related-skill routing patterns, naming rules, and lint compliance. Implementation complete but post-fix gate uncertain due to missing chain artifacts.
+- Files: docs/skill-authoring.md
+- Tests: skipped (documentation only)
+- Commit: 7562c74
+- Chain: .subagent-runs/das-b143/7cba2237
+- Blocker: Post-fix review gate "Uncertain" - chain artifacts (anchor-context.md, implementation.md) missing at expected path; content is verified complete but procedural gate not cleared

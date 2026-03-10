@@ -1,0 +1,110 @@
+{
+  "skill_name": "analyzing-data",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "Perform exploratory data analysis on my dataset",
+      "expected_trigger": true,
+      "rationale": "Direct EDA request",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "Which visualization library should I use?",
+      "expected_trigger": true,
+      "rationale": "Visualization selection",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "Create plots with Seaborn",
+      "expected_trigger": true,
+      "rationale": "Specific visualization library",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "Run statistical tests on my data",
+      "expected_trigger": true,
+      "rationale": "Statistical analysis",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "Profile my dataset for quality issues",
+      "expected_trigger": true,
+      "rationale": "Data profiling",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "How do I visualize large datasets?",
+      "expected_trigger": true,
+      "rationale": "Large data visualization",
+      "category": "positive"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "Build a Streamlit dashboard",
+      "expected_trigger": false,
+      "rationale": "Dashboard building is for building-data-apps",
+      "category": "negative"
+    },
+    {
+      "id": "trig-008",
+      "prompt": "Create an interactive web app",
+      "expected_trigger": false,
+      "rationale": "App building is for building-data-apps",
+      "category": "negative"
+    },
+    {
+      "id": "trig-009",
+      "prompt": "Deploy my visualization",
+      "expected_trigger": false,
+      "rationale": "Deployment is for building-data-apps",
+      "category": "negative"
+    },
+    {
+      "id": "trig-010",
+      "prompt": "Engineer features for ML",
+      "expected_trigger": false,
+      "rationale": "Feature engineering is for engineering-ml-features",
+      "category": "negative"
+    },
+    {
+      "id": "trig-011",
+      "prompt": "Evaluate my model performance",
+      "expected_trigger": false,
+      "rationale": "Model evaluation is for evaluating-ml-models",
+      "category": "negative"
+    },
+    {
+      "id": "trig-012",
+      "prompt": "Set up a Jupyter notebook",
+      "expected_trigger": false,
+      "rationale": "Notebook setup is for working-in-notebooks",
+      "category": "negative"
+    },
+    {
+      "id": "trig-013",
+      "prompt": "Create a correlation heatmap",
+      "expected_trigger": true,
+      "rationale": "Specific visualization type",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-014",
+      "prompt": "Analyze time series data",
+      "expected_trigger": true,
+      "rationale": "Time series analysis",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-015",
+      "prompt": "Generate automated profiling report",
+      "expected_trigger": true,
+      "rationale": "Automated profiling",
+      "category": "near-miss"
+    }
+  ]
+}

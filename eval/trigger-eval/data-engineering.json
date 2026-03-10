@@ -1,0 +1,75 @@
+{
+  "skill_name": "data-engineering",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "How do I build a data pipeline to process daily CSV files?",
+      "expected_trigger": true,
+      "rationale": "Direct question about building a data pipeline - core skill territory",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "I need to extract data from PostgreSQL and load it to S3",
+      "expected_trigger": true,
+      "rationale": "ETL workflow question - directly relevant to data engineering",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "What's the best way to transform JSON data using Polars?",
+      "expected_trigger": true,
+      "rationale": "Data transformation question with specific tool - in scope",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "How do I set up a data lake architecture?",
+      "expected_trigger": true,
+      "rationale": "Architecture question for data platforms - should trigger",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "What file format should I use for my analytics data warehouse?",
+      "expected_trigger": false,
+      "rationale": "Storage format question - better handled by storage-formats skill",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "How do I configure S3 credentials?",
+      "expected_trigger": false,
+      "rationale": "Authentication question - handled by storage-authentication skill",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "What's the best way to visualize my data with Plotly?",
+      "expected_trigger": false,
+      "rationale": "Visualization question - handled by data-science-visualization skill",
+      "category": "negative"
+    },
+    {
+      "id": "trig-008",
+      "prompt": "How do I tune hyperparameters for my ML model?",
+      "expected_trigger": false,
+      "rationale": "ML model evaluation question - handled by model-evaluation skill",
+      "category": "negative"
+    },
+    {
+      "id": "trig-009",
+      "prompt": "How do I create a Streamlit dashboard?",
+      "expected_trigger": false,
+      "rationale": "App building question - handled by interactive-apps skill",
+      "category": "negative"
+    },
+    {
+      "id": "trig-010",
+      "prompt": "How do I write SQL queries?",
+      "expected_trigger": false,
+      "rationale": "Generic SQL question - not specific to data engineering workflows",
+      "category": "negative"
+    }
+  ]
+}

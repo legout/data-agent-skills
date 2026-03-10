@@ -1,0 +1,75 @@
+{
+  "skill_name": "engineering-ml-features",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Categorical Encoding",
+      "description": "Tests categorical variable encoding",
+      "prompt": "Encode categorical variables for machine learning including ordinal, nominal, and high-cardinality cases.",
+      "expected_behavior": "The skill should provide encoding strategies, implementation patterns, and selection guidance.",
+      "success_criteria": [
+        "Covers one-hot encoding",
+        "Shows target encoding",
+        "Demonstrates ordinal encoding",
+        "Includes high-cardinality strategies"
+      ],
+      "tags": ["encoding", "categorical", "preprocessing", "scikit-learn"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Feature Scaling",
+      "description": "Tests feature scaling and transformation",
+      "prompt": "Apply appropriate scaling and transformations to numeric features for different model types.",
+      "expected_behavior": "The skill should explain scaling methods, when to use each, and implementation patterns.",
+      "success_criteria": [
+        "Shows standardization vs normalization",
+        "Covers robust scaling",
+        "Demonstrates power transforms",
+        "Includes model-specific guidance"
+      ],
+      "tags": ["scaling", "normalization", "preprocessing", "transforms"]
+    },
+    {
+      "id": "eval-003",
+      "name": "Datetime Features",
+      "description": "Tests datetime feature engineering",
+      "prompt": "Engineer features from datetime columns including cyclical encoding, time since events, and seasonality.",
+      "expected_behavior": "The skill should provide datetime extraction patterns, cyclical encoding, and feature creation.",
+      "success_criteria": [
+        "Shows extraction patterns",
+        "Covers cyclical encoding",
+        "Demonstrates time-delta features",
+        "Includes seasonality handling"
+      ],
+      "tags": ["datetime", "features", "cyclical", "seasonality"]
+    },
+    {
+      "id": "eval-004",
+      "name": "Text Features",
+      "description": "Tests text feature engineering",
+      "prompt": "Extract features from text data using TF-IDF, embeddings, and other NLP techniques.",
+      "expected_behavior": "The skill should explain text feature extraction methods and implementation patterns.",
+      "success_criteria": [
+        "Shows TF-IDF implementation",
+        "Covers text preprocessing",
+        "Demonstrates embedding extraction",
+        "Includes feature selection"
+      ],
+      "tags": ["text", "nlp", "tf-idf", "embeddings", "features"]
+    },
+    {
+      "id": "eval-005",
+      "name": "Leakage-Safe Pipeline",
+      "description": "Tests preventing data leakage",
+      "prompt": "Build a feature engineering pipeline that prevents data leakage using proper cross-validation and transformation sequencing.",
+      "expected_behavior": "The skill should explain leakage risks and provide safe pipeline patterns.",
+      "success_criteria": [
+        "Identifies common leakage sources",
+        "Shows safe CV patterns",
+        "Demonstrates proper sequencing",
+        "Includes validation approaches"
+      ],
+      "tags": ["data-leakage", "pipeline", "cv", "best-practices"]
+    }
+  ]
+}

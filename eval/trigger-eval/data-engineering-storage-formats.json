@@ -1,0 +1,54 @@
+{
+  "skill_name": "data-engineering-storage-formats",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "Should I use Parquet or ORC for my data lake?",
+      "expected_trigger": true,
+      "rationale": "Format comparison - core to this skill",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "How do I optimize Parquet file size and compression?",
+      "expected_trigger": true,
+      "rationale": "Parquet optimization - directly relevant",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "When should I use Arrow IPC vs Feather format?",
+      "expected_trigger": true,
+      "rationale": "Arrow format question - within skill scope",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "How do I use Zarr for storing large arrays?",
+      "expected_trigger": true,
+      "rationale": "Zarr usage - directly relevant",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "What format should I use for streaming data?",
+      "expected_trigger": true,
+      "rationale": "Format selection for streaming - within skill scope",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "How do I use Delta Lake?",
+      "expected_trigger": false,
+      "rationale": "Table format - handled by lakehouse skill",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "How do I compress my CSV files?",
+      "expected_trigger": false,
+      "rationale": "Generic compression - not format-specific",
+      "category": "negative"
+    }
+  ]
+}

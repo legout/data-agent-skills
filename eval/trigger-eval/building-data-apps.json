@@ -1,0 +1,110 @@
+{
+  "skill_name": "building-data-apps",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "Build a Streamlit dashboard",
+      "expected_trigger": true,
+      "rationale": "Direct Streamlit question",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "Create an app with Panel",
+      "expected_trigger": true,
+      "rationale": "Panel app question",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "Build a Gradio demo for my model",
+      "expected_trigger": true,
+      "rationale": "Gradio demo request",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "Should I use Streamlit or Dash?",
+      "expected_trigger": true,
+      "rationale": "Framework comparison",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "Deploy my Streamlit app",
+      "expected_trigger": true,
+      "rationale": "App deployment",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "Add interactivity to my dashboard",
+      "expected_trigger": true,
+      "rationale": "Dashboard interactivity",
+      "category": "positive"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "Set up Jupyter notebook",
+      "expected_trigger": false,
+      "rationale": "Jupyter is for working-in-notebooks",
+      "category": "negative"
+    },
+    {
+      "id": "trig-008",
+      "prompt": "Use marimo",
+      "expected_trigger": false,
+      "rationale": "marimo is for working-in-notebooks",
+      "category": "negative"
+    },
+    {
+      "id": "trig-009",
+      "prompt": "Export notebook to HTML",
+      "expected_trigger": false,
+      "rationale": "Notebook export is for working-in-notebooks",
+      "category": "negative"
+    },
+    {
+      "id": "trig-010",
+      "prompt": "Build a data pipeline",
+      "expected_trigger": false,
+      "rationale": "Pipeline is for building-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-011",
+      "prompt": "Create a static visualization",
+      "expected_trigger": false,
+      "rationale": "Static viz is for analyzing-data",
+      "category": "negative"
+    },
+    {
+      "id": "trig-012",
+      "prompt": "Perform EDA",
+      "expected_trigger": false,
+      "rationale": "EDA is for analyzing-data",
+      "category": "negative"
+    },
+    {
+      "id": "trig-013",
+      "prompt": "Add authentication to my app",
+      "expected_trigger": true,
+      "rationale": "App authentication",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-014",
+      "prompt": "Use NiceGUI for my web app",
+      "expected_trigger": true,
+      "rationale": "NiceGUI framework",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-015",
+      "prompt": "Containerize my data app",
+      "expected_trigger": true,
+      "rationale": "App containerization",
+      "category": "near-miss"
+    }
+  ]
+}

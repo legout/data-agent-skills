@@ -1,0 +1,75 @@
+{
+  "skill_name": "analyzing-data",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Exploratory Data Analysis",
+      "description": "Tests comprehensive EDA workflow",
+      "prompt": "Perform exploratory data analysis on a new dataset including profiling, distributions, correlations, and anomalies.",
+      "expected_behavior": "The skill should provide EDA patterns, profiling tools, and systematic exploration guidance.",
+      "success_criteria": [
+        "Shows profiling approach",
+        "Covers distribution analysis",
+        "Demonstrates correlation methods",
+        "Includes anomaly detection"
+      ],
+      "tags": ["eda", "profiling", "exploration", "analysis"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Visualization Selection",
+      "description": "Tests visualization library selection",
+      "prompt": "I need to create visualizations for my data analysis. When should I use Matplotlib, Seaborn, Plotly, or Altair?",
+      "expected_behavior": "The skill should compare visualization libraries and provide selection guidance.",
+      "success_criteria": [
+        "Compares library strengths",
+        "Provides selection framework",
+        "Shows example use cases",
+        "Covers interactivity tradeoffs"
+      ],
+      "tags": ["visualization", "matplotlib", "seaborn", "plotly", "comparison"]
+    },
+    {
+      "id": "eval-003",
+      "name": "Statistical Analysis",
+      "description": "Tests statistical testing and analysis",
+      "prompt": "Perform statistical tests to compare groups and test hypotheses in my dataset.",
+      "expected_behavior": "The skill should provide statistical test selection, implementation, and interpretation guidance.",
+      "success_criteria": [
+        "Shows test selection logic",
+        "Covers parametric tests",
+        "Demonstrates non-parametric options",
+        "Includes result interpretation"
+      ],
+      "tags": ["statistics", "hypothesis-testing", "scipy", "analysis"]
+    },
+    {
+      "id": "eval-004",
+      "name": "Large Dataset EDA",
+      "description": "Tests EDA with large datasets",
+      "prompt": "How do I perform EDA on a dataset that's too large to fit in memory?",
+      "expected_behavior": "The skill should explain sampling strategies, out-of-core analysis, and efficient profiling.",
+      "success_criteria": [
+        "Shows sampling strategies",
+        "Covers out-of-core tools",
+        "Demonstrates Polars/DuckDB for EDA",
+        "Includes memory-efficient patterns"
+      ],
+      "tags": ["eda", "large-data", "sampling", "out-of-core"]
+    },
+    {
+      "id": "eval-005",
+      "name": "Visualization Patterns",
+      "description": "Tests common visualization patterns",
+      "prompt": "Create common visualization patterns: time series, distributions, correlations, and categorical comparisons.",
+      "expected_behavior": "The skill should provide code patterns for standard visualization types.",
+      "success_criteria": [
+        "Shows time series patterns",
+        "Covers distribution plots",
+        "Demonstrates correlation visuals",
+        "Includes categorical comparisons"
+      ],
+      "tags": ["visualization", "patterns", "time-series", "distributions"]
+    }
+  ]
+}

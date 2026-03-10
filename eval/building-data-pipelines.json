@@ -1,0 +1,75 @@
+{
+  "skill_name": "building-data-pipelines",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Polars ETL Pipeline",
+      "description": "Tests ability to build ETL pipelines with Polars",
+      "prompt": "Build a production ETL pipeline using Polars that reads from CSV, performs data cleaning, aggregations, and writes to Parquet.",
+      "expected_behavior": "The skill should provide guidance on Polars lazy evaluation, efficient transformations, error handling, and output optimization.",
+      "success_criteria": [
+        "Uses lazy evaluation for memory efficiency",
+        "Includes data validation steps",
+        "Shows proper error handling patterns",
+        "Covers output optimization (partitioning, compression)"
+      ],
+      "tags": ["polars", "etl", "pipeline", "production"]
+    },
+    {
+      "id": "eval-002",
+      "name": "DuckDB SQL Pipeline",
+      "description": "Tests ability to build SQL-based data pipelines",
+      "prompt": "Design a SQL pipeline using DuckDB that processes multiple data sources, performs joins and aggregations, with incremental updates.",
+      "expected_behavior": "The skill should provide SQL patterns for reading multiple formats, incremental processing, and performance optimization.",
+      "success_criteria": [
+        "Shows multi-source ingestion (CSV, Parquet, JSON)",
+        "Includes incremental processing pattern",
+        "Demonstrates efficient join strategies",
+        "Covers transaction management"
+      ],
+      "tags": ["duckdb", "sql", "incremental", "multi-source"]
+    },
+    {
+      "id": "eval-003",
+      "name": "PyArrow Interchange",
+      "description": "Tests understanding of PyArrow for data interchange",
+      "prompt": "How do I use PyArrow to efficiently pass data between Polars, Pandas, and DuckDB in a multi-tool pipeline?",
+      "expected_behavior": "The skill should explain zero-copy interchange, Arrow IPC format, and integration patterns between tools.",
+      "success_criteria": [
+        "Explains zero-copy benefits",
+        "Shows interop patterns between tools",
+        "Covers Arrow IPC and Feather formats",
+        "Provides memory-efficient patterns"
+      ],
+      "tags": ["pyarrow", "interchange", "zero-copy", "interop"]
+    },
+    {
+      "id": "eval-004",
+      "name": "Production Pipeline Architecture",
+      "description": "Tests understanding of production data pipeline patterns",
+      "prompt": "Design a production-ready batch data pipeline with proper error handling, monitoring, and recovery mechanisms.",
+      "expected_behavior": "The skill should provide architecture guidance for resilient pipelines including retry logic, checkpointing, and failure handling.",
+      "success_criteria": [
+        "Includes idempotency patterns",
+        "Covers checkpoint/restart capabilities",
+        "Shows error handling and alerting",
+        "Addresses data quality gates"
+      ],
+      "tags": ["architecture", "production", "resilience", "monitoring"]
+    },
+    {
+      "id": "eval-005",
+      "name": "PostgreSQL Integration",
+      "description": "Tests PostgreSQL as pipeline source/target",
+      "prompt": "Build a pipeline that reads from PostgreSQL, transforms data with Polars, and writes results back efficiently.",
+      "expected_behavior": "The skill should provide patterns for PostgreSQL connection, query optimization, and efficient data movement.",
+      "success_criteria": [
+        "Shows efficient PostgreSQL reading patterns",
+        "Covers connection pooling considerations",
+        "Demonstrates batch writing strategies",
+        "Includes transaction safety"
+      ],
+      "tags": ["postgresql", "database", "integration", "etl"]
+    }
+  ]
+}

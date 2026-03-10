@@ -1,0 +1,110 @@
+{
+  "skill_name": "using-flowerpower",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "How do I use FlowerPower?",
+      "expected_trigger": true,
+      "rationale": "Direct FlowerPower question",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "Create a Hamilton DAG",
+      "expected_trigger": true,
+      "rationale": "Hamilton is core to FlowerPower",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "Set up a FlowerPower project",
+      "expected_trigger": true,
+      "rationale": "FlowerPower project setup",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "Use uv with FlowerPower",
+      "expected_trigger": true,
+      "rationale": "uv integration with FlowerPower",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "Execute a FlowerPower pipeline",
+      "expected_trigger": true,
+      "rationale": "FlowerPower execution",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "Test my Hamilton functions",
+      "expected_trigger": true,
+      "rationale": "Hamilton testing",
+      "category": "positive"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "Build a data pipeline with Polars",
+      "expected_trigger": false,
+      "rationale": "Generic pipeline is for building-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-008",
+      "prompt": "Should I use Prefect or Dagster?",
+      "expected_trigger": false,
+      "rationale": "Other orchestrators are for orchestrating-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-009",
+      "prompt": "Schedule my pipeline",
+      "expected_trigger": false,
+      "rationale": "General scheduling is orchestration topic",
+      "category": "negative"
+    },
+    {
+      "id": "trig-010",
+      "prompt": "Set up data quality checks",
+      "expected_trigger": false,
+      "rationale": "Data quality is for assuring-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-011",
+      "prompt": "How do I read from S3?",
+      "expected_trigger": false,
+      "rationale": "Storage access is for accessing-cloud-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-012",
+      "prompt": "Design a data lake",
+      "expected_trigger": false,
+      "rationale": "Storage design is for designing-data-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-013",
+      "prompt": "Use Hamilton without FlowerPower",
+      "expected_trigger": true,
+      "rationale": "Pure Hamilton is still this skill's domain",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-014",
+      "prompt": "Visualize my DAG dependencies",
+      "expected_trigger": true,
+      "rationale": "DAG viz is Hamilton/FlowerPower feature",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-015",
+      "prompt": "Compare FlowerPower to other orchestrators",
+      "expected_trigger": true,
+      "rationale": "Framework comparison including FlowerPower",
+      "category": "near-miss"
+    }
+  ]
+}

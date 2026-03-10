@@ -1,0 +1,54 @@
+{
+  "skill_name": "data-engineering-catalogs",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "Should I use Hive Metastore or AWS Glue for my data catalog?",
+      "expected_trigger": true,
+      "rationale": "Catalog selection question - core to this skill",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "How do I set up a REST catalog for Iceberg?",
+      "expected_trigger": true,
+      "rationale": "REST catalog configuration - directly relevant",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "How can I use DuckDB as a lightweight data catalog?",
+      "expected_trigger": true,
+      "rationale": "DuckDB catalog pattern - within skill scope",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "What are the differences between Amundsen, DataHub, and OpenMetadata?",
+      "expected_trigger": true,
+      "rationale": "Catalog comparison question - directly relevant",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "How do I implement data discovery and lineage tracking?",
+      "expected_trigger": true,
+      "rationale": "Data discovery question - catalog-related",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "How do I query data from multiple sources?",
+      "expected_trigger": false,
+      "rationale": "Generic query question - not catalog-specific",
+      "category": "negative"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "How do I configure S3 credentials?",
+      "expected_trigger": false,
+      "rationale": "Authentication question - handled by different skill",
+      "category": "negative"
+    }
+  ]
+}

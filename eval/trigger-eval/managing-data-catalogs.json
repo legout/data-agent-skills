@@ -1,0 +1,110 @@
+{
+  "skill_name": "managing-data-catalogs",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "How do I set up Hive Metastore?",
+      "expected_trigger": true,
+      "rationale": "Direct catalog setup question",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "Configure AWS Glue Data Catalog",
+      "expected_trigger": true,
+      "rationale": "Glue catalog configuration",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "What catalog should I use for Iceberg?",
+      "expected_trigger": true,
+      "rationale": "Catalog selection for table format",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "How do I register tables in a catalog?",
+      "expected_trigger": true,
+      "rationale": "Table registration in catalog",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "Compare DataHub vs Amundsen vs OpenMetadata",
+      "expected_trigger": true,
+      "rationale": "Catalog system comparison",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "Set up a REST catalog for Iceberg",
+      "expected_trigger": true,
+      "rationale": "REST catalog setup",
+      "category": "positive"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "How do I read from S3?",
+      "expected_trigger": false,
+      "rationale": "Storage access is for accessing-cloud-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-008",
+      "prompt": "Build a data transformation pipeline",
+      "expected_trigger": false,
+      "rationale": "Pipeline building is for building-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-009",
+      "prompt": "Should I use Delta Lake or Iceberg?",
+      "expected_trigger": false,
+      "rationale": "Format selection is for designing-data-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-010",
+      "prompt": "Schedule my data pipeline",
+      "expected_trigger": false,
+      "rationale": "Orchestration is for orchestrating-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-011",
+      "prompt": "How do I optimize Parquet files?",
+      "expected_trigger": false,
+      "rationale": "File optimization is for designing-data-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-012",
+      "prompt": "Set up data quality checks",
+      "expected_trigger": false,
+      "rationale": "Data quality is for assuring-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-013",
+      "prompt": "Use DuckDB to query multiple sources",
+      "expected_trigger": true,
+      "rationale": "DuckDB as lightweight catalog pattern",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-014",
+      "prompt": "How do I track data lineage?",
+      "expected_trigger": true,
+      "rationale": "Lineage tracking is catalog-related but could be observability",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-015",
+      "prompt": "Document my data assets",
+      "expected_trigger": true,
+      "rationale": "Data documentation is catalog-related",
+      "category": "near-miss"
+    }
+  ]
+}

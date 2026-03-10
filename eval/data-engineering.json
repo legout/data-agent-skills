@@ -1,0 +1,47 @@
+{
+  "skill_name": "data-engineering",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Core ETL Workflow",
+      "description": "Tests the skill's ability to guide a basic ETL pipeline setup",
+      "prompt": "I need to build a data pipeline that extracts data from PostgreSQL, transforms it with Polars, and loads to Parquet files. How should I structure this?",
+      "expected_behavior": "The skill should provide a structured workflow for building the ETL pipeline, including extraction patterns, transformation best practices with Polars, and Parquet output configuration.",
+      "success_criteria": [
+        "Provides step-by-step workflow",
+        "Mentions Polars for transformation",
+        "Includes Parquet writing guidance",
+        "References appropriate tools and patterns"
+      ],
+      "tags": ["workflow", "etl", "polars", "parquet"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Data Pipeline Architecture",
+      "description": "Tests understanding of pipeline architecture decisions",
+      "prompt": "What architecture should I use for a batch data pipeline that processes 1TB of daily data?",
+      "expected_behavior": "The skill should discuss medallion architecture, partitioning strategies, file formats, and tool selection for large-scale batch processing.",
+      "success_criteria": [
+        "Mentions medallion/bronze-silver-gold pattern",
+        "Discusses partitioning strategies",
+        "Recommends appropriate file formats",
+        "Considers scale and performance"
+      ],
+      "tags": ["architecture", "batch", "performance", "medallion"]
+    },
+    {
+      "id": "eval-003",
+      "name": "Tool Selection Guidance",
+      "description": "Tests ability to recommend appropriate tools for different scenarios",
+      "prompt": "Should I use DuckDB or Polars for analyzing CSV files on my laptop?",
+      "expected_behavior": "The skill should compare DuckDB and Polars for local CSV analysis, considering factors like data size, SQL vs DataFrame preference, and performance characteristics.",
+      "success_criteria": [
+        "Compares both tools fairly",
+        "Considers data size factors",
+        "Mentions SQL vs DataFrame syntax preferences",
+        "Provides clear recommendation criteria"
+      ],
+      "tags": ["tool-selection", "duckdb", "polars", "comparison"]
+    }
+  ]
+}

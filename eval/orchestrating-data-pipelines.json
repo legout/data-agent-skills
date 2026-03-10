@@ -1,0 +1,75 @@
+{
+  "skill_name": "orchestrating-data-pipelines",
+  "task_evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Prefect Workflow",
+      "description": "Tests Prefect workflow orchestration",
+      "prompt": "Build a data pipeline workflow using Prefect with tasks, dependencies, error handling, and scheduling.",
+      "expected_behavior": "The skill should provide Prefect flow patterns, task definitions, and deployment guidance.",
+      "success_criteria": [
+        "Shows flow and task patterns",
+        "Covers dependency management",
+        "Demonstrates error handling",
+        "Includes deployment options"
+      ],
+      "tags": ["prefect", "orchestration", "workflow", "scheduling"]
+    },
+    {
+      "id": "eval-002",
+      "name": "Dagster Pipeline",
+      "description": "Tests Dagster data pipeline construction",
+      "prompt": "Design a Dagster pipeline with software-defined assets, partitioning, and data quality checks.",
+      "expected_behavior": "The skill should explain Dagster concepts, asset definitions, and pipeline construction.",
+      "success_criteria": [
+        "Shows software-defined assets",
+        "Covers partitioning strategies",
+        "Demonstrates dependency graphs",
+        "Includes data quality integration"
+      ],
+      "tags": ["dagster", "assets", "pipeline", "partitioning"]
+    },
+    {
+      "id": "eval-003",
+      "name": "dbt Transformations",
+      "description": "Tests dbt for data transformations",
+      "prompt": "Structure a dbt project with models, tests, documentation, and incremental builds.",
+      "expected_behavior": "The skill should provide dbt project structure, model patterns, and best practices.",
+      "success_criteria": [
+        "Shows project structure",
+        "Covers model dependencies",
+        "Demonstrates testing patterns",
+        "Includes incremental models"
+      ],
+      "tags": ["dbt", "transformations", "testing", "incremental"]
+    },
+    {
+      "id": "eval-004",
+      "name": "Orchestrator Selection",
+      "description": "Tests orchestrator comparison and selection",
+      "prompt": "How do I choose between Prefect, Dagster, Airflow, and Luigi for my data orchestration needs?",
+      "expected_behavior": "The skill should compare orchestrators with decision guidance based on use cases.",
+      "success_criteria": [
+        "Compares major orchestrators",
+        "Explains key differentiators",
+        "Provides selection framework",
+        "Covers migration paths"
+      ],
+      "tags": ["comparison", "prefect", "dagster", "airflow", "selection"]
+    },
+    {
+      "id": "eval-005",
+      "name": "Production Deployment",
+      "description": "Tests production orchestration deployment",
+      "prompt": "Deploy a data pipeline to production with monitoring, alerting, and failure recovery.",
+      "expected_behavior": "The skill should provide production deployment patterns, monitoring setup, and ops guidance.",
+      "success_criteria": [
+        "Covers deployment patterns",
+        "Shows monitoring setup",
+        "Demonstrates alerting config",
+        "Includes failure recovery"
+      ],
+      "tags": ["production", "deployment", "monitoring", "operations"]
+    }
+  ]
+}

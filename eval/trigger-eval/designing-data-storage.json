@@ -1,0 +1,110 @@
+{
+  "skill_name": "designing-data-storage",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "Should I use Delta Lake or Iceberg?",
+      "expected_trigger": true,
+      "rationale": "Direct lakehouse format comparison question",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "How do I optimize Parquet files for analytics?",
+      "expected_trigger": true,
+      "rationale": "Parquet optimization is storage design",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "Design a data lake with bronze/silver/gold layers",
+      "expected_trigger": true,
+      "rationale": "Data lake architecture design",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "What's the best file format for time series data?",
+      "expected_trigger": true,
+      "rationale": "File format selection for storage",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "How do I implement schema evolution?",
+      "expected_trigger": true,
+      "rationale": "Schema evolution is lakehouse storage topic",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "Compare Avro vs Parquet for my use case",
+      "expected_trigger": true,
+      "rationale": "Format comparison for storage design",
+      "category": "positive"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "How do I read data from S3?",
+      "expected_trigger": false,
+      "rationale": "Storage access is for accessing-cloud-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-008",
+      "prompt": "Configure AWS credentials",
+      "expected_trigger": false,
+      "rationale": "Authentication is for accessing-cloud-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-009",
+      "prompt": "Build a transformation pipeline",
+      "expected_trigger": false,
+      "rationale": "Pipeline building is for building-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-010",
+      "prompt": "How do I set up Hive Metastore?",
+      "expected_trigger": false,
+      "rationale": "Catalog setup is for managing-data-catalogs",
+      "category": "negative"
+    },
+    {
+      "id": "trig-011",
+      "prompt": "Schedule my data processing jobs",
+      "expected_trigger": false,
+      "rationale": "Scheduling is for orchestrating-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-012",
+      "prompt": "How do I validate data quality?",
+      "expected_trigger": false,
+      "rationale": "Data quality is for assuring-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-013",
+      "prompt": "Design storage for ML training data",
+      "expected_trigger": true,
+      "rationale": "ML data storage design, though could overlap with AI pipelines",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-014",
+      "prompt": "How do I partition data in S3?",
+      "expected_trigger": true,
+      "rationale": "Partitioning is storage design, though mentions S3",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-015",
+      "prompt": "When should I use Zarr instead of Parquet?",
+      "expected_trigger": true,
+      "rationale": "Specialized format selection",
+      "category": "near-miss"
+    }
+  ]
+}

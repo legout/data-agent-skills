@@ -1,0 +1,110 @@
+{
+  "skill_name": "assuring-data-pipelines",
+  "trigger_evaluations": [
+    {
+      "id": "trig-001",
+      "prompt": "Set up Great Expectations for data validation",
+      "expected_trigger": true,
+      "rationale": "Direct data quality tool question",
+      "category": "positive"
+    },
+    {
+      "id": "trig-002",
+      "prompt": "How do I validate data with Pandera?",
+      "expected_trigger": true,
+      "rationale": "Pandera validation question",
+      "category": "positive"
+    },
+    {
+      "id": "trig-003",
+      "prompt": "Monitor my data pipeline with OpenTelemetry",
+      "expected_trigger": true,
+      "rationale": "Pipeline observability question",
+      "category": "positive"
+    },
+    {
+      "id": "trig-004",
+      "prompt": "Set up alerts for data quality issues",
+      "expected_trigger": true,
+      "rationale": "Data quality alerting",
+      "category": "positive"
+    },
+    {
+      "id": "trig-005",
+      "prompt": "How do I track pipeline metrics with Prometheus?",
+      "expected_trigger": true,
+      "rationale": "Metrics and monitoring",
+      "category": "positive"
+    },
+    {
+      "id": "trig-006",
+      "prompt": "Create data quality dashboards",
+      "expected_trigger": true,
+      "rationale": "Quality visualization",
+      "category": "positive"
+    },
+    {
+      "id": "trig-007",
+      "prompt": "Build an ETL pipeline",
+      "expected_trigger": false,
+      "rationale": "Pipeline building is for building-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-008",
+      "prompt": "Schedule my pipeline runs",
+      "expected_trigger": false,
+      "rationale": "Scheduling is for orchestrating-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-009",
+      "prompt": "Read data from S3",
+      "expected_trigger": false,
+      "rationale": "Storage access is for accessing-cloud-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-010",
+      "prompt": "Design a data lake",
+      "expected_trigger": false,
+      "rationale": "Storage design is for designing-data-storage",
+      "category": "negative"
+    },
+    {
+      "id": "trig-011",
+      "prompt": "Should I use Prefect or Dagster?",
+      "expected_trigger": false,
+      "rationale": "Orchestrator selection is for orchestrating-data-pipelines",
+      "category": "negative"
+    },
+    {
+      "id": "trig-012",
+      "prompt": "Set up a data catalog",
+      "expected_trigger": false,
+      "rationale": "Catalog is for managing-data-catalogs",
+      "category": "negative"
+    },
+    {
+      "id": "trig-013",
+      "prompt": "How do I handle data pipeline errors?",
+      "expected_trigger": true,
+      "rationale": "Error handling is quality/resilience topic",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-014",
+      "prompt": "Validate my ML model predictions",
+      "expected_trigger": true,
+      "rationale": "ML validation could be quality or model evaluation",
+      "category": "near-miss"
+    },
+    {
+      "id": "trig-015",
+      "prompt": "Track data lineage",
+      "expected_trigger": true,
+      "rationale": "Lineage is observability-adjacent",
+      "category": "near-miss"
+    }
+  ]
+}
