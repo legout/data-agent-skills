@@ -105,7 +105,7 @@ def lint_frontmatter(skill_file: Path, findings: list[Finding]) -> None:
         )
 
 
-def lint_markdown_references(md_file: Path, all_files: set[Path], findings: list[Finding]) -> None:
+def lint_markdown_references(md_file: Path, all_files: set[Path], findings: list[Finding], strict: bool = False) -> None:
     text = md_file.read_text(errors="replace")
 
     # Markdown links [text](path)
@@ -120,6 +120,9 @@ def lint_markdown_references(md_file: Path, all_files: set[Path], findings: list
         if "<" in ref or ">" in ref:
             continue  # template path placeholders
         if ref.startswith("@"):
+            # Flag hybrid @skill/path usage (ambiguous pattern)
+            if "/" in ref:
+                findings.append(Finding("error", md_file, f"ambiguous hybrid @skill/path usage: {ref}"))
             continue  # skill aliases, not filesystem paths
 
         # remove optional anchor
@@ -129,7 +132,8 @@ def lint_markdown_references(md_file: Path, all_files: set[Path], findings: list
             # second chance: repo-root relative
             root_target = (Path.cwd() / path_part).resolve()
             if root_target not in all_files:
-                findings.append(Finding("warn", md_file, f"missing local reference: {ref}"))
+                level = "error" if strict else "warn"
+                findings.append(Finding(level, md_file, f"missing local reference: {ref}"))
 
 
 def lint_python_fences(md_file: Path, findings: list[Finding]) -> None:
@@ -159,7 +163,7 @@ def main() -> int:
             lint_frontmatter(skill, findings)
 
     for md_file in sorted(iter_files(root, ".md")):
-        lint_markdown_references(md_file, all_files, findings)
+        lint_markdown_references(md_file, all_files, findings, args.strict)
         lint_python_fences(md_file, findings)
 
     errors = [f for f in findings if f.level == "error"]
