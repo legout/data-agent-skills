@@ -10,6 +10,10 @@ Discovered in: das-3jql (2026-03-10)
 
 ## Lesson: Adjacent-Skill Boundary Documentation
 
-When skills have overlapping concerns (e.g., EDA vs Visualization, Quality vs Observability), document explicit trigger guidance with comparison tables. Merge skills that are logically adjacent but operationally difficult to separate, using internal sections to preserve conceptual boundaries while avoiding user confusion.
-
 Discovered in: das-3jql (2026-03-10)
+
+## Lesson: Eval Directory Scope Hygiene
+
+When creating evaluation scaffolds for refactored architectures, ensure eval directories contain only the target skill manifests, not legacy ones. Mixed manifests (legacy + target) cause ambiguity for downstream eval tooling and make ticket behavior/metrics unclear. Remove or relocate legacy manifests before committing eval structure.
+
+Discovered in: das-lih7 (2026-03-10)
