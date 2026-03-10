@@ -173,11 +173,10 @@ api_key = "sk-..."
 
 ## Progressive disclosure
 
-- `references/streamlit-advanced.md` — Caching, custom components, multipage apps
-- `references/panel-holoviz.md` — Linked brushing, geographic visualizations
-- `references/gradio-ml.md` — Model sharing, API generation, Spaces deployment
-- `references/app-testing.md` — Automated testing for interactive apps
-- `references/production-deployment.md` — Docker, authentication, scaling
+- `../analyzing-data/references/streamlit-advanced.md` — Caching, custom components, multipage apps
+- `../analyzing-data/references/holoviz-datashader.md` — Linked brushing, geographic visualizations
+- `../analyzing-data/references/notebook-testing.md` — Automated testing for interactive apps
+- `../analyzing-data/references/sharing-publishing.md` — nbconvert, Quarto, Voilà publishing options
 
 ## Related skills
 

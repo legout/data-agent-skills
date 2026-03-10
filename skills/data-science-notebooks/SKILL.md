@@ -151,10 +151,8 @@ marimo convert notebook.ipynb -o notebook.py
 
 ## Progressive disclosure
 
-- `../references/jupyter-advanced.md` — Widgets, extensions, debugging
-- `../references/marimo-guide.md` — Reactive patterns, UI components
-- `../references/notebook-testing.md` — Unit tests for notebook code
-- `../references/sharing-publishing.md` — nbconvert, Quarto, Voilà
+- `../analyzing-data/references/notebook-testing.md` — Unit tests for notebook code
+- `../analyzing-data/references/sharing-publishing.md` — nbconvert, Quarto, Voilà
 
 ## Related skills
 

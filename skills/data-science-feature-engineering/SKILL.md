@@ -104,10 +104,10 @@ Track which features were created, why, and their expected impact.
 
 ## Progressive disclosure
 
-- `../references/categorical-encoding.md` — Comprehensive encoding guide
-- `../references/datetime-features.md` — Time-based feature patterns
-- `../references/text-features.md` — NLP feature engineering
-- `../references/feature-selection.md` — Selection strategies and implementations
+- `../analyzing-data/references/categorical-encoding.md` — Comprehensive encoding guide
+- `../analyzing-data/references/datetime-features.md` — Time-based feature patterns
+- `../analyzing-data/references/text-features.md` — NLP feature engineering
+- `../analyzing-data/references/feature-selection.md` — Selection strategies and implementations
 
 ## Related skills
 

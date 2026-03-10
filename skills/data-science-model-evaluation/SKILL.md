@@ -114,10 +114,10 @@ with mlflow.start_run():
 
 ## Progressive disclosure
 
-- `../references/cross-validation.md` — CV strategies for different data types
-- `../references/metrics-guide.md` — Choosing and interpreting metrics
-- `../references/hyperparameter-tuning.md` — Optuna, Ray Tune patterns
-- `../references/experiment-tracking.md` — MLflow, W&B setup
+- `../analyzing-data/references/cross-validation.md` — CV strategies for different data types
+- `../analyzing-data/references/metrics-guide.md` — Choosing and interpreting metrics
+- `../analyzing-data/references/hyperparameter-tuning.md` — Optuna, Ray Tune patterns
+- `../analyzing-data/references/experiment-tracking.md` — MLflow, W&B setup
 
 ## Related skills
 
