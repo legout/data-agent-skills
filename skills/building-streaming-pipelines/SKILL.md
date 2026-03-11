@@ -28,7 +28,6 @@ Use other skills for:
 - **Workflow orchestration (Prefect/Dagster)** → `orchestrating-data-pipelines`
 - **Data quality frameworks** → `assuring-data-pipelines`
 - **AI/ML pipelines (embeddings/vectors)** → `engineering-ai-pipelines`
-- **Data observability and monitoring** → `data-engineering-observability`
 
 ---
 
@@ -60,77 +59,30 @@ Answer these questions before writing code:
 5. **Consumer patterns**: Single consumer, consumer groups, or fan-out?
 6. **Schema evolution**: Will message formats change over time?
 
-### 2. Implement producer
+### 2. Implement producer and consumer
 
+**Producer pattern** (Kafka example):
 ```python
-# Kafka example
 from confluent_kafka import Producer
-import json
-import socket
-
-def delivery_report(err, msg):
-    if err:
-        print(f"Delivery failed: {err}")
-    else:
-        print(f"Delivered to {msg.topic()}[{msg.partition()}]")
-
-conf = {
-    'bootstrap.servers': 'localhost:9092',
-    'client.id': socket.gethostname(),
-    'acks': 'all'  # Wait for all replicas
-}
-
-producer = Producer(conf)
-
-data = {'id': 1, 'event': 'user_action', 'value': 100}
-producer.produce(
-    topic='user_events',
-    key=str(data['id']),
-    value=json.dumps(data).encode('utf-8'),
-    callback=delivery_report
-)
+producer = Producer({'bootstrap.servers': 'localhost:9092', 'acks': 'all'})
+producer.produce(topic, key=key, value=json.dumps(data).encode(), callback=delivery_report)
 producer.flush()
 ```
 
-### 3. Implement consumer
-
+**Consumer pattern** (with manual commit for reliability):
 ```python
-# Kafka consumer with manual commit
-from confluent_kafka import Consumer, KafkaError
-
-conf = {
-    'bootstrap.servers': 'localhost:9092',
-    'group.id': 'my_consumer_group',
-    'auto.offset.reset': 'earliest',
-    'enable.auto.commit': False  # Manual for reliability
-}
-
-consumer = Consumer(conf)
-consumer.subscribe(['user_events'])
-
-try:
-    while True:
-        msg = consumer.poll(timeout=1.0)
-        if msg is None:
-            continue
-        if msg.error():
-            if msg.error().code() == KafkaError._PARTITION_EOF:
-                continue
-            raise KafkaException(msg.error())
-        
-        # Process message
-        data = json.loads(msg.value().decode('utf-8'))
-        process_event(data)
-        
-        # Commit after successful processing
-        consumer.commit(asynchronous=False)
-except KeyboardInterrupt:
-    pass
-finally:
-    consumer.close()
+from confluent_kafka import Consumer
+consumer = Consumer({'bootstrap.servers': 'localhost:9092', 'group.id': 'my_group',
+                     'enable.auto.commit': False})
+consumer.subscribe(['topic'])
+msg = consumer.poll(timeout=1.0)
+# Process message, then commit
+consumer.commit(asynchronous=False)
 ```
 
-### 4. Validate and operate
+For detailed patterns with Schema Registry, error handling, and production configuration, see `references/kafka.md`.
+
+### 3. Validate and operate
 
 - **Consumer lag monitoring**: Track lag per partition
 - **Dead letter queues**: Handle poison messages
@@ -141,60 +93,31 @@ finally:
 
 ## Production standards
 
-### Idempotent processing
+### Delivery semantics
 
-Stream processors may receive duplicates. Design idempotent consumers:
+| Semantic | When to use | Implementation |
+|----------|-------------|----------------|
+| **At-most-once** | Loss is acceptable, highest throughput | Auto-commit before processing |
+| **At-least-once** | No data loss, duplicates OK | Manual commit after processing |
+| **Exactly-once** | No duplicates, financial/critical | Idempotent consumers + transactional writes |
 
+### Idempotency pattern
+
+Stream processors may receive duplicates. Always design idempotent consumers:
 ```python
-# Idempotent consumer with deduplication
-processed_ids = load_checkpoint()  # From Redis/DB
-
-if msg_id in processed_ids:
-    consumer.commit()  # Skip duplicate
-else:
+if msg_id not in processed_ids:  # Check dedup store (Redis/DB)
     process(msg)
     save_checkpoint(msg_id)
-    consumer.commit()
+ack()  # Acknowledge after handling (skip or process)
 ```
 
-### Error handling (Dead Letter Queue)
+### Error handling strategy
 
-```python
-try:
-    process(msg)
-except RetryableError as e:
-    # Retry with backoff
-    nack(requeue=True)
-except Exception as e:
-    # Send to DLQ
-    dlq_producer.produce(
-        topic='events.dlq',
-        value=json.dumps({'original': msg, 'error': str(e)})
-    )
-    ack()  # Acknowledge original to prevent reprocessing
-```
+- **Retryable errors** (timeouts, transient): Requeue with backoff
+- **Non-retryable errors** (schema mismatch, bad data): Send to dead letter queue
+- **Always acknowledge** after handling to prevent infinite retry loops
 
-### Schema evolution
-
-- Use Avro/Protobuf with Schema Registry for compatibility
-- Evolve schemas additively (new fields optional, old fields preserved)
-- Register schemas per topic/subject
-- Version schemas and test compatibility
-
-### Batch processing within streams
-
-```python
-# Accumulate messages before writing to reduce downstream load
-batch = []
-while True:
-    msg = consumer.poll(timeout=0.1)
-    if msg:
-        batch.append(msg.value())
-    if len(batch) >= BATCH_SIZE or timeout_reached:
-        write_to_database(batch)
-        consumer.commit()  # Commit after successful batch write
-        batch.clear()
-```
+For complete error handling patterns, see platform-specific references.
 
 ---
 
@@ -216,7 +139,6 @@ Start here based on your need:
 - `assuring-data-pipelines` — Data quality testing and observability
 - `building-data-pipelines` — Batch data processing with Polars, DuckDB, PyArrow
 - `engineering-ai-pipelines` — Embeddings, vector databases, RAG patterns
-- `data-engineering-observability` — Monitoring and observability for data pipelines
 
 ---
 

@@ -1,0 +1,13 @@
+{
+  "ticket_id": "das-5ewy",
+  "primary_terms": ["building-streaming-pipelines", "Kafka", "MQTT", "NATS", "JetStream", "streaming"],
+  "secondary_terms": ["skill-refactor", "data-engineering", "real-time", "event-streaming", "IoT", "producers", "consumers", "backpressure", "delivery-semantics"],
+  "file_hints": [
+    "skills/data-engineering-streaming/SKILL.md",
+    "skills/building-streaming-pipelines/",
+    "eval/building-streaming-pipelines.json",
+    "eval/trigger-eval/building-streaming-pipelines.json"
+  ],
+  "change_scope": "Create new building-streaming-pipelines skill directory with SKILL.md and references/ subdirectory. Consolidate existing data-engineering-streaming content. Ensure eval coverage and no broken refs.",
+  "ticket_summary": "Create building-streaming-pipelines skill for Kafka, MQTT, and NATS streaming workflows following new skill architecture standards"
+}
