@@ -1,7 +1,23 @@
 ---
 name: data-engineering
-description: "Comprehensive data engineering skill suite covering core libraries (Polars, DuckDB, PyArrow), lakehouse formats, cloud storage, orchestration, streaming, quality, observability, and AI/ML pipelines."
+description: "[DOCS ONLY - DO NOT TRIGGER] Index hub for data engineering skills. Use specific workflow skills instead: @building-data-pipelines for ETL workflows, @designing-data-storage for storage decisions, @accessing-cloud-storage for cloud access."
 ---
+
+> **⚠️ DOCS ONLY - DO NOT USE DIRECTLY**
+> 
+> This is a documentation index hub. It will not trigger automatically.
+> 
+> **Use these specific skills instead:**
+> - `@building-data-pipelines` - ETL workflows and data pipelines
+> - `@designing-data-storage` - File formats and lakehouse decisions  
+> - `@accessing-cloud-storage` - Cloud storage access patterns
+> - `@data-engineering-core` - Core libraries (Polars, DuckDB, PyArrow)
+> - `@assuring-data-pipelines` - Data quality and observability
+> - `@managing-data-catalogs` - Data catalog systems
+> - `@data-engineering-orchestration` - Workflow orchestration
+> - `@data-engineering-streaming` - Real-time streaming pipelines
+> - `@data-engineering-ai-ml` - AI/ML data pipelines
+> - `@data-engineering-best-practices` - Architecture patterns
 
 # Data Engineering Hub
 
@@ -36,11 +52,14 @@ Welcome to the comprehensive data engineering skill suite. This hub organizes al
 
 ## Getting Started
 
+### Building ETL Pipelines?
+Start with `@building-data-pipelines` for complete ETL workflows and data pipeline patterns.
+
 ### New to Data Engineering?
-Start with `@data-engineering-core` to learn the foundational libraries and patterns.
+Use `@data-engineering-core` to learn the foundational libraries and patterns.
 
 ### Working with Cloud Storage?
-Go to `@data-engineering-storage-remote-access` for fsspec, pyarrow.fs, and obstore.
+Go to `@accessing-cloud-storage` for fsspec, pyarrow.fs, and obstore.
 
 ### Building Data Lakes?
 Explore `@designing-data-storage` for file formats and ACID table formats.
@@ -75,6 +94,7 @@ Visit `@data-engineering-ai-ml` for embeddings, vector databases, and RAG.
 This restructured suite replaces the previous split organization (`data-engineering-*` and `remote-filesystems-*`). All content has been consolidated to eliminate duplication and clarify ownership.
 
 **Legacy skill replacements:**
+- `data-engineering` (this hub) → Use specific workflow skills like `@building-data-pipelines`
 - `data-engineering-core` → `@data-engineering-core` (plus specific integrations)
 - `data-engineering-lakehouse` / `data-engineering-storage-lakehouse` → `@designing-data-storage`
 - `data-engineering-storage-formats` → `@designing-data-storage`
