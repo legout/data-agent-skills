@@ -27,8 +27,8 @@ Please use **`@accessing-cloud-storage`** for all cloud storage access guidance,
 | `@data-engineering-storage-remote-access-integrations-pandas` | `@accessing-cloud-storage` |
 | `@data-engineering-storage-remote-access-integrations-duckdb` | `@accessing-cloud-storage` |
 | `@data-engineering-storage-remote-access-integrations-pyarrow` | `@accessing-cloud-storage` |
-| `@data-engineering-storage-remote-access-integrations-delta-lake` | `@data-engineering-storage-lakehouse` + `@accessing-cloud-storage` |
-| `@data-engineering-storage-remote-access-integrations-iceberg` | `@data-engineering-storage-lakehouse` + `@accessing-cloud-storage` |
+| `@data-engineering-storage-remote-access-integrations-delta-lake` | `@designing-data-storage` + `@accessing-cloud-storage` |
+| `@data-engineering-storage-remote-access-integrations-iceberg` | `@designing-data-storage` + `@accessing-cloud-storage` |
 
 ---
 

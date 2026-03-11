@@ -224,4 +224,4 @@ monitor.log_call("gpt-4o", 100, 50, 1200)
 - [Sentence Transformers](https://www.sbert.net/)
 - [OpenAI Embeddings Guide](https://platform.openai.com/docs/guides/embeddings)
 - [pgvector Documentation](https://github.com/pgvector/pgvector)
-- `@data-engineering-storage-lakehouse` - Versioned storage for models/embeddings
+- `@designing-data-storage` - Versioned storage for models/embeddings

@@ -2,6 +2,18 @@
 
 Apache Iceberg is a high-performance table format for large-scale analytics. It's engine-agnostic, supporting Spark, Trino, Flink, DuckDB, and more. Iceberg emphasizes schema evolution, partition evolution, and hidden partitioning.
 
+## Table of Contents
+1. [Installation](#installation)
+2. [Catalog Configuration](#catalog-configuration)
+3. [Table Operations](#table-operations)
+4. [Cloud Storage Integration](#cloud-storage-integration)
+5. [Comparison with Delta Lake](#comparison-with-delta-lake)
+6. [Best Practices](#best-practices)
+7. [Performance Tips](#performance-tips)
+8. [Resources](#resources)
+
+---
+
 ## Installation
 
 ```bash

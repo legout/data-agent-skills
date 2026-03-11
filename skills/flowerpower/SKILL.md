@@ -1,7 +1,7 @@
 ---
 name: flowerpower
 description: "Create and manage data pipelines using the FlowerPower framework with Hamilton DAGs and uv. Lightweight orchestration for batch ETL, data transformation, and ML pipelines. Integrates with Delta Lake, DuckDB, Polars, and cloud storage."
-dependsOn: ["@data-engineering-core", "@data-engineering-storage-lakehouse", "@data-engineering-storage-remote-access", "@assuring-data-pipelines", "@data-engineering-best-practices"]
+dependsOn: ["@data-engineering-core", "@designing-data-storage", "@data-engineering-storage-remote-access", "@assuring-data-pipelines", "@data-engineering-best-practices"]
 ---
 
 # FlowerPower Pipeline Framework
@@ -22,7 +22,7 @@ dependsOn: ["@data-engineering-core", "@data-engineering-storage-lakehouse", "@d
 
 This skill assumes familiarity with:
 - **`@data-engineering-core`** - Polars, DuckDB, PyArrow basics
-- **`@data-engineering-storage-lakehouse`** - Delta Lake, Iceberg table formats
+- **`@designing-data-storage`** - Delta Lake, Iceberg table formats
 - **`@data-engineering-storage-remote-access`** - Cloud storage (S3, GCS) and fsspec
 - **`@assuring-data-pipelines`** - Data validation with Pandera, Great Expectations
 - **`@data-engineering-best-practices`** - Medallion architecture, partitioning, incremental loads
@@ -318,7 +318,7 @@ def process_files(list_s3_files: list[str]) -> pl.LazyFrame:
 ## See Also
 
 - **`@data-engineering-best-practices`** - Medallion architecture, incremental loads, partitioning, file sizing
-- **`@data-engineering-storage-lakehouse`** - Delta Lake, Iceberg table formats and operations
+- **`@designing-data-storage`** - Delta Lake, Iceberg table formats and operations
 - **`@data-engineering-storage-remote-access`** - Cloud storage backends (S3, GCS) and libraries
 - **`@assuring-data-pipelines`** - Data validation frameworks (Pandera, Great Expectations)
 - **`@data-engineering-catalogs`** - Data catalog systems for discovery and governance

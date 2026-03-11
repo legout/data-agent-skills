@@ -21,7 +21,7 @@ If the task is primarily about cloud storage auth/connectors, use:
 - `@data-engineering-storage-authentication`
 
 If the task is primarily about ACID lakehouse table behavior, use:
-- `@data-engineering-storage-lakehouse`
+- `@designing-data-storage`
 
 ---
 
@@ -116,7 +116,7 @@ For production-grade structure, use:
 
 ## Related skills
 
-- `@data-engineering-storage-lakehouse` — Delta/Iceberg/Hudi behavior
+- `@designing-data-storage` — Delta/Iceberg/Hudi behavior
 - `@data-engineering-storage-remote-access` — fsspec/pyarrow.fs/obstore cloud access
 - `@data-engineering-orchestration` — Prefect/Dagster/dbt orchestration
 - `@assuring-data-pipelines` — Data validation (Pandera, Great Expectations) and observability (OTel, Prometheus)

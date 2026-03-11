@@ -247,6 +247,6 @@ def idempotent_incremental(
 
 - `@data-engineering-core` - DuckDB MERGE patterns
 - `@data-engineering-orchestration` - Scheduling incremental jobs
-- `@data-engineering-storage-lakehouse` - Delta/Iceberg time travel for backfills
+- `@designing-data-storage` - Delta/Iceberg time travel for backfills
 - [AWS DMS CDC Best Practices](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_BestPractices.html)
 - [Debezium Documentation](https://debezium.io/documentation/)

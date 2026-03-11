@@ -15,7 +15,7 @@ Foundational libraries and patterns for building robust, efficient data pipeline
 
 ## Related Skills
 
-- `@data-engineering-storage-lakehouse` - Delta Lake, Iceberg, Hudi
+- `@designing-data-storage` - Delta Lake, Iceberg, Hudi
 - `@data-engineering-streaming` - Kafka, MQTT, NATS
 - `@data-engineering-orchestration` - Prefect, Dagster, dbt
 - `@assuring-data-pipelines` - Great Expectations, Pandera, OpenTelemetry, Prometheus

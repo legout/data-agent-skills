@@ -34,7 +34,7 @@ Assumes familiarity with:
 Related:
 - `@data-engineering-quality` - Data validation integrated into orchestration
 - `@data-engineering-observability` - Monitoring and tracing
-- `@data-engineering-storage-lakehouse` - Delta/Iceberg for state management
+- `@designing-data-storage` - Delta/Iceberg for state management
 
 ---
 
@@ -102,7 +102,7 @@ See: `@orchestrating-data-pipelines/dbt.md`
 
 **Integration with data-engineering stack:**
 - Uses **Polars/DuckDB** for DataFrame operations (`@data-engineering-core`)
-- **Delta Lake** for ACID table formats (`@data-engineering-storage-lakehouse`)
+- **Delta Lake** for ACID table formats (`@designing-data-storage`)
 - **fsspec/S3** for cloud storage (`@data-engineering-storage-remote-access`)
 - **Pandera** for data validation (`@data-engineering-quality`)
 - Follows **medallion architecture** (`@data-engineering-best-practices`)

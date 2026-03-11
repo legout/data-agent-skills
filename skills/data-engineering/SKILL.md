@@ -12,10 +12,9 @@ Welcome to the comprehensive data engineering skill suite. This hub organizes al
 | Domain | Skills | When to Use |
 |--------|--------|-------------|
 | **Core** | `@data-engineering-core` | Polars, DuckDB, PyArrow fundamentals; ETL patterns; error handling; performance optimization |
-| **Storage** | `@data-engineering-storage-lakehouse` | Delta Lake, Apache Iceberg, Apache Hudi |
-|  | `@data-engineering-storage-remote-access` | fsspec, pyarrow.fs, obstore; cloud access patterns |
+| **Storage** | `@designing-data-storage` | File formats (Parquet, Arrow, Lance, Zarr, Avro, ORC) and lakehouse table formats (Delta Lake, Iceberg, Hudi) |
+|  | `@accessing-cloud-storage` | fsspec, pyarrow.fs, obstore; cloud access patterns |
 |  | `@data-engineering-storage-authentication` | AWS, GCP, Azure auth - IAM roles, managed identity, secrets management |
-|  | `@data-engineering-storage-formats` | Parquet optimizations, Lance, Zarr, Avro, ORC |
 | **Orchestration** | `@data-engineering-orchestration` | Prefect, Dagster, dbt, workflow scheduling |
 | **Streaming** | `@data-engineering-streaming` | Kafka, MQTT, NATS JetStream for real-time data |
 | **Quality & Observability** | `@assuring-data-pipelines` | Great Expectations, Pandera, OpenTelemetry, Prometheus for validation and monitoring |
@@ -44,7 +43,7 @@ Start with `@data-engineering-core` to learn the foundational libraries and patt
 Go to `@data-engineering-storage-remote-access` for fsspec, pyarrow.fs, and obstore.
 
 ### Building Data Lakes?
-Explore `@data-engineering-storage-lakehouse` for ACID table formats.
+Explore `@designing-data-storage` for file formats and ACID table formats.
 
 ### Choosing a Data Catalog?
 Check `@data-engineering-catalogs` for Iceberg catalogs, DuckDB multi-source patterns, and tool comparisons.
@@ -77,12 +76,13 @@ This restructured suite replaces the previous split organization (`data-engineer
 
 **Legacy skill replacements:**
 - `data-engineering-core` → `@data-engineering-core` (plus specific integrations)
-- `data-engineering-lakehouse` → `@data-engineering-storage-lakehouse`
+- `data-engineering-lakehouse` / `data-engineering-storage-lakehouse` → `@designing-data-storage`
+- `data-engineering-storage-formats` → `@designing-data-storage`
 - `data-engineering-orchestration` → `@data-engineering-orchestration`
 - `data-engineering-streaming` → `@data-engineering-streaming`
 - `data-engineering-quality` → `@assuring-data-pipelines`
 - `data-engineering-observability` → `@assuring-data-pipelines`
 - `data-engineering-llm-pipelines` → `@data-engineering-ai-ml`
-- `remote-filesystems-*` → `@data-engineering-storage-remote-access` and integrations
+- `remote-filesystems-*` → `@accessing-cloud-storage` and integrations
 
 All legacy skills remain functional but are deprecated. New content should be added to the new structure only.

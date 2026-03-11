@@ -2,6 +2,18 @@
 
 Apache Hudi (Hadoop Upserts Deletes and Incrementals) is a data lake storage framework focused on change data capture (CDC) and streaming upserts. It's optimized for low-latency upserts and incremental data processing.
 
+## Table of Contents
+1. [Key Characteristics](#key-characteristics)
+2. [Installation](#installation)
+3. [Core Concepts](#core-concepts)
+4. [PySpark Operations](#pyspark-operations)
+5. [Table Types](#table-types)
+6. [Use Cases](#use-cases)
+7. [Limitations](#limitations)
+8. [References](#references)
+
+---
+
 ## Key Characteristics
 
 - **CDC-First**: Built for streaming ingestion with upsert and delete support

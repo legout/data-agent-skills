@@ -2,6 +2,17 @@
 
 Delta Lake is an open-source storage layer that brings ACID transactions, schema evolution, and time travel to data lakes. It's the most widely adopted lakehouse format, especially in the Databricks ecosystem.
 
+## Table of Contents
+1. [Installation](#installation)
+2. [Pure-Python API](#pure-python-api-deltalake)
+3. [PySpark Integration](#pyspark-integration)
+4. [Cloud Storage Integration](#cloud-storage-integration)
+5. [Best Practices](#best-practices)
+6. [Common Pitfalls](#common-pitfalls)
+7. [References](#references)
+
+---
+
 ## Installation
 
 ```bash
@@ -169,6 +180,6 @@ See `@accessing-cloud-storage` for S3, GCS, Azure configuration using `storage_o
 
 ## References
 
-- [Delta Lakedocs](https://docs.delta.io/latest/index.html)
+- [Delta Lake docs](https://docs.delta.io/latest/index.html)
 - [deltalake Python API](https://delta-io.github.io/delta-rs/python/quickstart.html)
 - [PySpark Delta Guide](https://docs.delta.io/latest/delta-batch.html)

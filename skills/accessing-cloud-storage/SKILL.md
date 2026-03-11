@@ -1,7 +1,7 @@
 ---
 name: accessing-cloud-storage
 description: "Access cloud storage (S3, GCS, Azure) in Python using fsspec, pyarrow.fs, or obstore. Includes DataFrame integrations (Polars, DuckDB, Pandas, PyArrow), performance optimization, patterns for incremental loading, partitioned writes, and cross-cloud copy."
-dependsOn: ["@data-engineering-core", "@data-engineering-storage-authentication", "@data-engineering-storage-formats"]
+dependsOn: ["@data-engineering-core", "@data-engineering-storage-authentication", "@designing-data-storage"]
 ---
 
 # Accessing Cloud Storage
@@ -45,10 +45,9 @@ Comprehensive guide to accessing cloud storage (S3, GCS, Azure) and remote files
 Prerequisites:
 - `@data-engineering-core` - Polars, DuckDB, PyArrow basics
 - `@data-engineering-storage-authentication` - AWS, GCP, Azure auth patterns
-- `@data-engineering-storage-formats` - Parquet, Arrow, Lance, Zarr, Avro, ORC
+- `@designing-data-storage` - File formats (Parquet, Arrow, Lance) and lakehouse formats (Delta Lake, Iceberg, Hudi)
 
 Related:
-- `@data-engineering-storage-lakehouse` - Delta Lake, Iceberg on cloud storage
 - `@data-engineering-orchestration` - dbt with cloud storage
 
 ---
@@ -68,7 +67,7 @@ This skill contains detailed guidance for all three libraries:
 - **PyArrow** - Native filesystem with dataset scanning and batch processing
 
 For detailed patterns, see [DataFrame Integration](#dataframe-integration) below. For Delta Lake and Iceberg table formats on cloud storage:
-- `@data-engineering-storage-lakehouse` - Delta Lake and Iceberg with cloud catalogs (S3/GCS/Azure)
+- `@designing-data-storage` - Delta Lake and Iceberg with cloud catalogs (S3/GCS/Azure)
 
 ### Infrastructure Patterns
 - `@data-engineering-storage-authentication` - AWS, GCP, Azure auth patterns, IAM roles, service principals
@@ -76,7 +75,7 @@ For detailed patterns, see [DataFrame Integration](#dataframe-integration) below
 - See `patterns.md` in this skill - Incremental loading, partitioned writes, cross-cloud copy
 
 ### Storage Formats
-- `@data-engineering-storage-formats` - Parquet, Arrow/Feather, Lance, Zarr, Avro, ORC
+- `@designing-data-storage` - Parquet, Arrow/Feather, Lance, Zarr, Avro, ORC
 
 ---
 
@@ -609,7 +608,7 @@ with fs.open("s3://bucket/file.parquet", "rb") as f:
 
 ### Format Considerations
 
-For detailed information on storage formats (Parquet, Arrow, Lance, Zarr, Avro, ORC), including compression, schema evolution, and format selection guidance, see **`@data-engineering-storage-formats`**. This section focuses on I/O patterns, not format internals.
+For detailed information on storage formats (Parquet, Arrow, Lance, Zarr, Avro, ORC) and lakehouse table formats (Delta Lake, Iceberg, Hudi), including compression, schema evolution, and format selection guidance, see **`@designing-data-storage`**. This section focuses on I/O patterns, not format internals.
 
 ---
 

@@ -22,7 +22,7 @@ Use this skill when:
 
 Use other skills for:
 - **Cloud storage authentication and access** → `accessing-cloud-storage`
-- **Lakehouse table formats (Delta/Iceberg)** → `@data-engineering-storage-lakehouse`
+- **Lakehouse table formats (Delta/Iceberg)** → `@designing-data-storage`
 - **Workflow orchestration (Prefect/Dagster)** → `orchestrating-data-pipelines`
 - **Streaming data (Kafka/MQTT)** → `building-streaming-pipelines`
 - **Data quality frameworks** → `assuring-data-pipelines`
@@ -144,7 +144,7 @@ Start here based on your need:
 ## Related skills
 
 - `accessing-cloud-storage` — Cloud storage authentication and remote file access
-- `@data-engineering-storage-lakehouse` — Lakehouse formats (Delta Lake, Iceberg), file formats, storage design
+- `@designing-data-storage` — Lakehouse formats (Delta Lake, Iceberg), file formats, storage design
 - `orchestrating-data-pipelines` — Prefect, Dagster, dbt for workflow scheduling
 - `assuring-data-pipelines` — Data quality testing and observability
 - `building-streaming-pipelines` — Kafka, MQTT, NATS for real-time data

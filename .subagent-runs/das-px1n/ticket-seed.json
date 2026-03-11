@@ -1,0 +1,13 @@
+{
+  "ticket_id": "das-px1n",
+  "primary_terms": ["Parquet", "Arrow", "Feather", "IPC", "Avro", "ORC", "Zarr", "Lance", "format-selection", "storage-formats"],
+  "secondary_terms": ["compression", "partitioning", "schema-evolution", "columnar", "row-based", "data-lake", "ML-native"],
+  "file_hints": [
+    "skills/data-engineering-storage-formats/",
+    "skills/data-engineering-storage-lakehouse/",
+    "skills/building-data-pipelines/",
+    "skills/accessing-cloud-storage/"
+  ],
+  "change_scope": "Format reference consolidation across storage skills; may touch SKILL.md files and references/",
+  "ticket_summary": "Consolidate file-format references (Parquet, Arrow, Avro, ORC, Zarr) under storage-design skill, remove duplicates, add TOCs to long files"
+}

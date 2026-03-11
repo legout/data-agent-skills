@@ -1,7 +1,7 @@
 ---
 name: data-engineering-catalogs
 description: "Data catalogs: Iceberg catalogs (Hive Metastore, AWS Glue, Tabular), using DuckDB as a lightweight multi-source catalog, comparisons of Amundsen/DataHub/OpenMetadata, and patterns for unified data access."
-dependsOn: ["@data-engineering-storage-lakehouse", "@data-engineering-storage-remote-access", "@data-engineering-storage-authentication"]
+dependsOn: ["@designing-data-storage", "@data-engineering-storage-remote-access", "@data-engineering-storage-authentication"]
 ---
 
 # Data Catalogs
@@ -449,7 +449,7 @@ For complete runnable examples, see:
 
 ## References
 
-- `@data-engineering-storage-lakehouse` - Delta Lake, Iceberg table formats
+- `@designing-data-storage` - Delta Lake, Iceberg table formats
 - **`@data-engineering-best-practices`** - Medallion architecture, dataset lifecycle, partitioning, schema evolution
 - `duckdb-multisource.md` - Step-by-step DuckDB multi-source catalog setup
 - [Apache Iceberg Catalog Documentation](https://iceberg.apache.org/docs/latest/catalog/)

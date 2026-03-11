@@ -1,7 +1,7 @@
 ---
 name: data-engineering-best-practices
 description: "Data engineering best practices: medallion architecture, dataset lifecycle, partitioning, file sizing, schema evolution, and append/overwrite/merge patterns across Polars, PyArrow, DuckDB, Delta Lake, and Iceberg. Use when designing production data pipelines or reviewing data platform decisions."
-dependsOn: ["@data-engineering-core", "@data-engineering-storage-lakehouse", "@data-engineering-storage-remote-access", "@data-engineering-storage-formats", "@data-engineering-storage-authentication"]
+dependsOn: ["@data-engineering-core", "@designing-data-storage", "@accessing-cloud-storage", "@data-engineering-storage-authentication"]
 ---
 
 # Data Engineering Best Practices
@@ -20,9 +20,8 @@ Use for:
 
 Use domain skills for implementation details:
 - `@data-engineering-core`
-- `@data-engineering-storage-lakehouse`
-- `@data-engineering-storage-formats`
-- `@data-engineering-storage-remote-access`
+- `@designing-data-storage`
+- `@accessing-cloud-storage`
 - `@data-engineering-storage-authentication`
 
 ---
@@ -133,7 +132,7 @@ Minimum controls:
 
 - `best-practices-detailed.md` — comprehensive deep-dive examples
 - `@data-engineering-core/patterns/incremental.md` — incremental loading patterns
-- `@data-engineering-storage-lakehouse` — Delta/Iceberg/Hudi-specific behavior
+- `@designing-data-storage` — Delta/Iceberg/Hudi-specific behavior
 - `@assuring-data-pipelines` — Data validation (Pandera, Great Expectations) and observability (OTel, Prometheus)
 
 ---
