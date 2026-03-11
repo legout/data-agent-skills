@@ -263,3 +263,13 @@
 - Tests: passed (review-post-fix clear pass)
 - Commit: ffa0c64
 - Chain: .subagent-runs/das-uubf/0ed2d445
+
+## 2026-03-11T13:00:57+01:00 | das-wxeh | closed
+
+- Path: A
+- Research: no
+- Summary: Consolidated Polars, DuckDB, Pandas, and PyArrow integration guidance into data-engineering-storage-remote-access skill by adding DataFrame Integration section with comparison table, when-to-use guidance, and 2-3 code examples per framework.
+- Files: ~/.pi/agent/skills/data-engineering-storage-remote-access/SKILL.md
+- Tests: passed (4/4 checks, review-post-fix clear pass)
+- Commit: 3ebdffd
+- Chain: .subagent-runs/das-wxeh/7bf23cc2
