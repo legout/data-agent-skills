@@ -101,3 +101,54 @@
 - Tests: skipped (verification only)
 - Commit: 1edfeb6
 - Chain: .subagent-runs/das-gp3f/250cd1ec
+
+## 2026-03-10T22:20:27+01:00 | das-hhlo | closed
+
+- Path: A
+- Research: no
+- Summary: Verification ticket confirming all 14 skill eval manifests (task + trigger) exist and are valid. Work completed in das-lih7. All acceptance criteria verified with clear pass: 14 task evals × 5 evaluations = 70 total, 14 trigger evals × 15 cases = 210 total, comprehensive README.md documentation.
+- Files: (verification only - no code changes)
+- Tests: skipped (verification only)
+- Commit: none
+- Chain: .subagent-runs/das-hhlo/e03599cf
+
+## 2026-03-10T22:40:00+01:00 | das-llsd | closed
+
+- Path: A
+- Research: no
+- Summary: Created building-data-pipelines skill by merging data-engineering-core and data-engineering-best-practices following SKILL_REFACTORING_PLAN.md standards. Includes SKILL.md, 3 reference files, and complete ETL template.
+- Files: skills/building-data-pipelines/SKILL.md, skills/building-data-pipelines/references/*.md (3), skills/building-data-pipelines/templates/complete_etl_pipeline.py
+- Tests: skipped (skill creation)
+- Commit: da17ed4
+- Chain: .subagent-runs/das-llsd/1db16b86
+
+## 2026-03-10T22:55:00+01:00 | das-qee5 | closed
+
+- Path: A
+- Research: no
+- Summary: Created analyzing-data skill skeleton merging EDA and visualization scope per SKILL_REFACTORING_PLAN.md. Includes SKILL.md with 7 standard sections and 4 reference placeholders.
+- Files: skills/analyzing-data/SKILL.md, skills/analyzing-data/references/*.md (4)
+- Tests: skipped (skill skeleton)
+- Commit: db065c7
+- Chain: .subagent-runs/das-qee5/78d9353a
+
+## 2026-03-10T23:16:47+01:00 | das-qdy8 | closed
+
+- Path: A
+- Research: no
+- Summary: Consolidated 126 duplicate reference files from 6 data-science skills into shared analyzing-data/references/ (21 files). Updated SKILL.md progressive-disclosure paths, removed duplicate directories, and fixed relative path issues.
+- Files: skills/data-science-*/SKILL.md (6), skills/analyzing-data/references/*.md (17 new)
+- Tests: skipped (documentation restructuring)
+- Commit: d9c50d9
+- Chain: .subagent-runs/das-qdy8/9087b8ff
+
+## 2026-03-11T07:30:33+01:00 | das-s0yk | in_progress
+
+- Path: A
+- Research: no
+- Summary: Created accessing-cloud-storage skill consolidating AWS/GCP/Azure auth guidance from data-engineering-storage-authentication. Fixed major issue (concatenated content in aws.md) and minor reference path issues.
+- Files: ~/.pi/agent/skills/accessing-cloud-storage/SKILL.md, ~/.pi/agent/skills/accessing-cloud-storage/references/*.md (5)
+- Tests: uncertain (lint validation could not verify external skill path)
+- Commit: d4d60eb
+- Chain: .subagent-runs/das-s0yk/663fe9ce
+- Blocker: Post-fix gate "Uncertain" - lint tool cannot validate skill files outside repo at ~/.pi/agent/skills/. Source folder skills/data-engineering-storage-authentication/ NOT deleted pending clear pass.
