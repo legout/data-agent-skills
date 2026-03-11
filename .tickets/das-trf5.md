@@ -1,6 +1,6 @@
 ---
 id: das-trf5
-status: open
+status: closed
 deps: [das-g8hg, das-px1n, das-2rye, das-9jfk]
 links: [das-g8hg, das-09vu, das-k0lp, das-h2mc]
 created: 2026-03-10T15:55:10Z
@@ -20,3 +20,14 @@ Consolidate storage-format and lakehouse guidance into one design-oriented skill
 - Delta Lake and Iceberg integration guidance is moved under the storage-design boundary
 - touched content has direct references, TOCs where needed, and eval coverage
 
+
+## Notes
+
+**2026-03-11T14:31:07Z**
+
+Implementation complete:
+- Verified all 5 acceptance criteria met
+- Created evals/designing-data-storage.json with 15 test cases (format selection, lakehouse selection, implementation details, cross-skill references, best practices)
+- Fixed minor issue: missing anchor-context.md in run directory
+- Commit: 6287c00
+- Gate: Clear pass (review-post-fix)

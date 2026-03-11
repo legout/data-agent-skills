@@ -313,3 +313,13 @@
 - Tests: passed (review-post-fix clear pass)
 - Commit: 84e1731
 - Chain: .subagent-runs/das-px1n/9a85c2d9
+
+## 2026-03-11T15:29:33+01:00 | das-trf5 | closed
+
+- Path: A
+- Research: no
+- Summary: Verification ticket confirming designing-data-storage skill complete with format/lakehouse guidance, Delta/Iceberg integration under storage-design boundary, direct references, TOCs, and eval coverage. Created 15 eval test cases.
+- Files: evals/designing-data-storage.json
+- Tests: passed (review-post-fix clear pass)
+- Commit: 6287c00
+- Chain: .subagent-runs/das-trf5/b6679fda
