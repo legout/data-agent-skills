@@ -223,3 +223,23 @@
 - Tests: passed (review-post-fix clear pass)
 - Commit: 6406ef6
 - Chain: .subagent-runs/das-r62z/f27bb993
+
+## 2026-03-11T11:50:11+01:00 | das-r7yk | closed
+
+- Path: A
+- Research: no
+- Summary: Created GitHub Actions CI workflow (.github/workflows/ci.yml) with strict lint check and eval-manifest presence verification for 14 target skills. Fixed Major issue with exit code capture in bash -e mode.
+- Files: .github/workflows/ci.yml
+- Tests: passed (review-post-fix clear pass)
+- Commit: c6cee03
+- Chain: .subagent-runs/das-r7yk/67438918
+
+## 2026-03-11T12:09:53+01:00 | das-u0hp | closed
+
+- Path: A
+- Research: no
+- Summary: Created engineering-ml-features skill with SKILL.md and 4 reference files (categorical-encoding, datetime-features, text-features, feature-selection). Fixed 2 Major issues (TargetEncoder cv param, deprecated RandomizedLasso) and 1 Minor (division by zero).
+- Files: skills/engineering-ml-features/SKILL.md, skills/engineering-ml-features/references/*.md (4)
+- Tests: passed (review-post-fix clear pass)
+- Commit: 373110e
+- Chain: .subagent-runs/das-u0hp/28914b27

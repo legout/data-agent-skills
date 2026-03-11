@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-u0hp",
+  "primary_terms": ["engineering-ml-features", "feature-engineering", "preprocessing", "encoding", "datetime", "text-feature"],
+  "secondary_terms": ["skill-refactor", "data-science", "leakage-safe preprocessing", "representation guidance", "eval coverage", "skills"],
+  "file_hints": [".agents/skills/", "skills/", ".pi/agent/skills/"],
+  "change_scope": "Creating new engineering-ml-features skill by refactoring existing feature-engineering guidance",
+  "ticket_summary": "Refactor feature-engineering guidance into new engineering-ml-features skill with leakage-safe preprocessing and representation guidance"
+}
