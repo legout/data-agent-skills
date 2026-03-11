@@ -1,10 +1,20 @@
 ---
 name: data-science-interactive-apps
-description: "Interactive web apps for data science: Streamlit, Panel, and Gradio. Use for prototyping ML models, creating data exploration dashboards, and sharing insights with non-technical stakeholders."
+description: "[DEPRECATED] Use @building-data-apps instead. Interactive web apps for data science: Streamlit, Panel, and Gradio. Use for prototyping ML models, creating data exploration dashboards, and sharing insights with non-technical stakeholders."
 dependsOn: ["@data-science-notebooks", "@data-science-model-evaluation"]
 ---
 
 # Interactive Web Apps
+
+> **⚠️ DEPRECATED:** This skill has been superseded by `@building-data-apps`. 
+> 
+> The new skill includes:
+> - All 5 frameworks: Streamlit, Panel, Gradio, **Dash**, and **NiceGUI**
+> - Clear boundaries vs `working-in-notebooks`
+> - Comprehensive deployment patterns
+> - Advanced reference guides for each framework
+> 
+> Please use `@building-data-apps` for all new data app development.
 
 Use this skill for building lightweight web interfaces to ML models, data visualizations, and analytical tools.
 
@@ -180,6 +190,7 @@ api_key = "sk-..."
 
 ## Related skills
 
+- `@building-data-apps` — **Use this instead** for all data app development
 - `@data-science-notebooks` — Prototype in notebooks, convert to apps
 - `@data-science-model-evaluation` — Present model metrics in apps
 - `@data-engineering-orchestration` — Connect apps to production pipelines
