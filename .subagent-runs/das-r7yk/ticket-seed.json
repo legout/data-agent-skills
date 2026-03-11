@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-r7yk",
+  "primary_terms": ["CI", "linter", "strict mode", "eval manifests", "skills"],
+  "secondary_terms": ["GitHub Actions", "workflow", "linting", "validation", "evals", "actionable output"],
+  "file_hints": [".github/workflows/", ".tf/", "scripts/", "skills/"],
+  "change_scope": "CI workflow files and lint/eval validation configuration",
+  "ticket_summary": "Wire strict lint and eval-presence checks into CI to make them part of the default merge path"
+}

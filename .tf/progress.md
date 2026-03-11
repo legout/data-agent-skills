@@ -203,3 +203,23 @@
 - Commit: 7f3afce
 - Chain: .subagent-runs/das-jg7i/2f6694e5
 - Blocker: Post-fix review gate "Uncertain" - anchor-context.md and implementation.md missing at expected path (.subagent-runs/das-jg7i/2f6694e5/). Functional objective (fix broken refs) verified complete, but procedural gate not cleared.
+
+## 2026-03-11T10:53:20+01:00 | das-n3x8 | closed
+
+- Path: A
+- Research: no
+- Summary: Created orchestrating-data-pipelines skill consolidating Prefect/Dagster/dbt/FlowerPower guidance from external skill, fixed major location issue by moving from .pi/agent/skills/ to canonical skills/ directory.
+- Files: skills/orchestrating-data-pipelines/SKILL.md, skills/orchestrating-data-pipelines/*.md (5)
+- Tests: passed (review-post-fix clear pass)
+- Commit: 30b0076
+- Chain: .subagent-runs/das-n3x8/1a622984
+
+## 2026-03-11T11:36:38+01:00 | das-r62z | closed
+
+- Path: B
+- Research: no
+- Summary: Created working-in-notebooks skill with SKILL.md and 3 reference files (jupyter-guide, marimo-guide, reproducibility-patterns). Fixed Major marimo API issue (replaced @mo.cell with @app.cell). Clear post-fix pass.
+- Files: skills/working-in-notebooks/SKILL.md, skills/working-in-notebooks/references/*.md (3), evals/working-in-notebooks.json
+- Tests: passed (review-post-fix clear pass)
+- Commit: 6406ef6
+- Chain: .subagent-runs/das-r62z/f27bb993

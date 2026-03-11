@@ -1,0 +1,116 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: Skill Lint (Strict)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install pyyaml
+
+      - name: Run skill lint
+        id: lint
+        run: |
+          echo "::group::Running skill_lint.py --strict"
+          LINT_EXIT=0
+          python3 tools/skill_lint.py --strict || LINT_EXIT=$?
+          echo "::endgroup::"
+          
+          if [ $LINT_EXIT -ne 0 ]; then
+            echo "::error::Skill lint failed. Please fix the issues above."
+            echo ""
+            echo "Common fixes:"
+            echo "  - Ensure all SKILL.md files have valid frontmatter (name, description)"
+            echo "  - Fix broken markdown references in documentation"
+            echo "  - Run 'python3 tools/skill_lint.py' locally to see warnings"
+            exit 1
+          fi
+          
+          echo "✓ All skills passed lint checks"
+
+  eval-presence-check:
+    name: Eval Manifest Presence
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify eval manifests exist
+        id: eval-check
+        run: |
+          # List of the 14 target skill eval manifests
+          SKILLS=(
+            "accessing-cloud-storage"
+            "analyzing-data"
+            "assuring-data-pipelines"
+            "building-data-apps"
+            "building-data-pipelines"
+            "building-streaming-pipelines"
+            "designing-data-storage"
+            "engineering-ai-pipelines"
+            "engineering-ml-features"
+            "evaluating-ml-models"
+            "managing-data-catalogs"
+            "orchestrating-data-pipelines"
+            "using-flowerpower"
+            "working-in-notebooks"
+          )
+
+          MISSING=()
+          
+          echo "Checking eval manifests..."
+          echo ""
+          
+          for skill in "${SKILLS[@]}"; do
+            EVAL_FILE="eval/${skill}.json"
+            TRIGGER_FILE="eval/trigger-eval/${skill}.json"
+            
+            if [ ! -f "$EVAL_FILE" ]; then
+              MISSING+=("$EVAL_FILE")
+              echo "  ✗ Missing: $EVAL_FILE"
+            else
+              echo "  ✓ Found: $EVAL_FILE"
+            fi
+            
+            if [ ! -f "$TRIGGER_FILE" ]; then
+              MISSING+=("$TRIGGER_FILE")
+              echo "  ✗ Missing: $TRIGGER_FILE"
+            else
+              echo "  ✓ Found: $TRIGGER_FILE"
+            fi
+          done
+          
+          echo ""
+          
+          if [ ${#MISSING[@]} -ne 0 ]; then
+            echo "::error::Missing ${#MISSING[@]} eval manifest(s)"
+            echo ""
+            echo "Failed! The following eval manifests are missing:"
+            for file in "${MISSING[@]}"; do
+              echo "  - $file"
+            done
+            echo ""
+            echo "Action required:"
+            echo "  1. Create the missing eval manifest JSON files in the appropriate directory"
+            echo "  2. See eval/README.md for the eval manifest format specification"
+            echo "  3. Ensure both eval/<skill>.json AND eval/trigger-eval/<skill>.json exist"
+            exit 1
+          fi
+          
+          echo "✓ All 14 target skill eval manifests present ($((${#SKILLS[@]} * 2)) total files)"

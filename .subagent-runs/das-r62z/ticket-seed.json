@@ -1,0 +1,41 @@
+{
+  "ticket_id": "das-r62z",
+  "primary_terms": [
+    "working-in-notebooks",
+    "Jupyter",
+    "JupyterLab",
+    "marimo",
+    "notebook publishing",
+    "reproducibility",
+    "sharing"
+  ],
+  "secondary_terms": [
+    "skill-refactor",
+    "data-science",
+    "notebooks",
+    "workflow-centered skill",
+    "routing boundaries",
+    "notebook testing",
+    "nbstripout",
+    "Quarto",
+    "nbconvert",
+    "Voilà",
+    "reactive execution",
+    "version control",
+    "exploratory analysis"
+  ],
+  "file_hints": [
+    "skills/data-science-notebooks/",
+    "skills/working-in-notebooks/",
+    "SKILL_REFACTORING_PLAN.md"
+  ],
+  "change_scope": "Create new working-in-notebooks skill by refactoring data-science-notebooks skill with cleaner routing boundaries, direct references for Jupyter/marimo/sharing/reproducibility, and fixing broken refs",
+  "ticket_summary": "Create working-in-notebooks skill with direct references for Jupyter, marimo, sharing, and reproducibility guidance as part of the skill library refactoring",
+  "complexity": "medium",
+  "dependencies": ["das-jg7i"],
+  "acceptance_criteria": [
+    "new working-in-notebooks skill exists with direct references for Jupyter, marimo, sharing, and reproducibility",
+    "notebook-specific broken refs are fixed as part of the rewrite",
+    "touched content has eval coverage and explicit boundaries versus app-building"
+  ]
+}
