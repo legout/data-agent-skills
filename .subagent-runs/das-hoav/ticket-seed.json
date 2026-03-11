@@ -1,0 +1,12 @@
+{
+  "ticket_id": "das-hoav",
+  "primary_terms": ["building-data-apps", "Streamlit", "Panel", "Gradio", "Dash", "NiceGUI", "data-science-interactive-apps"],
+  "secondary_terms": ["skill-refactor", "data-science", "data-apps", "app-building", "dashboard", "web-app", "stakeholder-facing"],
+  "file_hints": ["skills/", "skills/data-science-interactive-apps/", "skills/working-in-notebooks/", "evals/"],
+  "change_scope": "Create new building-data-apps skill, refactor from data-science-interactive-apps, add Dash/NiceGUI coverage, add eval coverage, update boundary references",
+  "ticket_summary": "Create new building-data-apps skill for Streamlit, Panel, Gradio, Dash, and NiceGUI workflows with clear boundaries vs working-in-notebooks",
+  "dependency_context": {
+    "das-r62z": "closed - created working-in-notebooks skill with explicit boundary references to building-data-apps",
+    "das-jg7i": "closed - merged EDA and visualization into analyzing-data skill"
+  }
+}

@@ -348,7 +348,7 @@ def process_files(list_s3_files: list[str]) -> pl.LazyFrame:
 - **`@designing-data-storage`** - Delta Lake, Iceberg table formats and operations
 - **`@data-engineering-storage-remote-access`** - Cloud storage backends (S3, GCS) and libraries
 - **`@assuring-data-pipelines`** - Data validation frameworks (Pandera, Great Expectations)
-- **`@data-engineering-catalogs`** - Data catalog systems for discovery and governance
+- **`@managing-data-catalogs`** - Data catalog systems for discovery and governance
 
 ---
 

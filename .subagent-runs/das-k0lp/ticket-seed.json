@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-k0lp",
+  "primary_terms": ["managing-data-catalogs", "catalog architecture", "comparison guidance", "data catalogs"],
+  "secondary_terms": ["skill-refactor", "data-engineering", "catalogs", "metadata", "direct-link style"],
+  "file_hints": ["skills/", "eval/", ".tf/knowledge/"],
+  "change_scope": "Create new managing-data-catalogs skill, update catalog references to direct-link style, ensure eval coverage",
+  "ticket_summary": "Refactor catalog and metadata guidance into new managing-data-catalogs skill with architecture, comparison, and multi-source access guidance"
+}

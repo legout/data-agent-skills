@@ -302,7 +302,7 @@ slice_data = z[5000:6000, :]
 - `@accessing-cloud-storage` - S3, GCS, Azure authentication and I/O patterns
 - `@building-data-pipelines` - ETL patterns using these storage formats
 - `@data-engineering-ai-ml` - Vector storage, Lance, embeddings workflows
-- `@data-engineering-catalogs` - Hive, Glue, REST catalogs for Iceberg
+- `@managing-data-catalogs` - Hive, Glue, REST catalogs for Iceberg
 
 ## References
 

@@ -892,7 +892,7 @@ SELECT * FROM my_data WHERE batch_id = 1;
 - `@designing-data-storage` - File formats (Parquet, Arrow, Lance) and lakehouse formats (Delta Lake, Iceberg, Hudi)
 - `@accessing-cloud-storage` - S3, GCS, Azure backend details
 - `@assuring-data-pipelines` - Great Expectations, Pandera, OpenTelemetry, Prometheus
-- **`@data-engineering-catalogs`** - Data catalog systems, Iceberg catalogs, DuckDB multi-source pattern
+- **`@managing-data-catalogs`** - Data catalog systems, Iceberg catalogs, DuckDB multi-source pattern
 - [Delta Lake Schema Evolution](https://delta.io/blog/2023-02-08-delta-lake-schema-evolution/)
 - [Apache Iceberg Schema Evolution](https://iceberg.apache.org/docs/latest/evolution/)
 - [DuckDB MERGE INTO](https://duckdb.org/docs/stable/sql/statements/merge_into.html)

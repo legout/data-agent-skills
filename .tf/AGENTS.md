@@ -77,3 +77,9 @@ Discovered in: das-09vu (2026-03-11)
 For workflow-oriented skills (streaming, orchestration, pipelines), keep SKILL.md at decision/workflow level with short illustrative snippets only (~5-15 lines). Long runnable patterns (producer/consumer implementations, error handling flows) should live in reference files. Exception: library-selection skills where comparison and usage guidance should be inline for cohesion. When SKILL.md contains 50+ line code blocks, it likely duplicates reference content and should be refactored to progressive disclosure with links.
 
 Discovered in: das-5ewy (2026-03-11)
+
+## Lesson: Multi-Framework Skill Organization
+
+When documenting multiple frameworks/libraries in a single skill (e.g., Streamlit, Panel, Gradio, Dash, NiceGUI), use a three-tier structure: (1) main SKILL.md with quick starts and selection guidance for 80% of use cases, (2) framework-specific reference files for deep dives (caching, callbacks, deployment), and (3) a framework-selection guide that bridges the main skill and references with decision matrices. This prevents SKILL.md from becoming unwieldy while maintaining discoverability. Each reference file should focus on advanced patterns specific to that framework rather than duplicating basics already covered in the main skill.
+
+Discovered in: das-hoav (2026-03-11)

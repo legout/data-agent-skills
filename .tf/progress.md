@@ -344,3 +344,23 @@
 - Commit: 144d8eb
 - Chain: .subagent-runs/das-5ewy/2c66a6e6
 - Blocker: Post-fix review gate "Uncertain" - Major concern about SKILL.md being too code-heavy not resolved. Quick re-check identified that long code blocks in SKILL.md duplicate reference-level content and work against progressive disclosure standards.
+
+## 2026-03-11T16:58:28+01:00 | das-h2mc | closed
+
+- Path: A
+- Research: no
+- Summary: Created engineering-ai-pipelines skill for AI/ML data pipelines with SKILL.md and 4 reference files (embeddings, vector-stores, rag-pipelines, monitoring). Fixed 3 Major issues (SQL param mismatch, division-by-zero, default privacy) and 2 Minor issues (missing imports).
+- Files: skills/engineering-ai-pipelines/SKILL.md, skills/engineering-ai-pipelines/references/*.md (4), evals/engineering-ai-pipelines.json
+- Tests: passed (review-post-fix clear pass)
+- Commit: 89f1b21
+- Chain: .subagent-runs/das-h2mc/4ad4c60d
+
+## 2026-03-11T17:29:10+01:00 | das-hoav | closed
+
+- Path: A
+- Research: no
+- Summary: Created building-data-apps skill with SKILL.md and 7 reference files covering Streamlit, Panel, Gradio, Dash, and NiceGUI. Fixed 6 issues (3 Major security/correctness, 3 Minor). Deprecated data-science-interactive-apps.
+- Files: skills/building-data-apps/SKILL.md, skills/building-data-apps/references/*.md (7), skills/data-science-interactive-apps/SKILL.md
+- Tests: passed (review-post-fix clear pass)
+- Commit: 90113df
+- Chain: .subagent-runs/das-hoav/930353c7

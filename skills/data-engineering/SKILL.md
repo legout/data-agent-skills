@@ -20,7 +20,7 @@ Welcome to the comprehensive data engineering skill suite. This hub organizes al
 | **Quality & Observability** | `@assuring-data-pipelines` | Great Expectations, Pandera, OpenTelemetry, Prometheus for validation and monitoring |
 | **AI/ML** | `@data-engineering-ai-ml` | Embeddings, vector databases, RAG pipelines |
 | **Best Practices** | `@data-engineering-best-practices` | Medallion architecture, partitioning, file sizing, incremental loads, schema evolution, testing |
-| **Catalogs** | `@data-engineering-catalogs` | Data catalog systems: Iceberg catalogs, DuckDB multi-source, Amundsen/DataHub/OpenMetadata |
+| **Catalogs** | `@managing-data-catalogs` | Data catalog systems: Iceberg catalogs, DuckDB multi-source, Amundsen/DataHub/OpenMetadata |
 
 ## Quick Reference: Core Stack
 
@@ -46,7 +46,7 @@ Go to `@data-engineering-storage-remote-access` for fsspec, pyarrow.fs, and obst
 Explore `@designing-data-storage` for file formats and ACID table formats.
 
 ### Choosing a Data Catalog?
-Check `@data-engineering-catalogs` for Iceberg catalogs, DuckDB multi-source patterns, and tool comparisons.
+Check `@managing-data-catalogs` for Iceberg catalogs, DuckDB multi-source patterns, and tool comparisons.
 
 ### Production-Grade Pipelines?
 Read `@data-engineering-best-practices` for medallion architecture, partitioning, schema evolution, and testing strategies.
