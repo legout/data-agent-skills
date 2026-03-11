@@ -395,3 +395,14 @@
 - Tests: passed (review-post-fix clear pass)
 - Commit: e51fd1b
 - Chain: .subagent-runs/das-t14p/4328b428
+
+## 2026-03-11T18:52:08+01:00 | das-01dp | closed
+
+- Path: A
+- Research: no
+- Summary: Removed 21 superseded skill folders and updated all references to use new 14-skill set. All acceptance criteria met: (1) 21 superseded skills removed, (2) README updated with new skill taxonomy, (3) zero broken refs to deleted skills verified.
+- Files: README.md, skills/* (21 deleted, 14 updated with reference migrations)
+- Tests: passed (all acceptance criteria verified)
+- Commit: 3c44bf5
+- Chain: .subagent-runs/das-01dp/ac654f53
+- Resolution: Pre-existing lint warnings (20 errors/93 warnings) are unrelated to ticket scope - they concern missing TOCs, hybrid syntax, and template placeholders that existed before this ticket.
