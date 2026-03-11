@@ -1,7 +1,7 @@
 ---
 name: using-flowerpower
 description: "Create and manage data pipelines using the FlowerPower framework with Hamilton DAGs and uv. Lightweight orchestration for batch ETL, data transformation, and ML pipelines. Integrates with Delta Lake, DuckDB, Polars, and cloud storage."
-dependsOn: ["@data-engineering-core", "@designing-data-storage", "@data-engineering-storage-remote-access", "@assuring-data-pipelines", "@data-engineering-best-practices"]
+dependsOn: ["@building-data-pipelines", "@designing-data-storage", "@accessing-cloud-storage", "@assuring-data-pipelines"]
 ---
 
 # FlowerPower Pipeline Framework
@@ -46,11 +46,11 @@ Use `building-data-pipelines` for learning ETL patterns, tool selection, and wri
 ## Skill Dependencies
 
 This skill assumes familiarity with:
-- **`@data-engineering-core`** - Polars, DuckDB, PyArrow basics
+- **`@building-data-pipelines`** - Polars, DuckDB, PyArrow basics
 - **`@designing-data-storage`** - Delta Lake, Iceberg table formats
-- **`@data-engineering-storage-remote-access`** - Cloud storage (S3, GCS) and fsspec
+- **`@accessing-cloud-storage`** - Cloud storage (S3, GCS) and fsspec
 - **`@assuring-data-pipelines`** - Data validation with Pandera, Great Expectations
-- **`@data-engineering-best-practices`** - Medallion architecture, partitioning, incremental loads
+- **`@building-data-pipelines`** - Medallion architecture, partitioning, incremental loads
 
 ---
 
@@ -344,9 +344,9 @@ def process_files(list_s3_files: list[str]) -> pl.LazyFrame:
 
 - **`building-data-pipelines`** - General ETL patterns, tool selection, and raw Polars/DuckDB code
 - **`orchestrating-data-pipelines`** - Production orchestration (Prefect, Dagster, dbt) when you need scheduling, retries, and SLA guarantees
-- **`@data-engineering-best-practices`** - Medallion architecture, incremental loads, partitioning, file sizing
+- **`@building-data-pipelines`** - Medallion architecture, incremental loads, partitioning, file sizing
 - **`@designing-data-storage`** - Delta Lake, Iceberg table formats and operations
-- **`@data-engineering-storage-remote-access`** - Cloud storage backends (S3, GCS) and libraries
+- **`@accessing-cloud-storage`** - Cloud storage backends (S3, GCS) and libraries
 - **`@assuring-data-pipelines`** - Data validation frameworks (Pandera, Great Expectations)
 - **`@managing-data-catalogs`** - Data catalog systems for discovery and governance
 

@@ -260,4 +260,3 @@ glue:GetTable: Entity not found
 
 - [AWS Glue Data Catalog Docs](https://docs.aws.amazon.com/glue/latest/dg/catalog-and-crawler.html)
 - `@accessing-cloud-storage` - AWS authentication patterns
-- `@data-engineering-storage-authentication` - IAM roles and credentials

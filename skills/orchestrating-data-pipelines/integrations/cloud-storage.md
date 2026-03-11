@@ -119,4 +119,4 @@ Example with dbt Cloud:
 - [DuckDB HTTPFS extension](https://duckdb.org/docs/extensions/httpfs)
 - [dbt-postgres documentation](https://docs.getdbt.com/docs/adapters/postgres)
 - `@orchestrating-data-pipelines/dbt.md` - Full dbt guide
-- `@data-engineering-storage-remote-access/integrations/duckdb.md` - DuckDB cloud patterns
+- `@accessing-cloud-storage/references/duckdb.md` - DuckDB cloud patterns

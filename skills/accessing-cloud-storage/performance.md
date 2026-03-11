@@ -160,4 +160,4 @@ for batch in scan.to_batches():
 ## References
 
 - `SKILL.md` in this skill - Library guides (fsspec, obstore, pyarrow.fs)
-- `@data-engineering-core` - Polars lazy evaluation for pushdown
+- `@building-data-pipelines` - Polars lazy evaluation for pushdown

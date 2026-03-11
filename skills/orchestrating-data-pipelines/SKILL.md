@@ -1,7 +1,7 @@
 ---
 name: orchestrating-data-pipelines
 description: "Pipeline orchestration and workflow management with Prefect, Dagster, and dbt. Covers scheduling, dependency management, retries, and integration patterns."
-dependsOn: ["@data-engineering-core"]
+dependsOn: ["@building-data-pipelines"]
 ---
 
 # Pipeline Orchestration
@@ -28,12 +28,12 @@ Workflow orchestration tools for data pipelines: Prefect, Dagster, and dbt. Thes
 ## Skill Dependencies
 
 Assumes familiarity with:
-- `@data-engineering-core` - Polars, DuckDB, PyArrow
-- `@data-engineering-storage-remote-access` - Cloud storage for intermediate data
+- `@building-data-pipelines` - Polars, DuckDB, PyArrow
+- `@accessing-cloud-storage` - Cloud storage for intermediate data
 
 Related:
-- `@data-engineering-quality` - Data validation integrated into orchestration
-- `@data-engineering-observability` - Monitoring and tracing
+- `@assuring-data-pipelines` - Data validation integrated into orchestration
+- `@assuring-data-pipelines` - Monitoring and tracing
 - `@designing-data-storage` - Delta/Iceberg for state management
 
 ---
@@ -101,11 +101,11 @@ See: `@orchestrating-data-pipelines/dbt.md`
 | Production readiness | High | Moderate (batch jobs) |
 
 **Integration with data-engineering stack:**
-- Uses **Polars/DuckDB** for DataFrame operations (`@data-engineering-core`)
+- Uses **Polars/DuckDB** for DataFrame operations (`@building-data-pipelines`)
 - **Delta Lake** for ACID table formats (`@designing-data-storage`)
-- **fsspec/S3** for cloud storage (`@data-engineering-storage-remote-access`)
-- **Pandera** for data validation (`@data-engineering-quality`)
-- Follows **medallion architecture** (`@data-engineering-best-practices`)
+- **fsspec/S3** for cloud storage (`@accessing-cloud-storage`)
+- **Pandera** for data validation (`@assuring-data-pipelines`)
+- Follows **medallion architecture** (`@building-data-pipelines`)
 
 **Skill reference:** `@flowerpower` - Complete guide to FlowerPower with advanced production patterns (watermarks, data quality, incremental loads, cloud deployment).
 

@@ -1,6 +1,6 @@
 ---
 id: das-t14p
-status: open
+status: closed
 deps: [das-y3ig, das-jg7i, das-u0hp, das-nd1t, das-r62z, das-hoav, das-uubf]
 links: [das-01dp, das-y3ig]
 created: 2026-03-10T15:55:12Z
@@ -20,3 +20,15 @@ Document the breaking change, the old-to-new mapping, and how contributors shoul
 - migration guidance covers old-to-new skill names and rollout expectations
 - contributor guidance explains templates, evals, and lint expectations
 
+
+## Notes
+
+**2026-03-11T17:32:02Z**
+
+Implementation complete:
+- Created docs/migration-map.md with complete old→new skill mapping (29 legacy → 14 target)
+- Created CHANGELOG.md with release notes, breaking changes, and planned sections
+- Created CONTRIBUTING.md with contributor workflow, eval requirements, lint checks
+- Fixed 2 Major issues (numerical consistency, claim scoping) + 1 Minor (policy consistency)
+- Commit: e51fd1b
+- Gate: Clear pass (review-post-fix)

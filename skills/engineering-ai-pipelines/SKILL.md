@@ -2,7 +2,7 @@
 name: engineering-ai-pipelines
 description: "AI/ML production workflows: embedding generation, vector storage, RAG patterns, LLM monitoring, and batch inference."
 dependsOn:
-  - "@data-engineering-core"
+  - "@building-data-pipelines"
   - "@designing-data-storage"
 ---
 
@@ -430,10 +430,10 @@ def monitored_llm_call(prompt: str, model: str = "gpt-4o") -> str:
 ## Related Skills
 
 - `@designing-data-storage` - File formats (Parquet, Lance) and lakehouse formats for storing embeddings
-- `@data-engineering-core` - Polars, DuckDB for data processing in pipelines
-- `@data-engineering-orchestration` - Scheduling and batch processing for embedding generation
-- `@data-engineering-quality` - Data validation and quality checks for ML pipelines
-- `@data-engineering-observability` - General pipeline monitoring with OpenTelemetry
+- `@building-data-pipelines` - Polars, DuckDB for data processing in pipelines
+- `@orchestrating-data-pipelines` - Scheduling and batch processing for embedding generation
+- `@assuring-data-pipelines` - Data validation and quality checks for ML pipelines
+- `@assuring-data-pipelines` - General pipeline monitoring with OpenTelemetry
 
 ## References
 

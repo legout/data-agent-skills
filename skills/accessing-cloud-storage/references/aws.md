@@ -224,6 +224,6 @@ fs = s3fs.S3FileSystem(
 - [AWS IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
 - [AssumeRole Documentation](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html)
 - [Workload Identity Federation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_idp_oidc.html)
-- `data-engineering-storage-remote-access-libraries-fsspec` - fsspec S3 configuration
-- `data-engineering-storage-remote-access-libraries-pyarrow-fs` - PyArrow S3 integration
-- `data-engineering-storage-remote-access-libraries-obstore` - obstore S3 usage
+- `fsspec` - fsspec S3 configuration
+- `PyArrow filesystem` - PyArrow S3 integration
+- `obstore` - obstore S3 usage

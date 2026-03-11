@@ -1,7 +1,7 @@
 ---
 name: engineering-ml-features
 description: "Feature engineering for machine learning: encoding categorical variables, scaling numeric features, datetime transformations, text features, and leakage-safe preprocessing pipelines. Use when preparing data for modeling or improving model performance through better representations."
-dependsOn: ["@analyzing-data", "@data-engineering-core"]
+dependsOn: ["@analyzing-data", "@building-data-pipelines"]
 ---
 
 # Engineering ML Features
@@ -21,9 +21,9 @@ Use this skill for creating, transforming, and selecting features that improve m
 ## When NOT to use this skill
 
 - General data exploration → use `analyzing-data`
-- Model evaluation and selection → use `data-science-model-evaluation`
-- Building interactive data apps → use `data-science-interactive-apps`
-- Notebook setup and workflows → use `data-science-notebooks`
+- Model evaluation and selection → use `@evaluating-ml-models`
+- Building interactive data apps → use `@building-data-apps`
+- Notebook setup and workflows → use `@working-in-notebooks`
 
 ## Quick tool selection
 
@@ -244,8 +244,8 @@ Reference guides for detailed implementations:
 ## Related skills
 
 - `analyzing-data` — Understand data before engineering features
-- `data-science-model-evaluation` — Validate feature impact on model performance
-- `data-engineering-core` — Data processing fundamentals and pipeline patterns
+- `@evaluating-ml-models` — Validate feature impact on model performance
+- `@building-data-pipelines` — Data processing fundamentals and pipeline patterns
 
 ## References
 

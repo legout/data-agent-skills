@@ -170,5 +170,5 @@ def resilient_copy(src_fs, src_path, dst_fs, dst_path):
 ## References
 
 - `SKILL.md` in this skill - Library guides (fsspec, obstore)
-- `@data-engineering-core` - DuckDB/MERGE for metadata tracking
-- `@data-engineering-observability` - Monitoring long-running copy jobs
+- `@building-data-pipelines` - DuckDB/MERGE for metadata tracking
+- `@assuring-data-pipelines` - Monitoring long-running copy jobs

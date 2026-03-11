@@ -364,3 +364,34 @@
 - Tests: passed (review-post-fix clear pass)
 - Commit: 90113df
 - Chain: .subagent-runs/das-hoav/930353c7
+
+## 2026-03-11T17:50:16+01:00 | das-k0lp | in_progress
+
+- Path: A
+- Research: no
+- Summary: Created managing-data-catalogs skill with SKILL.md and 5 detailed guides (Hive Metastore, AWS Glue, REST Catalog, DuckDB, Open Source Tools). Updated 4 skill files with new references. All 11 verification checks passed.
+- Files: skills/managing-data-catalogs/SKILL.md, skills/managing-data-catalogs/*.md (5), skills/data-engineering/SKILL.md, skills/designing-data-storage/SKILL.md, skills/data-engineering-best-practices/best-practices-detailed.md, skills/flowerpower/SKILL.md
+- Tests: passed (11/11 verification checks)
+- Commit: e9ba7e6
+- Chain: .subagent-runs/das-k0lp/dec65adf
+- Blocker: Post-fix gate "Uncertain" - review.md file missing actual review content (only write confirmation). Cannot verify resolution of reported Major issue. All tests passed, implementation verified complete, but procedural gate not cleared.
+
+## 2026-03-11T18:12:18+01:00 | das-y3ig | closed
+
+- Path: A
+- Research: no
+- Summary: Converted data-engineering skill to docs-only hub by adding [DOCS ONLY - DO NOT TRIGGER] prefix to frontmatter description and deprecation banner with routing to specific replacement skills.
+- Files: skills/data-engineering/SKILL.md
+- Tests: passed (review-post-fix clear pass)
+- Commit: 57e6192
+- Chain: .subagent-runs/das-y3ig/ef87bd05
+
+## 2026-03-11T18:30:23+01:00 | das-t14p | closed
+
+- Path: A
+- Research: no
+- Summary: Created 3 root-level documentation files for skill refactor: docs/migration-map.md (old→new mapping), CHANGELOG.md (release notes), CONTRIBUTING.md (contributor guide). Fixed 2 Major issues (numerical consistency in changelog, scoping claims to actual delivery) and 1 Minor (trigger eval policy consistency).
+- Files: CHANGELOG.md, CONTRIBUTING.md, docs/migration-map.md
+- Tests: passed (review-post-fix clear pass)
+- Commit: e51fd1b
+- Chain: .subagent-runs/das-t14p/4328b428

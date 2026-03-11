@@ -1,7 +1,7 @@
 ---
 name: managing-data-catalogs
 description: "Data catalogs for lakehouse architectures: Iceberg catalogs (Hive Metastore, AWS Glue, REST/Tabular), using DuckDB as a lightweight multi-source catalog, and comparisons of open-source metadata tools (Amundsen, DataHub, OpenMetadata)."
-dependsOn: ["@designing-data-storage", "@accessing-cloud-storage", "@data-engineering-storage-authentication"]
+dependsOn: ["@designing-data-storage", "@accessing-cloud-storage"]
 ---
 
 # Managing Data Catalogs
@@ -155,7 +155,6 @@ df = table.scan().to_pandas()
 
 - `@designing-data-storage` - Delta Lake, Iceberg table formats, file format selection
 - `@accessing-cloud-storage` - fsspec, pyarrow.fs, obstore for storage access
-- `@data-engineering-storage-authentication` - AWS, GCP, Azure credential patterns
 - `@building-data-pipelines` - ETL patterns using catalog-registered tables
 
 ---

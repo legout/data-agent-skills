@@ -1,7 +1,7 @@
 ---
 name: assuring-data-pipelines
 description: "Data quality validation and observability for data pipelines. Combines Great Expectations and Pandera for data validation with OpenTelemetry and Prometheus for monitoring and alerting."
-dependsOn: ["@data-engineering-core"]
+dependsOn: ["@building-data-pipelines"]
 ---
 
 # Assuring Data Pipelines
@@ -39,8 +39,8 @@ Data quality validation and observability for production data pipelines. Ensure 
 
 ## Skill Dependencies
 
-- `@data-engineering-core` - Polars, DuckDB, Pandas basics
-- `@data-engineering-orchestration` - Integrate validation into workflows
+- `@building-data-pipelines` - Polars, DuckDB, Pandas basics
+- `@orchestrating-data-pipelines` - Integrate validation into workflows
 
 ---
 
@@ -587,5 +587,5 @@ def quality_assured_pipeline(df):
 - [OpenTelemetry Python](https://opentelemetry.io/docs/instrumentation/python/)
 - [Prometheus Python Client](https://github.com/prometheus/client_python)
 - [Grafana Dashboarding](https://grafana.com/docs/grafana/latest/dashboards/)
-- `@data-engineering-core` - Pipeline patterns with validation
-- `@data-engineering-orchestration` - Prefect/Dagster observability features
+- `@building-data-pipelines` - Pipeline patterns with validation
+- `@orchestrating-data-pipelines` - Prefect/Dagster observability features

@@ -1,7 +1,7 @@
 ---
 name: accessing-cloud-storage
 description: "Access cloud storage (S3, GCS, Azure) in Python using fsspec, pyarrow.fs, or obstore. Includes DataFrame integrations (Polars, DuckDB, Pandas, PyArrow), performance optimization, patterns for incremental loading, partitioned writes, and cross-cloud copy."
-dependsOn: ["@data-engineering-core", "@data-engineering-storage-authentication", "@designing-data-storage"]
+dependsOn: ["@building-data-pipelines", "@assuring-data-pipelines", "@designing-data-storage"]
 ---
 
 # Accessing Cloud Storage
@@ -43,12 +43,12 @@ Comprehensive guide to accessing cloud storage (S3, GCS, Azure) and remote files
 ## Skill Dependencies
 
 Prerequisites:
-- `@data-engineering-core` - Polars, DuckDB, PyArrow basics
-- `@data-engineering-storage-authentication` - AWS, GCP, Azure auth patterns
+- `@building-data-pipelines` - Polars, DuckDB, PyArrow basics
+- AWS, GCP, Azure auth patterns (see Authentication section below)
 - `@designing-data-storage` - File formats (Parquet, Arrow, Lance) and lakehouse formats (Delta Lake, Iceberg, Hudi)
 
 Related:
-- `@data-engineering-orchestration` - dbt with cloud storage
+- `@orchestrating-data-pipelines` - dbt with cloud storage
 
 ---
 
@@ -70,7 +70,7 @@ For detailed patterns, see [DataFrame Integration](#dataframe-integration) below
 - `@designing-data-storage` - Delta Lake and Iceberg with cloud catalogs (S3/GCS/Azure)
 
 ### Infrastructure Patterns
-- `@data-engineering-storage-authentication` - AWS, GCP, Azure auth patterns, IAM roles, service principals
+- AWS, GCP, Azure auth patterns, IAM roles, service principals (see Authentication section below)
 - See `performance.md` in this skill - Caching, concurrency, async
 - See `patterns.md` in this skill - Incremental loading, partitioned writes, cross-cloud copy
 
@@ -463,7 +463,7 @@ cached_fs = fsspec.filesystem(
 df = pl.read_parquet("simplecache::s3://bucket/cached.parquet")
 ```
 
-**See:** `@data-engineering-core` for Polars fundamentals, `@data-engineering-storage-authentication` for credential setup.
+**See:** `@building-data-pipelines` for Polars fundamentals.
 
 ---
 
@@ -509,7 +509,7 @@ con.execute("INSTALL delta; LOAD delta;")
 df = con.sql("SELECT * FROM delta_scan('s3://bucket/delta-table/')").pl()
 ```
 
-**See:** `@data-engineering-core` for DuckDB fundamentals, `@data-engineering-storage-authentication` for credential patterns.
+**See:** `@building-data-pipelines` for DuckDB fundamentals.
 
 ---
 
@@ -549,7 +549,7 @@ s3_fs = fs.S3FileSystem(region="us-east-1")
 df = pd.read_parquet("bucket/data.parquet", filesystem=s3_fs)
 ```
 
-**See:** `@data-engineering-core` for pandas alternatives (Polars recommended for large data), `@data-engineering-storage-authentication` for credential setup.
+**See:** `@building-data-pipelines` for pandas alternatives (Polars recommended for large data).
 
 ---
 
@@ -602,7 +602,7 @@ with fs.open("s3://bucket/file.parquet", "rb") as f:
     table = pq.read_table(f)
 ```
 
-**See:** `@data-engineering-core` for PyArrow fundamentals, `@data-engineering-storage-authentication` for credential patterns.
+**See:** `@building-data-pipelines` for PyArrow fundamentals.
 
 ---
 
@@ -616,7 +616,6 @@ For detailed information on storage formats (Parquet, Arrow, Lance, Zarr, Avro, 
 
 All three libraries follow standard cloud authentication patterns: explicit credentials → environment variables → config files → IAM roles/Managed Identities.
 
-**See:** `@data-engineering-storage-authentication`
 
 ## Performance Optimization
 

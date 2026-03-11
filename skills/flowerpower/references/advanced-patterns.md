@@ -655,9 +655,9 @@ def notify_failure(error: Exception, **kwargs):
 
 ## References
 
-- `@data-engineering-best-practices` - Medallion architecture, partitioning, incremental loads
+- `@building-data-pipelines` - Medallion architecture, partitioning, incremental loads
 - `@designing-data-storage` - Delta Lake, Iceberg operations
-- `@data-engineering-storage-remote-access` - Cloud storage (S3, GCS, Azure)
+- `@accessing-cloud-storage` - Cloud storage (S3, GCS, Azure)
 - `@assuring-data-pipelines` - Data validation with Pandera, Great Expectations
 - [FlowerPower Documentation](https://legout.github.io/flowerpower/)
 - [Hamilton DAG Tutorial](https://hamilton.apache.org/tutorials/)

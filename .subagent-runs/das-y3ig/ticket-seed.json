@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-y3ig",
+  "primary_terms": ["data-engineering", "hub skill", "skill-map.md", "trigger behavior"],
+  "secondary_terms": ["skill routing", "migration", "docs-only", "trigger path"],
+  "file_hints": ["skills/data-engineering/SKILL.md", "docs/skill-map.md", "docs/TAXONOMY.md"],
+  "change_scope": "Convert data-engineering hub skill to docs-only index, update docs/skill-map.md with routing info, remove hub from trigger path",
+  "ticket_summary": "Convert data-engineering hub skill into documentation so it no longer competes in triggering"
+}

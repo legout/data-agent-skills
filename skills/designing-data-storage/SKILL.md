@@ -2,7 +2,7 @@
 name: designing-data-storage
 description: "File formats and lakehouse table formats for data lakes: Parquet, Arrow, Lance, Zarr, Avro, ORC, Delta Lake, Apache Iceberg, and Apache Hudi. Covers compression, partitioning, ACID transactions, schema evolution, and format selection."
 dependsOn:
-  - "@data-engineering-core"
+  - "@building-data-pipelines"
 ---
 
 # Designing Data Storage
@@ -301,7 +301,7 @@ slice_data = z[5000:6000, :]
 
 - `@accessing-cloud-storage` - S3, GCS, Azure authentication and I/O patterns
 - `@building-data-pipelines` - ETL patterns using these storage formats
-- `@data-engineering-ai-ml` - Vector storage, Lance, embeddings workflows
+- `@engineering-ai-pipelines` - Vector storage, Lance, embeddings workflows
 - `@managing-data-catalogs` - Hive, Glue, REST catalogs for Iceberg
 
 ## References

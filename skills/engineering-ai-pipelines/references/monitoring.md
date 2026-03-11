@@ -350,5 +350,5 @@ def check_alerts(stats: dict) -> List[str]:
 - [OpenAI Token Pricing](https://openai.com/pricing)
 - [OpenTelemetry Metrics](https://opentelemetry.io/docs/concepts/signals/metrics/)
 - [Tenacity Retry Library](https://github.com/jd/tenacity)
-- `@data-engineering-observability` - General pipeline monitoring
+- `@assuring-data-pipelines` - General pipeline monitoring
 - `@engineering-ai-pipelines/references/rag-pipelines.md` - End-to-end RAG

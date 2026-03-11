@@ -217,5 +217,5 @@ GROUP BY source_system;
 
 - [DuckDB ATTACH Documentation](https://duckdb.org/docs/stable/sql/statements/attach.html)
 - [DuckLake Documentation](https://ducklake.select/docs/stable/duckdb/usage/)
-- `@data-engineering-core` - DuckDB fundamentals
+- `@building-data-pipelines` - DuckDB fundamentals
 - `@accessing-cloud-storage` - S3 authentication for DuckDB

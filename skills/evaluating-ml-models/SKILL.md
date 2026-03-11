@@ -1,7 +1,7 @@
 ---
 name: evaluating-ml-models
 description: "Model evaluation and validation: cross-validation strategies, metrics selection, hyperparameter tuning, experiment tracking, and model comparison. Use when assessing model performance, diagnosing issues, selecting models, or optimizing hyperparameters."
-dependsOn: ["@engineering-ml-features", "@data-engineering-core"]
+dependsOn: ["@engineering-ml-features", "@building-data-pipelines"]
 ---
 
 # Evaluating ML Models
@@ -22,8 +22,8 @@ Use this skill for rigorously assessing model performance, comparing alternative
 
 - Feature engineering and preprocessing → use `engineering-ml-features`
 - Exploratory data analysis → use `analyzing-data`
-- Building interactive data apps → use `data-science-interactive-apps`
-- Notebook setup and workflows → use `data-science-notebooks`
+- Building interactive data apps → use `@building-data-apps`
+- Notebook setup and workflows → use `@working-in-notebooks`
 
 ## Quick tool selection
 
@@ -172,10 +172,9 @@ Detailed reference guides for specific topics:
 
 ## Related skills
 
-- `engineering-ml-features` — Upstream feature engineering before evaluation
-- `data-science-model-evaluation` — Legacy skill, use `@evaluating-ml-models` instead
-- `data-engineering-orchestration` — Production model deployment
-- `assuring-data-pipelines` — Model monitoring in production
+- `@engineering-ml-features` — Upstream feature engineering before evaluation
+- `@orchestrating-data-pipelines` — Production model deployment
+- `@assuring-data-pipelines` — Model monitoring in production
 
 ## References
 

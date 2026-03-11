@@ -10,9 +10,9 @@ npx skills add legout/data-platform-agent-skills --list
 
 # Install specific skills
 npx skills add legout/data-platform-agent-skills \
-  --skill data-engineering-core \
-  --skill data-science-eda \
-  --skill data-science-visualization
+  --skill analyzing-data \
+  --skill building-data-pipelines \
+  --skill designing-data-storage
 
 # Install all skills
 npx skills add legout/data-platform-agent-skills --all
@@ -20,19 +20,31 @@ npx skills add legout/data-platform-agent-skills --all
 
 ### ⚠️ Migration Warning (Breaking Change)
 
-If you previously installed skills manually (symlinked or copied the nested `data-engineering/` directory), **you must remove the old structure first** to avoid conflicts:
+If you previously installed skills before March 2025, **you must remove the old structure first** to avoid conflicts:
 
 ```bash
-# Remove old nested skill structure (if exists)
+# Remove old skill folders (if they exist)
 rm -rf ~/.pi/agent/skills/data-engineering/
+rm -rf ~/.pi/agent/skills/data-engineering-core/
+rm -rf ~/.pi/agent/skills/data-engineering-best-practices/
+rm -rf ~/.pi/agent/skills/data-engineering-orchestration/
+rm -rf ~/.pi/agent/skills/data-engineering-quality/
+rm -rf ~/.pi/agent/skills/data-engineering-observability/
+rm -rf ~/.pi/agent/skills/data-engineering-ai-ml/
+rm -rf ~/.pi/agent/skills/data-engineering-catalogs/
+rm -rf ~/.pi/agent/skills/data-engineering-storage-remote-access/
 rm -rf ~/.pi/agent/skills/data-science/
-rm -rf ~/.pi/agent/skills/flowerpower-skill/
+rm -rf ~/.pi/agent/skills/data-science-eda/
+rm -rf ~/.pi/agent/skills/data-science-feature-engineering/
+rm -rf ~/.pi/agent/skills/data-science-interactive-apps/
+rm -rf ~/.pi/agent/skills/data-science-model-evaluation/
+rm -rf ~/.pi/agent/skills/data-science-notebooks/
 
 # Now install fresh with npx skills
 npx skills add legout/data-platform-agent-skills --all
 ```
 
-**Why this happens:** The old structure had skills nested (e.g., `data-engineering/core/`). The new structure uses flat names (`data-engineering-core/`). Both have the same skill `name:` in frontmatter, causing pi to detect conflicts.
+**Why this happens:** We consolidated 21 legacy skills into 14 focused skills with clearer naming (e.g., `data-engineering-core` → `building-data-pipelines`).
 
 ---
 
@@ -40,13 +52,21 @@ npx skills add legout/data-platform-agent-skills --all
 
 ```
 data-platform-agent-skills/
-├── skills/                    # All skills (flat structure)
-│   ├── data-engineering-core/
-│   ├── data-engineering-storage-lakehouse/
-│   ├── data-science-eda/
-│   ├── data-science-visualization/
+├── skills/                    # All skills (14 focused skills)
+│   ├── accessing-cloud-storage/
+│   ├── analyzing-data/
+│   ├── assuring-data-pipelines/
+│   ├── building-data-apps/
+│   ├── building-data-pipelines/
+│   ├── building-streaming-pipelines/
+│   ├── designing-data-storage/
+│   ├── engineering-ai-pipelines/
+│   ├── engineering-ml-features/
+│   ├── evaluating-ml-models/
 │   ├── flowerpower/
-│   └── ...
+│   ├── managing-data-catalogs/
+│   ├── orchestrating-data-pipelines/
+│   └── working-in-notebooks/
 ├── tools/                     # Development utilities
 │   └── skill_lint.py         # Lint skills for correctness
 └── README.md
@@ -60,18 +80,18 @@ data-platform-agent-skills/
 
 ```bash
 # Edit a skill
-skills/data-science-visualization/SKILL.md
+skills/analyzing-data/SKILL.md
 
 # Lint before committing
 python3 tools/skill_lint.py
 
 # Test locally
 npx skills add . --list
-npx skills add . --skill data-science-visualization
+npx skills add . --skill analyzing-data
 
 # Commit and push
-git add skills/data-science-visualization/
-git commit -m "Update visualization skill"
+git add skills/analyzing-data/
+git commit -m "Update analyzing-data skill"
 git push
 ```
 
@@ -89,24 +109,27 @@ Checks:
 
 ---
 
-## Skill Categories
+## Skill Categories (14 Focused Skills)
 
-### Data Engineering (23 skills)
-- **Core**: Polars, DuckDB, PyArrow, PostgreSQL
-- **Storage**: Lakehouse (Delta, Iceberg, Hudi), cloud access, auth
-- **Orchestration**: Prefect, Dagster, dbt
-- **Quality, Observability, Streaming**
+### Data Platform (10 skills)
+- **accessing-cloud-storage** — S3, GCS, Azure storage with fsspec, pyarrow.fs, obstore
+- **analyzing-data** — Exploratory data analysis, profiling, visualization
+- **assuring-data-pipelines** — Data quality, observability, validation (Great Expectations, OpenTelemetry)
+- **building-data-apps** — Streamlit, Panel, Gradio, Dash interactive applications
+- **building-data-pipelines** — Core batch ETL with Polars, DuckDB, PyArrow
+- **building-streaming-pipelines** — Kafka, MQTT, NATS streaming data
+- **designing-data-storage** — Lakehouse (Delta, Iceberg), formats, partitioning
+- **engineering-ai-pipelines** — Embeddings, vector stores, RAG, LLM monitoring
+- **managing-data-catalogs** — Metadata systems, Glue, Tabular, REST catalogs
+- **orchestrating-data-pipelines** — Prefect, Dagster, dbt workflow orchestration
 
-### Data Science (8 skills)
-- **EDA** — Exploratory Data Analysis
-- **Visualization** — Matplotlib, Seaborn, Plotly, Altair, HoloViz, Bokeh
-- **Feature Engineering** — ML feature preparation
-- **Model Evaluation** — Validation and tuning
-- **Notebooks** — Jupyter, marimo
-- **Interactive Apps** — Streamlit, Panel, Gradio
+### Data Science / ML (3 skills)
+- **engineering-ml-features** — Feature engineering, preprocessing, selection
+- **evaluating-ml-models** — Cross-validation, metrics, hyperparameter tuning
+- **working-in-notebooks** — Jupyter, JupyterLab, marimo workflows
 
 ### Pipeline Framework (1 skill)
-- **FlowerPower** — Hamilton DAG-based pipelines
+- **flowerpower** — Hamilton DAG-based pipeline framework
 
 ---
 

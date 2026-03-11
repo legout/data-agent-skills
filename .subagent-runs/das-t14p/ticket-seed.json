@@ -1,0 +1,9 @@
+{
+  "ticket_id": "das-t14p",
+  "primary_terms": ["migration-map.md", "CHANGELOG.md", "CONTRIBUTING.md", "migration guidance", "contributor guidance"],
+  "secondary_terms": ["skill-refactor", "new architecture", "old-to-new mapping", "templates", "evals", "lint expectations"],
+  "file_hints": ["docs/migration-map.md", "CHANGELOG.md", "CONTRIBUTING.md", ".tf/knowledge/", ".tf/lessons/"],
+  "change_scope": "Documentation files for migration map, changelog, and contributor guidance",
+  "ticket_summary": "Publish migration map, changelog, and contributor guidance for the refactored skill architecture",
+  "dependencies": ["das-y3ig", "das-jg7i", "das-u0hp", "das-nd1t", "das-r62z", "das-hoav", "das-uubf"]
+}

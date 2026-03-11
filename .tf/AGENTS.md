@@ -83,3 +83,15 @@ Discovered in: das-5ewy (2026-03-11)
 When documenting multiple frameworks/libraries in a single skill (e.g., Streamlit, Panel, Gradio, Dash, NiceGUI), use a three-tier structure: (1) main SKILL.md with quick starts and selection guidance for 80% of use cases, (2) framework-specific reference files for deep dives (caching, callbacks, deployment), and (3) a framework-selection guide that bridges the main skill and references with decision matrices. This prevents SKILL.md from becoming unwieldy while maintaining discoverability. Each reference file should focus on advanced patterns specific to that framework rather than duplicating basics already covered in the main skill.
 
 Discovered in: das-hoav (2026-03-11)
+
+## Lesson: Non-Triggerable Hub Skill Pattern
+
+For skills that serve as documentation hubs/indexes rather than providing actionable guidance, use explicit non-triggerable markers: (1) add `[DOCS ONLY - DO NOT TRIGGER]` prefix to frontmatter description, (2) add deprecation banner at top of content with routing to specific replacement skills. This prevents hub skills from being selected over actionable skills on general queries, improving user experience by directing them immediately to relevant specialized skills.
+
+Discovered in: das-y3ig (2026-03-11)
+
+## Lesson: Changelog Claims Scoped to Delivery State
+
+When documenting refactoring work in changelogs, distinguish between completed work and planned target state. Use explicit markers like "(Planned)" or future-tense wording for items not yet delivered. Avoid presenting target-state goals as completed facts, which misleads users during migration and creates trust issues. Scope claims to what is actually in the commit, defer roadmap items to dedicated sections.
+
+Discovered in: das-t14p (2026-03-11)
