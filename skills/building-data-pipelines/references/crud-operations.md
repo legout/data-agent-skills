@@ -475,7 +475,7 @@ CREATE TABLE batch_metadata (
 
 - `pipeline-patterns.md` — ETL and incremental loading patterns
 - `production-architecture.md` — Medallion architecture and partitioning
-- `designing-data-storage` — Delta Lake, Iceberg deep dive
+- `@data-engineering-storage-lakehouse` — Delta Lake, Iceberg deep dive
 - [Delta Lake Schema Evolution](https://delta.io/blog/2023-02-08-delta-lake-schema-evolution/)
 - [Apache Iceberg Evolution](https://iceberg.apache.org/docs/latest/evolution/)
 - [DuckDB MERGE INTO](https://duckdb.org/docs/stable/sql/statements/merge_into.html)

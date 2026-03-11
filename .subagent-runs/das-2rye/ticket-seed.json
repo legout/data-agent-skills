@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-2rye",
+  "primary_terms": ["designing-data-storage", "Delta Lake", "Iceberg", "Hudi", "storage-design", "lakehouse"],
+  "secondary_terms": ["storage formats", "table formats", "cross-links", "direct-link style", "decision guidance", "skill-refactor", "data-engineering"],
+  "file_hints": [".tf/knowledge/", ".agents/skills/", "data-engineering-storage-formats", "data-engineering-storage-lakehouse"],
+  "change_scope": "Storage design workflow/skills, lakehouse documentation/knowledge files, cross-links between storage and lakehouse skills",
+  "ticket_summary": "Consolidate lakehouse design references under the designing-data-storage workflow with explicit cross-links and updated direct-link style"
+}

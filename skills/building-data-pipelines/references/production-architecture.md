@@ -449,7 +449,7 @@ Before deploying to production:
 
 - `pipeline-patterns.md` — ETL patterns and incremental loading
 - `crud-operations.md` — Append, overwrite, merge patterns
-- `designing-data-storage` — Delta Lake, Iceberg, and file formats
+- `@data-engineering-storage-lakehouse` — Delta Lake, Iceberg, and file formats
 - `accessing-cloud-storage` — Cloud storage authentication and access
 - [Delta Lake Documentation](https://delta.io/)
 - [Apache Iceberg Documentation](https://iceberg.apache.org/)

@@ -283,3 +283,13 @@
 - Tests: passed (review-post-fix clear pass)
 - Commit: f400135, 49e9c0f
 - Chain: .subagent-runs/das-g8hg/38e33b75
+
+## 2026-03-11T14:13:55+01:00 | das-2rye | closed
+
+- Path: B
+- Research: no
+- Summary: Consolidated lakehouse skill references to @accessing-cloud-storage across 4 files (SKILL.md, delta-lake.md, iceberg.md, storage-formats SKILL.md). Fixed 1 Major issue (deprecated reference in storage-formats References section).
+- Files: skills/data-engineering-storage-lakehouse/SKILL.md, skills/data-engineering-storage-lakehouse/delta-lake.md, skills/data-engineering-storage-lakehouse/iceberg.md, skills/data-engineering-storage-formats/SKILL.md
+- Tests: passed (review-post-fix clear pass)
+- Commit: bcde9ea
+- Chain: .subagent-runs/das-2rye/e9223d1d

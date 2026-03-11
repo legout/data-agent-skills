@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-9jfk",
+  "primary_terms": ["Delta", "Iceberg", "designing-data-storage", "accessing-cloud-storage"],
+  "secondary_terms": ["storage-design", "data-engineering", "integration guidance", "merge", "relocate", "lakehouse", "table formats"],
+  "file_hints": [".tf/knowledge/", "skills/data-engineering/", "skills/accessing-cloud-storage/"],
+  "change_scope": "Knowledge/documentation files for Delta Lake and Apache Iceberg integration, likely in .tf/knowledge and skills directories",
+  "ticket_summary": "Relocate Delta and Iceberg integration guidance to designing-data-storage, remove obsolete references, ensure clear boundaries with accessing-cloud-storage"
+}
