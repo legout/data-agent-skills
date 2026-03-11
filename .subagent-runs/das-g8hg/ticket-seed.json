@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-g8hg",
+  "primary_terms": ["accessing-cloud-storage", "fsspec", "pyarrow.fs", "obstore", "Polars", "DuckDB", "Pandas", "PyArrow"],
+  "secondary_terms": ["provider/auth", "library", "integration", "storage-access", "remote-access", "storage-design", "DataFrame", "cloud-storage"],
+  "file_hints": [".pi/agent/skills/", "skills/", ".tf/knowledge/"],
+  "change_scope": "Create new consolidated accessing-cloud-storage skill, deprecate 10 legacy remote-access child skills, update references",
+  "ticket_summary": "Create consolidated accessing-cloud-storage skill by merging fragmented storage-access skill tree into one coherent workflow-centered skill"
+}

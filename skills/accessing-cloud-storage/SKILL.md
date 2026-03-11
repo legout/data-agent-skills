@@ -58,7 +58,7 @@ Related:
 ### Library Deep Dives
 This skill contains detailed guidance for all three libraries:
 - **fsspec** - See [fsspec Library Guide](#fsspec-library-guide) below
-- **pyarrow.fs** - See [PyArrow Filesystem Guide](#pyarrow-filesystem-guide) below  
+- **pyarrow.fs** - See [PyArrow Filesystem Guide](#pyarrow-filesystem-guide) below
 - **obstore** - See [obstore Library Guide](#obstore-library-guide) below
 
 ### DataFrame Integrations
@@ -67,9 +67,8 @@ This skill contains detailed guidance for all three libraries:
 - **Pandas** - fsspec auto-detection for transparent cloud URI handling
 - **PyArrow** - Native filesystem with dataset scanning and batch processing
 
-For detailed patterns, see [DataFrame Integration](#dataframe-integration) below. For Delta Lake and Iceberg:
-- `@data-engineering-storage-remote-access-integrations-delta-lake` - Delta on S3/GCS/Azure
-- `@data-engineering-storage-remote-access-integrations-iceberg` - Iceberg with cloud catalogs
+For detailed patterns, see [DataFrame Integration](#dataframe-integration) below. For Delta Lake and Iceberg table formats on cloud storage:
+- `@data-engineering-storage-lakehouse` - Delta Lake and Iceberg with cloud catalogs (S3/GCS/Azure)
 
 ### Infrastructure Patterns
 - `@data-engineering-storage-authentication` - AWS, GCP, Azure auth patterns, IAM roles, service principals

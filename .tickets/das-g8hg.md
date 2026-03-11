@@ -1,6 +1,6 @@
 ---
 id: das-g8hg
-status: open
+status: in_progress
 deps: [das-llsd, das-s0yk, das-ix8j, das-wxeh]
 links: [das-09vu, das-k0lp, das-trf5]
 created: 2026-03-10T15:55:10Z
@@ -20,3 +20,9 @@ Collapse the fragmented storage-access skill tree into one coherent workflow-cen
 - obsolete remote-access child-skill content is mapped into the new skill
 - touched content has clear routing boundaries versus storage-design work
 
+
+## Notes
+
+**2026-03-11T12:33:26Z**
+
+Implementation: Finalized accessing-cloud-storage skill with consolidated library guides (fsspec/pyarrow.fs/obstore), DataFrame integration section (Polars/DuckDB/Pandas/PyArrow), and deprecation stubs for 10 legacy skills. Commit f400135 (13 files, +537/-1757). Status: in_progress due to uncertain post-fix gate (missing review.md content prevents full issue traceability). Next run should verify all acceptance criteria with fresh review.
