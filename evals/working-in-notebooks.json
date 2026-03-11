@@ -1,0 +1,244 @@
+{
+  "skill": "working-in-notebooks",
+  "description": "Evaluation suite for working-in-notebooks skill covering Jupyter, marimo, and reproducibility workflows",
+  "version": "1.0.0",
+  "task_evals": [
+    {
+      "id": "task-001",
+      "name": "Convert Jupyter to Marimo",
+      "description": "Convert an existing Jupyter notebook to marimo format",
+      "prompt": "I have a Jupyter notebook called analysis.ipynb that I want to convert to marimo for better version control. How do I do this?",
+      "expected_behavior": [
+        "Mentions `marimo convert` command",
+        "Explains the .py output format",
+        "Mentions that outputs will be recomputed",
+        "Suggests `marimo edit` to verify the conversion"
+      ],
+      "negative_indicators": [
+        "Suggests manual copy-paste",
+        "Does not mention marimo convert",
+        "Suggests staying with Jupyter"
+      ]
+    },
+    {
+      "id": "task-002",
+      "name": "Make Notebook Reproducible",
+      "description": "Set up a notebook for reproducibility with seeds and dependencies",
+      "prompt": "I'm creating a data analysis notebook that uses random sampling. How can I make sure someone else can get the same results when they run it?",
+      "expected_behavior": [
+        "Mentions setting random seeds (numpy, random, torch)",
+        "Suggests pinning dependencies (requirements.txt)",
+        "Mentions PYTHONHASHSEED for full determinism",
+        "References reproducibility-patterns.md"
+      ],
+      "negative_indicators": [
+        "Only says 'document your steps'",
+        "Ignores random seeds",
+        "Suggests Docker as the only solution"
+      ]
+    },
+    {
+      "id": "task-003",
+      "name": "Jupyter Magic Commands",
+      "description": "Use Jupyter magic commands effectively",
+      "prompt": "What are some useful Jupyter magic commands for timing code and debugging?",
+      "expected_behavior": [
+        "Mentions %timeit for timing",
+        "Mentions %%timeit for cell timing",
+        "Mentions %debug for debugging",
+        "Mentions %watermark for environment info"
+      ],
+      "negative_indicators": [
+        "Confuses magics with standard Python",
+        "Only mentions print statements",
+        "Does not reference jupyter-guide.md"
+      ]
+    },
+    {
+      "id": "task-004",
+      "name": "Marimo Reactive Execution",
+      "description": "Understand marimo's reactive execution model",
+      "prompt": "How does marimo's reactive execution work? If I have three cells where cell 2 depends on cell 1, and cell 3 depends on cell 2, what happens when I change cell 1?",
+      "expected_behavior": [
+        "Explains dependency graph",
+        "States that dependent cells auto-re-run",
+        "Mentions that cell 2 and cell 3 will re-run",
+        "Contrasts with Jupyter's manual execution"
+      ],
+      "negative_indicators": [
+        "Says nothing happens",
+        "Says only cell 2 re-runs",
+        "Confuses with Jupyter behavior"
+      ]
+    },
+    {
+      "id": "task-005",
+      "name": "Notebook Git Best Practices",
+      "description": "Handle notebooks in version control",
+      "prompt": "I want to commit my Jupyter notebooks to git, but the diffs are messy and files are huge. What should I do?",
+      "expected_behavior": [
+        "Mentions nbstripout for Jupyter",
+        "Suggests marimo as alternative",
+        "Mentions .gitattributes setup",
+        "Mentions pre-commit hooks"
+      ],
+      "negative_indicators": [
+        "Says to avoid git for notebooks",
+        "Only suggests .gitignore",
+        "Does not mention stripping outputs"
+      ]
+    }
+  ],
+  "trigger_evals": [
+    {
+      "id": "trigger-001",
+      "type": "positive",
+      "prompt": "How do I convert my Jupyter notebook to marimo?",
+      "expected_skill": "working-in-notebooks",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-002",
+      "type": "positive",
+      "prompt": "What magic commands are available in Jupyter?",
+      "expected_skill": "working-in-notebooks",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-003",
+      "type": "positive",
+      "prompt": "How can I make my notebook reproducible?",
+      "expected_skill": "working-in-notebooks",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-004",
+      "type": "positive",
+      "prompt": "Should I use Jupyter or marimo for my data analysis?",
+      "expected_skill": "working-in-notebooks",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-005",
+      "type": "positive",
+      "prompt": "How do I set random seeds in a notebook?",
+      "expected_skill": "working-in-notebooks",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-006",
+      "type": "positive",
+      "prompt": "What are some best practices for organizing Jupyter notebooks?",
+      "expected_skill": "working-in-notebooks",
+      "confidence": "medium"
+    },
+    {
+      "id": "trigger-007",
+      "type": "positive",
+      "prompt": "How do I pin dependencies for my notebook?",
+      "expected_skill": "working-in-notebooks",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-008",
+      "type": "positive",
+      "prompt": "How do I use marimo's reactive UI components?",
+      "expected_skill": "working-in-notebooks",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-009",
+      "type": "positive",
+      "prompt": "How do I manage secrets in notebooks?",
+      "expected_skill": "working-in-notebooks",
+      "confidence": "medium"
+    },
+    {
+      "id": "trigger-010",
+      "type": "positive",
+      "prompt": "What's the best way to share my notebook with others?",
+      "expected_skill": "working-in-notebooks",
+      "confidence": "medium"
+    },
+    {
+      "id": "trigger-011",
+      "type": "negative",
+      "prompt": "Build me a dashboard for stakeholders to explore sales data",
+      "expected_skill": "building-data-apps",
+      "not_skill": "working-in-notebooks",
+      "reason": "Stakeholder-facing dashboard is an app, not a notebook"
+    },
+    {
+      "id": "trigger-012",
+      "type": "negative",
+      "prompt": "Create a Streamlit app for my machine learning model",
+      "expected_skill": "building-data-apps",
+      "not_skill": "working-in-notebooks",
+      "reason": "Streamlit is explicitly for apps"
+    },
+    {
+      "id": "trigger-013",
+      "type": "negative",
+      "prompt": "How do I perform exploratory data analysis on this dataset?",
+      "expected_skill": "analyzing-data",
+      "not_skill": "working-in-notebooks",
+      "reason": "EDA patterns belong in analyzing-data"
+    },
+    {
+      "id": "trigger-014",
+      "type": "negative",
+      "prompt": "What visualization library should I use for my scatter plot?",
+      "expected_skill": "analyzing-data",
+      "not_skill": "working-in-notebooks",
+      "reason": "Visualization selection belongs in analyzing-data"
+    },
+    {
+      "id": "trigger-015",
+      "type": "negative",
+      "prompt": "How do I evaluate my model's performance with cross-validation?",
+      "expected_skill": "evaluating-ml-models",
+      "not_skill": "working-in-notebooks",
+      "reason": "Model evaluation belongs in evaluating-ml-models"
+    },
+    {
+      "id": "trigger-016",
+      "type": "negative",
+      "prompt": "Create a Gradio interface for my image classifier",
+      "expected_skill": "building-data-apps",
+      "not_skill": "working-in-notebooks",
+      "reason": "Gradio is for building apps, not notebooks"
+    },
+    {
+      "id": "trigger-017",
+      "type": "negative",
+      "prompt": "How do I engineer features for my time series data?",
+      "expected_skill": "engineering-ml-features",
+      "not_skill": "working-in-notebooks",
+      "reason": "Feature engineering patterns belong in engineering-ml-features"
+    },
+    {
+      "id": "trigger-018",
+      "type": "negative",
+      "prompt": "Build an interactive data explorer with buttons and sliders for my team",
+      "expected_skill": "building-data-apps",
+      "not_skill": "working-in-notebooks",
+      "reason": "Interactive explorer for team = app"
+    },
+    {
+      "id": "trigger-019",
+      "type": "negative",
+      "prompt": "What's the best statistical test for comparing these two groups?",
+      "expected_skill": "analyzing-data",
+      "not_skill": "working-in-notebooks",
+      "reason": "Statistical testing belongs in analyzing-data"
+    },
+    {
+      "id": "trigger-020",
+      "type": "negative",
+      "prompt": "Deploy my notebook as a web application",
+      "expected_skill": "building-data-apps",
+      "not_skill": "working-in-notebooks",
+      "reason": "Deploying as web app requires app-building tools"
+    }
+  ]
+}
