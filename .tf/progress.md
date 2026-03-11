@@ -253,3 +253,13 @@
 - Tests: passed (6/6 checks, review-post-fix clear pass)
 - Commit: e6109f5
 - Chain: .subagent-runs/das-nd1t/2fe3f708
+
+## 2026-03-11T12:43:10+01:00 | das-uubf | closed
+
+- Path: A
+- Research: no
+- Summary: Verification ticket confirming lint and CI gates properly enforce refactoring standards (strict mode for missing refs/hybrid links, duplicate detection, TOC checks, eval manifest presence). Added transient directories to lint ignore list.
+- Files: tools/skill_lint.py
+- Tests: passed (review-post-fix clear pass)
+- Commit: ffa0c64
+- Chain: .subagent-runs/das-uubf/0ed2d445

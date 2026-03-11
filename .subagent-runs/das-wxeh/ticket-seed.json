@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-wxeh",
+  "primary_terms": ["Polars", "DuckDB", "Pandas", "PyArrow", "accessing-cloud-storage", "designing-data-storage"],
+  "secondary_terms": ["framework integration", "remote-I/O", "cloud storage", "skill refactor", "consolidation", "library layer"],
+  "file_hints": ["skills/", "data-engineering/", "accessing-cloud-storage", "designing-data-storage", "integrations"],
+  "change_scope": "Cloud storage skill files - consolidate Polars, DuckDB, Pandas, PyArrow integration guidance into accessing-cloud-storage skill",
+  "ticket_summary": "Consolidate framework integration references in accessing-cloud-storage skill - move Polars, DuckDB, Pandas, PyArrow remote-I/O guidance to avoid duplication and point to library layer"
+}
