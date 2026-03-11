@@ -1,0 +1,112 @@
+{
+  "skill": "engineering-ai-pipelines",
+  "description": "Evaluations for AI/ML pipelines: embeddings, vector storage, RAG, and LLM monitoring",
+  "version": "1.0.0",
+  "evals": [
+    {
+      "name": "embedding-selection-openai",
+      "query": "I need to generate embeddings for a production RAG system. Should I use OpenAI or local models?",
+      "expected_mentions": ["OpenAI", "text-embedding-3-small", "cost", "convenience", "local models", "privacy"],
+      "expected_skills": ["engineering-ai-pipelines"],
+      "evaluation_criteria": "Should compare OpenAI (convenience, cost) vs local models (privacy, offline), mention text-embedding-3-small for most use cases"
+    },
+    {
+      "name": "embedding-selection-local",
+      "query": "I'm working with healthcare data and can't send it to external APIs. How do I generate embeddings locally?",
+      "expected_mentions": ["sentence-transformers", "all-MiniLM-L6-v2", "local", "privacy", "offline"],
+      "expected_skills": ["engineering-ai-pipelines"],
+      "evaluation_criteria": "Should recommend sentence-transformers with all-MiniLM-L6-v2, emphasize privacy and offline capability"
+    },
+    {
+      "name": "embedding-model-dimensions",
+      "query": "What embedding model should I use for a balance of speed and quality?",
+      "expected_mentions": ["all-MiniLM-L6-v2", "384", "text-embedding-3-small", "1536", "trade-off"],
+      "expected_skills": ["engineering-ai-pipelines"],
+      "evaluation_criteria": "Should mention MiniLM-L6 (384 dim, fast) vs OpenAI 3-small (1536 dim, quality), discuss trade-offs"
+    },
+    {
+      "name": "vector-db-selection-lancedb",
+      "query": "I'm building a RAG prototype. What vector database should I use?",
+      "expected_mentions": ["LanceDB", "embedded", "Arrow-native", "Polars", "prototyping"],
+      "expected_skills": ["engineering-ai-pipelines"],
+      "evaluation_criteria": "Should recommend LanceDB for RAG prototyping, mention Arrow-native integration with Polars"
+    },
+    {
+      "name": "vector-db-selection-pgvector",
+      "query": "We already use PostgreSQL and need to add vector search. What should we do?",
+      "expected_mentions": ["pgvector", "PostgreSQL", "ACID", "extension", "existing"],
+      "expected_skills": ["engineering-ai-pipelines"],
+      "evaluation_criteria": "Should recommend pgvector PostgreSQL extension, mention ACID benefits and existing infrastructure"
+    },
+    {
+      "name": "vector-db-comparison",
+      "query": "Compare LanceDB vs pgvector for a production RAG system.",
+      "expected_mentions": ["LanceDB", "pgvector", "embedded", "PostgreSQL", "scale", "ACID"],
+      "expected_skills": ["engineering-ai-pipelines"],
+      "evaluation_criteria": "Should compare LanceDB (embedded, prototyping) vs pgvector (ACID, existing PG), mention trade-offs"
+    },
+    {
+      "name": "rag-chunking",
+      "query": "How should I chunk documents for a RAG system?",
+      "expected_mentions": ["chunking", "tokens", "paragraphs", "semantic", "tiktoken", "overlap"],
+      "expected_skills": ["engineering-ai-pipelines"],
+      "evaluation_criteria": "Should discuss chunking strategies: by tokens, paragraphs, semantic; mention tiktoken and overlap"
+    },
+    {
+      "name": "rag-context-assembly",
+      "query": "How do I assemble context within an LLM's token budget for RAG?",
+      "expected_mentions": ["token budget", "context assembly", "tiktoken", "max_tokens", "truncation"],
+      "expected_skills": ["engineering-ai-pipelines"],
+      "evaluation_criteria": "Should explain context assembly with token counting, staying within budget, prioritizing relevant chunks"
+    },
+    {
+      "name": "rag-complete-pipeline",
+      "query": "Show me a complete RAG pipeline with embedding generation, vector search, and LLM generation.",
+      "expected_mentions": ["RAGPipeline", "retrieve", "generate", "LanceDB", "sentence-transformers", "OpenAI"],
+      "expected_skills": ["engineering-ai-pipelines"],
+      "evaluation_criteria": "Should provide complete RAG pipeline code with retrieval and generation components"
+    },
+    {
+      "name": "llm-monitoring-cost",
+      "query": "How do I track costs for OpenAI API usage in production?",
+      "expected_mentions": ["LLMMonitor", "token", "cost", "DuckDB", "log_call", "pricing"],
+      "expected_skills": ["engineering-ai-pipelines"],
+      "evaluation_criteria": "Should explain cost tracking with token counting, DuckDB storage, and pricing calculations"
+    },
+    {
+      "name": "llm-monitoring-retry",
+      "query": "How do I add retry logic to LLM API calls?",
+      "expected_mentions": ["tenacity", "retry", "exponential backoff", "stop_after_attempt", "rate limits"],
+      "expected_skills": ["engineering-ai-pipelines"],
+      "evaluation_criteria": "Should show tenacity retry pattern with exponential backoff for handling rate limits"
+    },
+    {
+      "name": "llm-monitoring-opentelemetry",
+      "query": "How do I instrument LLM calls with OpenTelemetry for tracing?",
+      "expected_mentions": ["OpenTelemetry", "tracer", "span", "attributes", "tokens", "latency"],
+      "expected_skills": ["engineering-ai-pipelines"],
+      "evaluation_criteria": "Should demonstrate OpenTelemetry tracing with spans for LLM calls, including token and latency attributes"
+    },
+    {
+      "name": "vector-index-ivf-pq",
+      "query": "When should I use IVF_PQ vs HNSW indexes in LanceDB?",
+      "expected_mentions": ["IVF_PQ", "HNSW", "disk-efficient", "recall", "memory", "partitions"],
+      "expected_skills": ["engineering-ai-pipelines"],
+      "evaluation_criteria": "Should explain IVF_PQ (disk-efficient) vs HNSW (high recall, memory), when to use each"
+    },
+    {
+      "name": "cross-reference-storage",
+      "query": "Where should I store my embeddings for long-term persistence?",
+      "expected_mentions": ["designing-data-storage", "Parquet", "Lance", "Delta Lake", "storage"],
+      "expected_skills": ["engineering-ai-pipelines", "designing-data-storage"],
+      "evaluation_criteria": "Should reference @designing-data-storage for storage format guidance, mention Lance for vectors or Parquet/Delta for general"
+    },
+    {
+      "name": "rag-evaluation",
+      "query": "How do I evaluate the quality of my RAG system's answers?",
+      "expected_mentions": ["precision", "LLM-as-a-Judge", "ground truth", "relevance", "retrieval"],
+      "expected_skills": ["engineering-ai-pipelines"],
+      "evaluation_criteria": "Should discuss retrieval evaluation (precision@k) and answer quality (LLM-as-judge)"
+    }
+  ]
+}

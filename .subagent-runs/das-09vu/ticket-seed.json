@@ -1,0 +1,15 @@
+{
+  "ticket_id": "das-09vu",
+  "primary_terms": ["flowerpower", "using-flowerpower", "building-data-pipelines", "orchestrating-data-pipelines"],
+  "secondary_terms": ["skill-refactor", "data-engineering", "pipeline skills", "overlap boundaries", "eval coverage", "scripts", "hamilton", "dag"],
+  "file_hints": [
+    "skills/flowerpower/SKILL.md",
+    "skills/flowerpower/scripts/",
+    "skills/flowerpower/references/",
+    "skills/building-data-pipelines/SKILL.md",
+    "skills/orchestrating-data-pipelines/SKILL.md",
+    "eval/"
+  ],
+  "change_scope": "FlowerPower skill refresh with explicit boundary documentation vs pipeline skills, ensuring eval coverage and no broken refs",
+  "ticket_summary": "Refresh flowerpower skill with direct script references and explicit overlap boundaries vs building-data-pipelines and orchestrating-data-pipelines skills"
+}

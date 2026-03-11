@@ -323,3 +323,24 @@
 - Tests: passed (review-post-fix clear pass)
 - Commit: 6287c00
 - Chain: .subagent-runs/das-trf5/b6679fda
+
+## 2026-03-11T15:48:01+01:00 | das-09vu | closed
+
+- Path: A
+- Research: no
+- Summary: Updated FlowerPower skill frontmatter name to using-flowerpower and replaced generic @-prefixed boundary targets with canonical skill names (building-data-pipelines, orchestrating-data-pipelines) per acceptance criteria.
+- Files: skills/flowerpower/SKILL.md
+- Tests: passed (review-post-fix clear pass)
+- Commit: 70aa495
+- Chain: .subagent-runs/das-09vu/a7b6d5b4
+
+## 2026-03-11T16:28:57+01:00 | das-5ewy | in_progress
+
+- Path: A
+- Research: no
+- Summary: Created building-streaming-pipelines skill with SKILL.md and 3 reference files (kafka.md, mqtt.md, nats.md). Fixed critical missing reference issues. Post-fix gate uncertain due to unresolved Major concern about SKILL.md being too code-heavy.
+- Files: skills/building-streaming-pipelines/SKILL.md, skills/building-streaming-pipelines/references/*.md (3)
+- Tests: uncertain (review-post-fix gate uncertain)
+- Commit: 144d8eb
+- Chain: .subagent-runs/das-5ewy/2c66a6e6
+- Blocker: Post-fix review gate "Uncertain" - Major concern about SKILL.md being too code-heavy not resolved. Quick re-check identified that long code blocks in SKILL.md duplicate reference-level content and work against progressive disclosure standards.

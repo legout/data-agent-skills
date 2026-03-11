@@ -65,3 +65,15 @@ Discovered in: das-g8hg (2026-03-11)
 When deleting deprecated skill directories, search the entire codebase for references to the deleted skills (using grep/find), not just in obvious SKILL.md files. References may exist in migration guides, comparison tables, documentation, or cross-skill notes. Update all found references to point to canonical replacements before committing the deletion.
 
 Discovered in: das-9jfk (2026-03-11)
+
+## Lesson: Canonical Skill Names in Boundary Sections
+
+When documenting skill boundaries against related skills, use canonical skill names (e.g., `building-data-pipelines`, `orchestrating-data-pipelines`) not @-prefixed aliases (e.g., `@data-engineering-core`, `@data-engineering-orchestration`). This ensures boundary documentation matches the current taxonomy and avoids confusion when deprecated names are phased out.
+
+Discovered in: das-09vu (2026-03-11)
+
+## Lesson: Progressive Disclosure Code Density
+
+For workflow-oriented skills (streaming, orchestration, pipelines), keep SKILL.md at decision/workflow level with short illustrative snippets only (~5-15 lines). Long runnable patterns (producer/consumer implementations, error handling flows) should live in reference files. Exception: library-selection skills where comparison and usage guidance should be inline for cohesion. When SKILL.md contains 50+ line code blocks, it likely duplicates reference content and should be refactored to progressive disclosure with links.
+
+Discovered in: das-5ewy (2026-03-11)

@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-h2mc",
+  "primary_terms": ["engineering-ai-pipelines", "embeddings", "vector stores", "RAG", "monitoring", "skill"],
+  "secondary_terms": ["data-engineering", "ai-ml", "production workflow", "storage cross-links", "eval coverage"],
+  "file_hints": [".agents/skills/", ".tf/knowledge/", "skills/"],
+  "change_scope": "New skill creation under .agents/skills/ or skills/ directory, possibly updating data-engineering-ai-ml skill references",
+  "ticket_summary": "Create new engineering-ai-pipelines skill with focused workflow guidance for embeddings, vector stores, RAG, and monitoring; refactor from existing data-engineering-ai-ml skill"
+}
