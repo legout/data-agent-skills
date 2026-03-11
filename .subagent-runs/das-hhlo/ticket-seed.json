@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-hhlo",
+  "primary_terms": ["eval", "manifests", "trigger-eval", "14 skills", "positive", "near-miss", "contributor documentation"],
+  "secondary_terms": ["evaluation", "task evaluations", "trigger evaluations", "skill coverage", "CONTRIBUTING"],
+  "file_hints": ["eval/", "eval/README.md", "eval/*.json", "eval/trigger-eval/*.json"],
+  "change_scope": "eval directory verification and contributor documentation enhancement if needed",
+  "ticket_summary": "Verify eval manifests for all 14 future skills exist with positive/near-miss trigger cases, and document how contributors should add/update eval coverage"
+}

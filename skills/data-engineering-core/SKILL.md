@@ -119,8 +119,7 @@ For production-grade structure, use:
 - `@data-engineering-storage-lakehouse` — Delta/Iceberg/Hudi behavior
 - `@data-engineering-storage-remote-access` — fsspec/pyarrow.fs/obstore cloud access
 - `@data-engineering-orchestration` — Prefect/Dagster/dbt orchestration
-- `@data-engineering-quality` — Pandera / Great Expectations validation
-- `@data-engineering-observability` — OTel + Prometheus monitoring
+- `@assuring-data-pipelines` — Data validation (Pandera, Great Expectations) and observability (OTel, Prometheus)
 - `@data-engineering-ai-ml` — embedding/vector/RAG pipelines
 
 ---

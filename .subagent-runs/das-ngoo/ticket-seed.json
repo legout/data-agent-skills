@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-ngoo",
+  "primary_terms": ["taxonomy", "naming conventions", "SKILL.md", "templates", "dependsOn"],
+  "secondary_terms": ["14-skill", "authoring rules", "reference templates", "repo-authoritative"],
+  "file_hints": ["docs/", "SKILL_REFACTORING_PLAN.md", "skills/"],
+  "change_scope": "docs directory, taxonomy documentation, templates",
+  "ticket_summary": "Finalize 14-skill taxonomy with naming rules, templates, and dependsOn policy"
+}

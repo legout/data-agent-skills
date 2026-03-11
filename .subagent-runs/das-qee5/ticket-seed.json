@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-qee5",
+  "primary_terms": ["analyzing-data", "SKILL.md", "skill skeleton", "routing boundaries"],
+  "secondary_terms": ["skill-refactor", "data-science", "analysis", "feature engineering", "notebooks", "data apps", "reference slots"],
+  "file_hints": ["skills/analyzing-data/SKILL.md"],
+  "change_scope": "Create new analyzing-data skill skeleton with explicit routing boundaries to related skills",
+  "ticket_summary": "Create analyzing-data SKILL.md skeleton with routing boundaries to feature engineering, notebooks, and data apps skills"
+}

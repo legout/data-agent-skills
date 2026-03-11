@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-6zd4",
+  "primary_terms": ["skill_lint", "duplicate-content", "TOC", "stale-year"],
+  "secondary_terms": ["markdown", "lint", "content-quality", "threshold", "references"],
+  "file_hints": ["skill_lint"],
+  "change_scope": "skill_lint module - add new lint checks for duplicate content, TOC, and stale year markers",
+  "ticket_summary": "Add three new lint checks to skill_lint: duplicate markdown content detection, long references without TOC flagging, and stale year markers in headings"
+}

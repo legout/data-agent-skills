@@ -1,0 +1,13 @@
+{
+  "ticket_id": "das-llsd",
+  "primary_terms": ["building-data-pipelines", "data-engineering-core", "data-engineering-best-practices", "SKILL.md"],
+  "secondary_terms": ["skill-refactor", "merging", "direct references", "eval coverage", "broken refs", "medallion architecture", "ETL patterns", "Polars", "DuckDB", "PyArrow"],
+  "file_hints": [
+    "skills/data-engineering-core/",
+    "skills/data-engineering-best-practices/",
+    "skills/building-data-pipelines/",
+    "eval/building-data-pipelines.json"
+  ],
+  "change_scope": "Create new building-data-pipelines skill by merging content from data-engineering-core and data-engineering-best-practices. Need to create new skill directory, consolidate references, update SKILL.md with direct references, ensure no broken local refs, and verify eval coverage.",
+  "ticket_summary": "Create building-data-pipelines skill as first refactored engineering skill, merging core ETL and best-practices content"
+}

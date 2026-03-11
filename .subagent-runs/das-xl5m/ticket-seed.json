@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-xl5m",
+  "primary_terms": ["SKILL.md", "template", "long-reference", "TOC"],
+  "secondary_terms": ["progressive-disclosure", "direct-link", "authoring", "consistent structure"],
+  "file_hints": ["docs/", "templates/", "SKILL_REFACTORING_PLAN.md"],
+  "change_scope": "Template files for SKILL.md and reference documents, likely in docs/ or a new templates/ directory",
+  "ticket_summary": "Create reusable templates for SKILL.md and long-reference files with TOC guidance and progressive-disclosure explanations"
+}

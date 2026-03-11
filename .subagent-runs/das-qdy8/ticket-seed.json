@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-qdy8",
+  "primary_terms": ["data-science", "analysis", "deduplication", "references"],
+  "secondary_terms": ["consolidation", "shared-references", "duplicate-copies", "skill-refactor"],
+  "file_hints": ["skills/data-science-*/", "skills/*/references/", ".tf/knowledge/"],
+  "change_scope": "data-science skills and their reference files",
+  "ticket_summary": "Consolidate shared analysis references across data-science skills and delete duplicate copies"
+}

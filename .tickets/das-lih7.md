@@ -1,6 +1,6 @@
 ---
 id: das-lih7
-status: in_progress
+status: closed
 deps: [das-3jql]
 links: [das-yfvl, das-gp3f]
 created: 2026-03-10T15:59:02Z
@@ -42,3 +42,13 @@ Implementation complete but gate uncertain - requires follow-up
 **Next steps:**
 - Remove or relocate 29 legacy-named manifests from eval/ and eval/trigger-eval/
 - Re-verify manifest count matches 14-skill target architecture
+
+**2026-03-10T20:00:06Z**
+
+Implementation complete:
+
+- Removed 58 legacy eval manifests (29 from eval/, 29 from eval/trigger-eval/)
+- Retained only 14 target skills per SKILL_REFACTORING_PLAN.md §5.2
+- Final count: 28 manifests (14 + 14), symmetric across both directories
+- Commit: 09b5c51
+- Gate: Clear pass (high confidence)

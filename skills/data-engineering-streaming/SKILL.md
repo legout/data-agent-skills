@@ -29,7 +29,7 @@ Real-time data ingestion and stream processing with Apache Kafka, MQTT, and NATS
 
 - `@data-engineering-core` - Process stream data with Polars/DuckDB
 - `@data-engineering-orchestration` - Orchestrate stream processing jobs
-- `@data-engineering-quality` - Validate streaming data
+- `@assuring-data-pipelines` - Validate streaming data
 - `@data-engineering-storage-lakehouse` - Persist streams to Delta/Iceberg
 
 ---

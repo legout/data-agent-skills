@@ -1,0 +1,12 @@
+{
+  "ticket_id": "das-ekec",
+  "primary_terms": ["assuring-data-pipelines", "Great Expectations", "Pandera", "OpenTelemetry", "Prometheus"],
+  "secondary_terms": ["data quality", "observability", "feedback-loop", "operational assurance", "skill consolidation", "skill-refactor"],
+  "file_hints": [
+    "skills/data-engineering-quality/SKILL.md",
+    "skills/data-engineering-observability/SKILL.md",
+    "skills/assuring-data-pipelines/SKILL.md"
+  ],
+  "change_scope": "Create new assuring-data-pipelines skill by merging data-engineering-quality and data-engineering-observability; ensure eval coverage and no broken refs",
+  "ticket_summary": "Merge data quality (Great Expectations, Pandera) and observability (OpenTelemetry, Prometheus) skills into single assuring-data-pipelines skill"
+}

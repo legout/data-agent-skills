@@ -1,6 +1,6 @@
 ---
 id: das-6zd4
-status: open
+status: closed
 deps: [das-xl5m]
 links: [das-8erm, das-r7yk]
 created: 2026-03-10T15:59:03Z
@@ -20,3 +20,16 @@ Teach the linter to catch the structural problems highlighted by the refactor pl
 - long references without a TOC are flagged
 - stale year markers like 2026 in headings are flagged
 
+
+## Notes
+
+**2026-03-10T20:55:32Z**
+
+Implementation complete:
+- Added lint_duplicate_content(): detects blocks >5 lines in 3+ files with >100 total lines
+- Added lint_toc_required(): enforces TOC for references/**/*.md only (>100 lines)
+- Added lint_stale_year(): flags (202[0-9]) year markers in h1/h2 headings
+- Fixed post-review: TOC scope limited to references/, duplicate count uses unique files
+
+Test: python tools/skill_lint.py runs clean (34 errors, 145 warnings as expected)
+Commit: 3a7c6b2

@@ -18,8 +18,7 @@ Welcome to the comprehensive data engineering skill suite. This hub organizes al
 |  | `@data-engineering-storage-formats` | Parquet optimizations, Lance, Zarr, Avro, ORC |
 | **Orchestration** | `@data-engineering-orchestration` | Prefect, Dagster, dbt, workflow scheduling |
 | **Streaming** | `@data-engineering-streaming` | Kafka, MQTT, NATS JetStream for real-time data |
-| **Quality** | `@data-engineering-quality` | Great Expectations, Pandera for data validation |
-| **Observability** | `@data-engineering-observability` | OpenTelemetry, Prometheus for pipeline monitoring |
+| **Quality & Observability** | `@assuring-data-pipelines` | Great Expectations, Pandera, OpenTelemetry, Prometheus for validation and monitoring |
 | **AI/ML** | `@data-engineering-ai-ml` | Embeddings, vector databases, RAG pipelines |
 | **Best Practices** | `@data-engineering-best-practices` | Medallion architecture, partitioning, file sizing, incremental loads, schema evolution, testing |
 | **Catalogs** | `@data-engineering-catalogs` | Data catalog systems: Iceberg catalogs, DuckDB multi-source, Amundsen/DataHub/OpenMetadata |
@@ -57,7 +56,7 @@ Read `@data-engineering-best-practices` for medallion architecture, partitioning
 Check `@data-engineering-orchestration` for Prefect, Dagster, and dbt.
 
 ### Production Monitoring?
-See `@data-engineering-observability` for tracing and metrics.
+See `@assuring-data-pipelines` for validation, tracing, and monitoring.
 
 ### AI/ML Data Pipelines?
 Visit `@data-engineering-ai-ml` for embeddings, vector databases, and RAG.
@@ -81,8 +80,8 @@ This restructured suite replaces the previous split organization (`data-engineer
 - `data-engineering-lakehouse` → `@data-engineering-storage-lakehouse`
 - `data-engineering-orchestration` → `@data-engineering-orchestration`
 - `data-engineering-streaming` → `@data-engineering-streaming`
-- `data-engineering-quality` → `@data-engineering-quality`
-- `data-engineering-observability` → `@data-engineering-observability`
+- `data-engineering-quality` → `@assuring-data-pipelines`
+- `data-engineering-observability` → `@assuring-data-pipelines`
 - `data-engineering-llm-pipelines` → `@data-engineering-ai-ml`
 - `remote-filesystems-*` → `@data-engineering-storage-remote-access` and integrations
 

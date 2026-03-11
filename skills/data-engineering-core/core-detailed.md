@@ -18,8 +18,7 @@ Foundational libraries and patterns for building robust, efficient data pipeline
 - `@data-engineering-storage-lakehouse` - Delta Lake, Iceberg, Hudi
 - `@data-engineering-streaming` - Kafka, MQTT, NATS
 - `@data-engineering-orchestration` - Prefect, Dagster, dbt
-- `@data-engineering-quality` - Great Expectations, Pandera
-- `@data-engineering-observability` - OpenTelemetry, Prometheus
+- `@assuring-data-pipelines` - Great Expectations, Pandera, OpenTelemetry, Prometheus
 - `@data-engineering-ai-ml` - Embeddings, vector DBs, RAG
 - `@data-engineering-storage-remote-access` - fsspec, pyarrow.fs, obstore for cloud access
 
@@ -937,7 +936,7 @@ if __name__ == "__main__":
 
 ## 11. Testing & Validation
 
-While `@data-engineering-quality` covers Great Expectations and Pandera, here's a lightweight pattern for unit testing Polars transformations:
+While `@assuring-data-pipelines` covers Great Expectations and Pandera, here's a lightweight pattern for unit testing Polars transformations:
 
 ```python
 import pytest

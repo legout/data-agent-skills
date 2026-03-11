@@ -272,5 +272,5 @@ Score 1-5 on: {', '.join(criteria)}. Provide brief justification."""
 
 - [OpenAI Token Pricing](https://openai.com/pricing)
 - [OpenTelemetry Metrics](https://opentelemetry.io/docs/concepts/signals/metrics/)
-- `@data-engineering-observability` - General pipeline monitoring
+- `@assuring-data-pipelines` - General pipeline monitoring
 - `@data-engineering-ai-ml/rag-pipelines.md` - End-to-end RAG

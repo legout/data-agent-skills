@@ -32,8 +32,7 @@ Assumes familiarity with:
 - `@data-engineering-storage-remote-access` - Cloud storage for intermediate data
 
 Related:
-- `@data-engineering-quality` - Data validation integrated into orchestration
-- `@data-engineering-observability` - Monitoring and tracing
+- `@assuring-data-pipelines` - Data validation (Pandera, Great Expectations) and observability (OTel, Prometheus)
 - `@data-engineering-storage-lakehouse` - Delta/Iceberg for state management
 
 ---
@@ -104,7 +103,7 @@ See: `@data-engineering-orchestration/dbt.md`
 - Uses **Polars/DuckDB** for DataFrame operations (`@data-engineering-core`)
 - **Delta Lake** for ACID table formats (`@data-engineering-storage-lakehouse`)
 - **fsspec/S3** for cloud storage (`@data-engineering-storage-remote-access`)
-- **Pandera** for data validation (`@data-engineering-quality`)
+- **Pandera** for data validation (`@assuring-data-pipelines`)
 - Follows **medallion architecture** (`@data-engineering-best-practices`)
 
 **Skill reference:** `@flowerpower` - Complete guide to FlowerPower with advanced production patterns (watermarks, data quality, incremental loads, cloud deployment).

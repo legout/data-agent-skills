@@ -123,7 +123,7 @@ with mlflow.start_run():
 
 - `@data-science-feature-engineering` — Features to evaluate
 - `@data-engineering-orchestration` — Production model deployment
-- `@data-engineering-observability` — Model monitoring in production
+- `@assuring-data-pipelines` — Model monitoring in production
 
 ## References
 

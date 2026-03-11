@@ -35,3 +35,9 @@ Discovered in: das-qdy8 (2026-03-10)
 When skills are created outside the repo (e.g., ~/.pi/agent/skills/), the lint tool cannot validate them from within the repo context. For post-fix verification of external skills, either: (1) add a scoped lint mode with path include/exclude, (2) run lint in the skill's owning workspace, or (3) accept manual verification as the gate. Do not rely on repo-scoped lint for external skill paths.
 
 Discovered in: das-s0yk (2026-03-11)
+
+## Lesson: Skill Merge Content Preservation
+
+When merging multiple skills into one, systematically verify all unique content from each source skill is preserved before deleting source directories. Create a checklist of unique sections (workflows, anti-patterns, tool options, examples) and cross-reference against the merged skill. Common oversights include: EDA-specific workflows (duplicates, class imbalance, temporal patterns), specialized tool options (interactive exploration, large-data handling), and domain-specific anti-patterns (MCAR/MAR/MNAR for missing data).
+
+Discovered in: das-3wu8 (2026-03-11)

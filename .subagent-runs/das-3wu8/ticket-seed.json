@@ -1,0 +1,13 @@
+{
+  "ticket_id": "das-3wu8",
+  "primary_terms": ["analyzing-data", "data-science-eda", "data-science-visualization", "SKILL.md"],
+  "secondary_terms": ["skill-refactor", "content-merge", "trigger-boundary", "references", "EDA", "statistics", "visualization"],
+  "file_hints": [
+    "skills/analyzing-data/SKILL.md",
+    "skills/data-science-eda/SKILL.md",
+    "skills/data-science-visualization/SKILL.md",
+    "skills/analyzing-data/references/"
+  ],
+  "change_scope": "Merge EDA and visualization skills into analyzing-data, update references, retire duplicate skills",
+  "ticket_summary": "Merge EDA, statistics, and visualization guidance from data-science-eda and data-science-visualization skills into analyzing-data skill, ensuring local references are direct and non-broken"
+}

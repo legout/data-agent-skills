@@ -134,8 +134,7 @@ Minimum controls:
 - `best-practices-detailed.md` — comprehensive deep-dive examples
 - `@data-engineering-core/patterns/incremental.md` — incremental loading patterns
 - `@data-engineering-storage-lakehouse` — Delta/Iceberg/Hudi-specific behavior
-- `@data-engineering-quality` — validation framework implementation
-- `@data-engineering-observability` — metrics/tracing/alerting
+- `@assuring-data-pipelines` — Data validation (Pandera, Great Expectations) and observability (OTel, Prometheus)
 
 ---
 

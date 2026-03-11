@@ -21,7 +21,7 @@ Data engineering patterns for AI/ML workloads: embedding generation, vector data
 - `@data-engineering-core` - Polars, DuckDB for data processing
 - `@data-engineering-storage-remote-access` - Cloud storage for embeddings and models
 - `@data-engineering-orchestration` - Schedule/batch embedding generation
-- `@data-engineering-quality` - Validate embedding quality
+- `@assuring-data-pipelines` - Validate embedding quality
 
 ---
 

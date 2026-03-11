@@ -172,4 +172,4 @@ def resilient_copy(src_fs, src_path, dst_fs, dst_path):
 - `@data-engineering-storage-remote-access/libraries/fsspec` - Filesystem basics
 - `@data-engineering-storage-remote-access/libraries/obstore` - High-performance async
 - `@data-engineering-core` - DuckDB/MERGE for metadata tracking
-- `@data-engineering-observability` - Monitoring long-running copy jobs
+- `@assuring-data-pipelines` - Monitoring long-running copy jobs

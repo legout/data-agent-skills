@@ -152,3 +152,23 @@
 - Commit: d4d60eb
 - Chain: .subagent-runs/das-s0yk/663fe9ce
 - Blocker: Post-fix gate "Uncertain" - lint tool cannot validate skill files outside repo at ~/.pi/agent/skills/. Source folder skills/data-engineering-storage-authentication/ NOT deleted pending clear pass.
+
+## 2026-03-11T07:51:05+01:00 | das-s0yk | closed
+
+- Path: A
+- Research: no
+- Summary: Merged provider auth guidance into accessing-cloud-storage skill in repo. Consolidated SKILL.md and 5 reference files (aws.md, gcp.md, azure.md, patterns.md, testing.md), removed legacy data-engineering-storage-authentication directory. Post-fix gate clear pass.
+- Files: skills/accessing-cloud-storage/SKILL.md, skills/accessing-cloud-storage/references/*.md (5), skills/data-engineering-storage-authentication/* (deleted)
+- Tests: passed (review-post-fix clear pass)
+- Commit: 71d3f4c
+- Chain: .subagent-runs/das-s0yk/e208598b
+
+## 2026-03-11T08:13:29+01:00 | das-3wu8 | closed
+
+- Path: A
+- Research: no
+- Summary: Merged data-science-eda and data-science-visualization into analyzing-data skill, adding missing EDA workflow steps (identify issues, interactive/large-data tools, MCAR/MAR/MNAR guidance) and deleting legacy directories.
+- Files: skills/analyzing-data/SKILL.md, skills/data-science-eda/SKILL.md (deleted), skills/data-science-visualization/SKILL.md (deleted)
+- Tests: passed (review-post-fix clear pass)
+- Commit: abd6665
+- Chain: .subagent-runs/das-3wu8/10f26fcd
