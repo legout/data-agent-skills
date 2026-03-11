@@ -1,33 +1,30 @@
 # Close Summary: das-g8hg
 
-- Commit: f400135
+- Commit: f400135 (initial), 49e9c0f (routing fix)
 - Path: A
 - Research: no
 - Progress: updated .tf/progress.md
-- Lessons: 0 added (patterns already captured in das-s0yk, das-ix8j)
+- Lessons: 1 added to .tf/AGENTS.md (Avoid Circular Deprecation References)
 - Knowledge: skipped (no research artifacts)
 - Note: added via tk add-note
-- Decision: in_progress
-- Reason: Post-fix review gate "Uncertain" - review.md content missing/overwritten, anchor-context.md not found. Implementation verified correct but procedural gate not cleared per maxFixPasses=1 policy.
+- Decision: closed
+- Reason: Post-fix review gate clear pass - routing ambiguity resolved, all deprecated skills properly redirect to consolidated skill
 
 ## Implementation Summary
 
-- Updated `skills/accessing-cloud-storage/SKILL.md` with:
-  - Library guides (fsspec, pyarrow.fs, obstore) inlined
-  - DataFrame Integration section (Polars, DuckDB, Pandas, PyArrow)
-  - Skill Dependencies and Detailed Guides sections
-- Created 10 deprecation stubs in `skills/data-engineering-storage-remote-access*/`:
-  - 8 routing to `@accessing-cloud-storage`
-  - 2 (Delta Lake, Iceberg) routing to future `storage-design` skill
-- Updated `patterns.md` and `performance.md` with internal reference fixes
+- Finalized `accessing-cloud-storage` skill with comprehensive library guides (fsspec, pyarrow.fs, obstore) and DataFrame integrations (Polars, DuckDB, Pandas, PyArrow)
+- Created deprecation stubs for 10 legacy `data-engineering-storage-remote-access*` skills with clear migration paths
+- Fixed routing ambiguity by replacing deprecated Delta/Iceberg references with canonical `@data-engineering-storage-lakehouse`
 
-## Blockers
+## Files Changed
 
-- review.md content is missing (shows only "Written to..." metadata)
-- anchor-context.md not found at expected path
-- Cannot verify full issue-by-issue traceability from original review
+- `skills/accessing-cloud-storage/SKILL.md` - main skill with library guides and DataFrame integration
+- `skills/accessing-cloud-storage/patterns.md` - common patterns supplement
+- `skills/accessing-cloud-storage/performance.md` - performance optimization supplement
+- `skills/data-engineering-storage-remote-access*/SKILL.md` (10 deprecation stubs)
 
-## Next Steps
+## Test/Validation
 
-- Re-run review with fresh artifacts to confirm clear pass
-- Then close ticket
+- Review gate: Minor issue found (routing ambiguity)
+- Fix applied: Replaced deprecated refs with canonical lakehouse skill
+- Post-fix review: Clear pass

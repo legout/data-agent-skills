@@ -274,13 +274,12 @@
 - Commit: 3ebdffd
 - Chain: .subagent-runs/das-wxeh/7bf23cc2
 
-## 2026-03-11T13:32:48+01:00 | das-g8hg | in_progress
+## 2026-03-11T13:32:48+01:00 | das-g8hg | closed
 
 - Path: A
 - Research: no
-- Summary: Finalized accessing-cloud-storage skill by updating main SKILL.md with library guides, DataFrame integration, and creating deprecation stubs for 10 legacy remote-access skills (routing to @accessing-cloud-storage or future storage-design skill).
+- Summary: Finalized accessing-cloud-storage skill by updating main SKILL.md with library guides, DataFrame integration, and creating deprecation stubs for 10 legacy remote-access skills. Fixed routing ambiguity by replacing deprecated Delta/Iceberg references with canonical lakehouse skill.
 - Files: skills/accessing-cloud-storage/SKILL.md, skills/accessing-cloud-storage/patterns.md, skills/accessing-cloud-storage/performance.md, skills/data-engineering-storage-remote-access*/SKILL.md (10 deprecation stubs)
-- Tests: uncertain (review-post-fix gate uncertain - missing review.md content prevents full issue traceability)
-- Commit: f400135
-- Chain: .subagent-runs/das-g8hg/da2b0714
-- Blocker: Post-fix review gate "Uncertain" - review.md content is missing/overwritten, anchor-context.md not found. Implementation verified correct in skills/ but procedural gate not cleared.
+- Tests: passed (review-post-fix clear pass)
+- Commit: f400135, 49e9c0f
+- Chain: .subagent-runs/das-g8hg/38e33b75

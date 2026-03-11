@@ -53,3 +53,9 @@ Discovered in: das-ix8j (2026-03-11)
 When documenting skill relationships in the "Related skills" section, ensure the wording accurately reflects the formal `dependsOn` frontmatter. The text description should not invert the dependency relationship (e.g., saying "X depends on this skill" when frontmatter shows "this skill depends on @X"). Use directional phrasing like "Upstream X before Y" or "Downstream Y after X" to avoid ambiguity.
 
 Discovered in: das-nd1t (2026-03-11)
+
+## Lesson: Avoid Circular Deprecation References
+
+When consolidating skills and creating deprecation stubs, verify that the new canonical skill does NOT reference the deprecated skills in its content. This creates "circular deprecation" where users following the canonical entry point are sent back to deprecated content. After creating deprecation stubs, audit the new skill's references to ensure all pointers point to current/active skills only.
+
+Discovered in: das-g8hg (2026-03-11)
