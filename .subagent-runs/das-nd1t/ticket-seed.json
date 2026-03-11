@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-nd1t",
+  "primary_terms": ["evaluating-ml-models", "cross-validation", "metrics", "hyperparameter-tuning", "experiment-tracking", "model-evaluation"],
+  "secondary_terms": ["skill-refactor", "data-science", "CV", "Optuna", "MLflow", "Weights & Biases", "sklearn.model_selection", "sklearn.metrics"],
+  "file_hints": ["skills/data-science-model-evaluation/", "skills/analyzing-data/references/cross-validation.md", "skills/analyzing-data/references/metrics-guide.md", "skills/analyzing-data/references/hyperparameter-tuning.md", "skills/analyzing-data/references/experiment-tracking.md"],
+  "change_scope": "Create new evaluating-ml-models skill, move references from analyzing-data, deduplicate data-science-model-evaluation content",
+  "ticket_summary": "Refactor model-evaluation guidance into new focused skill with CV, metrics, tuning, and experiment tracking references"
+}

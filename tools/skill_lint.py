@@ -24,7 +24,7 @@ from typing import Iterable
 
 import yaml
 
-IGNORE_PARTS = {".git", ".ruff_cache", "node_modules", ".venv", "venv"}
+IGNORE_PARTS = {".git", ".ruff_cache", "node_modules", ".venv", "venv", ".subagent-runs", ".tf"}
 
 
 @dataclass

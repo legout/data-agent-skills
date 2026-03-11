@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-uubf",
+  "primary_terms": ["lint", "CI", "strict checks", "refs", "duplicates", "TOC", "hybrid refs", "eval manifest"],
+  "secondary_terms": ["markdown", "skill links", "@skill/path", "validation", "enforcement"],
+  "file_hints": ["linter config", "CI workflow", "skill files", "validation scripts"],
+  "change_scope": "linter configuration and CI pipeline for skill refactor enforcement",
+  "ticket_summary": "Extend linter with strict checks for missing refs, duplicates, TOCs, hybrid links, stale year tags, and wire into CI"
+}

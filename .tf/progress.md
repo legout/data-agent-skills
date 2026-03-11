@@ -243,3 +243,13 @@
 - Tests: passed (review-post-fix clear pass)
 - Commit: 373110e
 - Chain: .subagent-runs/das-u0hp/28914b27
+
+## 2026-03-11T12:29:11+01:00 | das-nd1t | closed
+
+- Path: A
+- Research: no
+- Summary: Created evaluating-ml-models skill with SKILL.md, 4 reference files (cross-validation, metrics-guide, hyperparameter-tuning, experiment-tracking), and eval manifest. Fixed 1 Minor issue (dependency wording in Related skills section).
+- Files: skills/evaluating-ml-models/SKILL.md, skills/evaluating-ml-models/references/*.md (4), skills/data-science-model-evaluation/SKILL.md, evals/evaluating-ml-models.json
+- Tests: passed (6/6 checks, review-post-fix clear pass)
+- Commit: e6109f5
+- Chain: .subagent-runs/das-nd1t/2fe3f708

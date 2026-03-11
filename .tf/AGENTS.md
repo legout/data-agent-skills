@@ -47,3 +47,9 @@ Discovered in: das-3wu8 (2026-03-11)
 When creating skills that help users choose between similar libraries (e.g., fsspec vs pyarrow.fs vs obstore), inline the library deep-dives into the main SKILL.md rather than keeping them as separate files. This creates a cohesive "library selection and usage" layer where users can: (1) see the comparison table, (2) immediately read detailed usage guidance for their chosen library, all without navigating between multiple skill files. Reserve separate reference files for supplementary topics like performance patterns or common recipes.
 
 Discovered in: das-ix8j (2026-03-11)
+
+## Lesson: Dependency Direction Consistency
+
+When documenting skill relationships in the "Related skills" section, ensure the wording accurately reflects the formal `dependsOn` frontmatter. The text description should not invert the dependency relationship (e.g., saying "X depends on this skill" when frontmatter shows "this skill depends on @X"). Use directional phrasing like "Upstream X before Y" or "Downstream Y after X" to avoid ambiguity.
+
+Discovered in: das-nd1t (2026-03-11)
