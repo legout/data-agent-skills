@@ -1,0 +1,13 @@
+{
+  "ticket_id": "das-trf5",
+  "primary_terms": ["designing-data-storage", "Delta Lake", "Iceberg", "storage-formats", "lakehouse"],
+  "secondary_terms": ["skill-refactor", "consolidation", "deprecation", "direct-references", "TOC"],
+  "file_hints": [
+    "skills/designing-data-storage/",
+    "skills/data-engineering/",
+    "skills/accessing-cloud-storage/",
+    "skills/data-engineering-catalogs/"
+  ],
+  "change_scope": "designing-data-storage skill and related skill references; verify consolidation is complete",
+  "ticket_summary": "Create designing-data-storage skill by merging formats, lakehouse, and Delta/Iceberg integration content. Verify deprecation stubs, direct references, and TOCs."
+}

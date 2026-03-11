@@ -303,3 +303,13 @@
 - Tests: passed (review-post-fix clear pass)
 - Commit: bd2b407
 - Chain: .subagent-runs/das-9jfk/1bac4ab2
+
+## 2026-03-11T15:03:13+01:00 | das-px1n | closed
+
+- Path: A
+- Research: no
+- Summary: Consolidated data-engineering-storage-formats and data-engineering-storage-lakehouse into new designing-data-storage skill per SKILL_REFACTORING_PLAN.md. Fixed 2 Major issues (broken skill references, missing TOC) and 1 Minor (missing dependsOn).
+- Files: skills/designing-data-storage/SKILL.md, skills/designing-data-storage/references/*.md (5), skills/data-engineering-storage-formats/* (deleted), skills/data-engineering-storage-lakehouse/* (deleted), 16 skill files with updated references
+- Tests: passed (review-post-fix clear pass)
+- Commit: 84e1731
+- Chain: .subagent-runs/das-px1n/9a85c2d9

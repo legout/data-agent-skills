@@ -1,0 +1,112 @@
+{
+  "skill": "designing-data-storage",
+  "description": "Evaluations for file format and lakehouse table format selection",
+  "version": "1.0.0",
+  "evals": [
+    {
+      "name": "format-selection-analytics",
+      "query": "I need to store analytical data for querying with DuckDB and Spark. What format should I use?",
+      "expected_mentions": ["Parquet", "columnar", "predicate pushdown"],
+      "expected_skills": ["designing-data-storage"],
+      "evaluation_criteria": "Should recommend Parquet for analytics with DuckDB/Spark, mentioning columnar benefits and predicate pushdown"
+    },
+    {
+      "name": "format-selection-ml-training",
+      "query": "I'm building an ML pipeline and need to store training data that's shared between Python processes. What format is best?",
+      "expected_mentions": ["Arrow", "Feather", "zero-copy", "IPC"],
+      "expected_skills": ["designing-data-storage"],
+      "evaluation_criteria": "Should recommend Arrow/Feather for zero-copy IPC between processes in ML pipelines"
+    },
+    {
+      "name": "format-selection-vectors",
+      "query": "I have image embeddings and need to perform vector similarity search. What format should I use?",
+      "expected_mentions": ["Lance", "vector", "embedding", "search"],
+      "expected_skills": ["designing-data-storage"],
+      "evaluation_criteria": "Should recommend Lance for ML/vector workloads with built-in vector search capabilities"
+    },
+    {
+      "name": "format-selection-ndim-arrays",
+      "query": "I'm storing satellite imagery as 3D arrays (time, lat, lon). What format is appropriate?",
+      "expected_mentions": ["Zarr", "chunked", "N-dimensional", "array"],
+      "expected_skills": ["designing-data-storage"],
+      "evaluation_criteria": "Should recommend Zarr for N-dimensional chunked array storage"
+    },
+    {
+      "name": "format-selection-streaming",
+      "query": "I need to serialize events from Kafka with schema evolution support. What format should I use?",
+      "expected_mentions": ["Avro", "streaming", "schema evolution", "Kafka"],
+      "expected_skills": ["designing-data-storage"],
+      "evaluation_criteria": "Should recommend Avro for streaming/Kafka with schema evolution support"
+    },
+    {
+      "name": "lakehouse-selection-delta",
+      "query": "We're using Databricks and need ACID transactions on our data lake. Which lakehouse format should we choose?",
+      "expected_mentions": ["Delta Lake", "Spark", "Databricks", "ACID"],
+      "expected_skills": ["designing-data-storage"],
+      "evaluation_criteria": "Should recommend Delta Lake for Spark/Databricks ecosystem with ACID support"
+    },
+    {
+      "name": "lakehouse-selection-iceberg",
+      "query": "We need a table format that works with Spark, Trino, and Flink. What should we use?",
+      "expected_mentions": ["Iceberg", "engine-agnostic", "multi-engine", "catalog"],
+      "expected_skills": ["designing-data-storage"],
+      "evaluation_criteria": "Should recommend Apache Iceberg for multi-engine environments"
+    },
+    {
+      "name": "lakehouse-selection-hudi",
+      "query": "We're building a CDC pipeline to capture database changes into our data lake. Which format is best?",
+      "expected_mentions": ["Hudi", "CDC", "upsert", "streaming"],
+      "expected_skills": ["designing-data-storage"],
+      "evaluation_criteria": "Should recommend Apache Hudi for CDC and streaming upsert workloads"
+    },
+    {
+      "name": "compression-selection",
+      "query": "What's the best compression codec for Parquet files used in analytics workloads?",
+      "expected_mentions": ["Zstd", "Snappy", "compression"],
+      "expected_skills": ["designing-data-storage"],
+      "evaluation_criteria": "Should recommend Zstd for balanced compression or Snappy for speed-critical workloads"
+    },
+    {
+      "name": "delta-time-travel",
+      "query": "How do I read a previous version of a Delta Lake table using Python?",
+      "expected_mentions": ["load_version", "time travel", "history"],
+      "expected_skills": ["designing-data-storage"],
+      "evaluation_criteria": "Should explain time travel with load_version() or load_with_datetime()"
+    },
+    {
+      "name": "iceberg-catalog-config",
+      "query": "How do I configure PyIceberg to use AWS Glue as the catalog?",
+      "expected_mentions": ["load_catalog", "glue", "s3.region"],
+      "expected_skills": ["designing-data-storage"],
+      "evaluation_criteria": "Should show Glue catalog configuration with load_catalog() and proper S3 settings"
+    },
+    {
+      "name": "format-migration-parquet-delta",
+      "query": "How do I convert existing Parquet files to Delta Lake format?",
+      "expected_mentions": ["write_deltalake", "convert", "Parquet"],
+      "expected_skills": ["designing-data-storage"],
+      "evaluation_criteria": "Should explain using write_deltalake() to convert Parquet to Delta"
+    },
+    {
+      "name": "cross-reference-cloud-storage",
+      "query": "How do I configure S3 credentials when writing to Delta Lake?",
+      "expected_mentions": ["accessing-cloud-storage", "storage_options"],
+      "expected_skills": ["designing-data-storage", "accessing-cloud-storage"],
+      "evaluation_criteria": "Should reference @accessing-cloud-storage for S3/GCS/Azure configuration details"
+    },
+    {
+      "name": "lakehouse-vs-file-format",
+      "query": "What's the difference between Parquet and Delta Lake?",
+      "expected_mentions": ["file format", "table format", "ACID", "transactions"],
+      "expected_skills": ["designing-data-storage"],
+      "evaluation_criteria": "Should explain Parquet is a file format, Delta Lake is a table format adding ACID transactions"
+    },
+    {
+      "name": "partitioning-guidance",
+      "query": "What are good partitioning strategies for a Delta Lake table with date-based queries?",
+      "expected_mentions": ["partition", "date", "year", "month", "predicate pushdown"],
+      "expected_skills": ["designing-data-storage"],
+      "evaluation_criteria": "Should recommend date-based partitioning (year/month/day) for time-series queries"
+    }
+  ]
+}
