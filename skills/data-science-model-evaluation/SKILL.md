@@ -1,10 +1,12 @@
 ---
 name: data-science-model-evaluation
-description: "Model evaluation and validation: cross-validation, metrics, hyperparameter tuning, and model comparison. Use when assessing model performance, selecting models, or diagnosing modeling issues."
-dependsOn: ["@data-science-feature-engineering", "@data-engineering-core"]
+description: "[DEPRECATED] Use `@evaluating-ml-models` instead. Model evaluation and validation: cross-validation, metrics, hyperparameter tuning, and model comparison."
+dependsOn: ["@evaluating-ml-models"]
 ---
 
-# Model Evaluation
+# Model Evaluation (Deprecated)
+
+> **Deprecation Notice:** This skill has been replaced by `@evaluating-ml-models`. Please use the new skill for all model evaluation tasks. This skill now redirects to `@evaluating-ml-models` for comprehensive evaluation guidance.
 
 Use this skill for rigorously assessing model performance, comparing alternatives, and diagnosing issues.
 
@@ -114,10 +116,11 @@ with mlflow.start_run():
 
 ## Progressive disclosure
 
-- `../analyzing-data/references/cross-validation.md` — CV strategies for different data types
-- `../analyzing-data/references/metrics-guide.md` — Choosing and interpreting metrics
-- `../analyzing-data/references/hyperparameter-tuning.md` — Optuna, Ray Tune patterns
-- `../analyzing-data/references/experiment-tracking.md` — MLflow, W&B setup
+This skill is deprecated. Please see `@evaluating-ml-models` for detailed reference guides:
+- Cross-validation strategies
+- Metrics selection guide
+- Hyperparameter tuning patterns
+- Experiment tracking setup
 
 ## Related skills
 

@@ -1,0 +1,246 @@
+{
+  "skill": "evaluating-ml-models",
+  "description": "Evaluation suite for evaluating-ml-models skill covering cross-validation, metrics, hyperparameter tuning, experiment tracking, and model comparison",
+  "version": "1.0.0",
+  "task_evals": [
+    {
+      "id": "task-001",
+      "name": "Cross-Validation Strategy Selection",
+      "description": "Choose appropriate CV strategy for time series data",
+      "prompt": "I'm working with a time series dataset to predict stock prices. What cross-validation strategy should I use and why is regular K-fold not appropriate?",
+      "expected_behavior": [
+        "Recommends TimeSeriesSplit for temporal data",
+        "Explains why K-fold causes data leakage for time series",
+        "Mentions preserving temporal order",
+        "References cross-validation.md"
+      ],
+      "negative_indicators": [
+        "Recommends standard K-fold for time series",
+        "Doesn't mention temporal ordering",
+        "Suggests random shuffling is acceptable"
+      ]
+    },
+    {
+      "id": "task-002",
+      "name": "Metrics for Imbalanced Classification",
+      "description": "Select appropriate metrics for imbalanced classification",
+      "prompt": "My fraud detection dataset has 99% legitimate transactions and 1% fraud. What metrics should I use to evaluate my model, and why is accuracy misleading here?",
+      "expected_behavior": [
+        "Explains why accuracy is misleading for imbalanced data",
+        "Recommends precision, recall, F1, or PR-AUC",
+        "Mentions ROC-AUC limitations for severe imbalance",
+        "References metrics-guide.md"
+      ],
+      "negative_indicators": [
+        "Recommends accuracy as primary metric",
+        "Ignores class imbalance issue",
+        "Only mentions accuracy and nothing else"
+      ]
+    },
+    {
+      "id": "task-003",
+      "name": "Hyperparameter Tuning with Optuna",
+      "description": "Set up Bayesian optimization for hyperparameter tuning",
+      "prompt": "How do I use Optuna to tune hyperparameters for my Random Forest classifier? I want to optimize n_estimators and max_depth.",
+      "expected_behavior": [
+        "Shows objective function setup",
+        "Uses trial.suggest_int for parameters",
+        "Creates study with direction='maximize'",
+        "Calls study.optimize()",
+        "References hyperparameter-tuning.md"
+      ],
+      "negative_indicators": [
+        "Uses grid search instead of Optuna",
+        "Doesn't define objective function",
+        "Forgets to specify optimization direction"
+      ]
+    },
+    {
+      "id": "task-004",
+      "name": "Experiment Tracking Setup",
+      "description": "Set up MLflow for experiment tracking",
+      "prompt": "How do I track my model training experiments with MLflow? I want to log hyperparameters, metrics, and save the model.",
+      "expected_behavior": [
+        "Uses mlflow.start_run() context manager",
+        "Logs parameters with mlflow.log_params()",
+        "Logs metrics with mlflow.log_metrics()",
+        "Saves model with mlflow.sklearn.log_model()",
+        "References experiment-tracking.md"
+      ],
+      "negative_indicators": [
+        "Doesn't use context manager",
+        "Forgets to log parameters",
+        "Doesn't mention model logging"
+      ]
+    },
+    {
+      "id": "task-005",
+      "name": "Regression Metrics Selection",
+      "description": "Choose appropriate metrics for regression problems",
+      "prompt": "I'm evaluating a house price prediction model. What metrics should I use, and what's the difference between MAE and RMSE?",
+      "expected_behavior": [
+        "Recommends MAE, RMSE, and R² for regression",
+        "Explains RMSE penalizes large errors more",
+        "Mentions MAE is more robust to outliers",
+        "Suggests MAPE for scale-independent comparison"
+      ],
+      "negative_indicators": [
+        "Uses classification metrics for regression",
+        "Doesn't distinguish MAE vs RMSE",
+        "Recommends accuracy for regression"
+      ]
+    }
+  ],
+  "trigger_evals": [
+    {
+      "id": "trigger-001",
+      "type": "positive",
+      "prompt": "How do I evaluate my model using cross-validation?",
+      "expected_skill": "evaluating-ml-models",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-002",
+      "type": "positive",
+      "prompt": "What metrics should I use for my classification model?",
+      "expected_skill": "evaluating-ml-models",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-003",
+      "type": "positive",
+      "prompt": "How do I tune hyperparameters with Optuna?",
+      "expected_skill": "evaluating-ml-models",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-004",
+      "type": "positive",
+      "prompt": "What's the best cross-validation strategy for time series?",
+      "expected_skill": "evaluating-ml-models",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-005",
+      "type": "positive",
+      "prompt": "How do I track experiments with MLflow?",
+      "expected_skill": "evaluating-ml-models",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-006",
+      "type": "positive",
+      "prompt": "My model is overfitting. How do I diagnose it?",
+      "expected_skill": "evaluating-ml-models",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-007",
+      "type": "positive",
+      "prompt": "How do I compare two models statistically?",
+      "expected_skill": "evaluating-ml-models",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-008",
+      "type": "positive",
+      "prompt": "What should I use for imbalanced data - accuracy or F1 score?",
+      "expected_skill": "evaluating-ml-models",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-009",
+      "type": "positive",
+      "prompt": "How do I use Weights & Biases for experiment tracking?",
+      "expected_skill": "evaluating-ml-models",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-010",
+      "type": "positive",
+      "prompt": "Should I use stratified k-fold for my classification problem?",
+      "expected_skill": "evaluating-ml-models",
+      "confidence": "high"
+    },
+    {
+      "id": "trigger-011",
+      "type": "negative",
+      "prompt": "How do I encode categorical variables for my model?",
+      "expected_skill": "engineering-ml-features",
+      "not_skill": "evaluating-ml-models",
+      "reason": "Categorical encoding belongs to feature engineering"
+    },
+    {
+      "id": "trigger-012",
+      "type": "negative",
+      "prompt": "What's the best way to scale my numeric features?",
+      "expected_skill": "engineering-ml-features",
+      "not_skill": "evaluating-ml-models",
+      "reason": "Feature scaling is feature engineering"
+    },
+    {
+      "id": "trigger-013",
+      "type": "negative",
+      "prompt": "How do I create features from datetime columns?",
+      "expected_skill": "engineering-ml-features",
+      "not_skill": "evaluating-ml-models",
+      "reason": "Datetime feature engineering belongs to engineering-ml-features"
+    },
+    {
+      "id": "trigger-014",
+      "type": "negative",
+      "prompt": "Should I use one-hot encoding or target encoding for high-cardinality features?",
+      "expected_skill": "engineering-ml-features",
+      "not_skill": "evaluating-ml-models",
+      "reason": "Encoding strategy is feature engineering"
+    },
+    {
+      "id": "trigger-015",
+      "type": "negative",
+      "prompt": "How do I convert text data to numerical features?",
+      "expected_skill": "engineering-ml-features",
+      "not_skill": "evaluating-ml-models",
+      "reason": "Text vectorization is feature engineering"
+    },
+    {
+      "id": "trigger-016",
+      "type": "negative",
+      "prompt": "How do I select the best features from my dataset?",
+      "expected_skill": "engineering-ml-features",
+      "not_skill": "evaluating-ml-models",
+      "reason": "Feature selection is part of feature engineering"
+    },
+    {
+      "id": "trigger-017",
+      "type": "negative",
+      "prompt": "How do I prevent data leakage in my preprocessing pipeline?",
+      "expected_skill": "engineering-ml-features",
+      "not_skill": "evaluating-ml-models",
+      "reason": "Prevention of data leakage in preprocessing is feature engineering"
+    },
+    {
+      "id": "trigger-018",
+      "type": "negative",
+      "prompt": "What visualization should I use for my EDA?",
+      "expected_skill": "analyzing-data",
+      "not_skill": "evaluating-ml-models",
+      "reason": "EDA visualization belongs to analyzing-data"
+    },
+    {
+      "id": "trigger-019",
+      "type": "negative",
+      "prompt": "How do I handle missing values in my dataset?",
+      "expected_skill": "analyzing-data",
+      "not_skill": "evaluating-ml-models",
+      "reason": "Missing value handling is data analysis/preprocessing"
+    },
+    {
+      "id": "trigger-020",
+      "type": "negative",
+      "prompt": "What statistical test should I use to compare these groups?",
+      "expected_skill": "analyzing-data",
+      "not_skill": "evaluating-ml-models",
+      "reason": "Statistical testing belongs to analyzing-data"
+    }
+  ]
+}
