@@ -182,3 +182,24 @@
 - Tests: passed (review-post-fix clear pass)
 - Commit: 973d0d6
 - Chain: .subagent-runs/das-ekec/eafd987a
+
+## 2026-03-11T09:26:25+01:00 | das-ix8j | closed
+
+- Path: A
+- Research: no
+- Summary: Consolidated 4 remote-access library skills into accessing-cloud-storage by inlining fsspec/pyarrow.fs/obstore deep-dives into main SKILL.md for cohesive library selection, plus performance.md and patterns.md supplements.
+- Files: skills/accessing-cloud-storage/SKILL.md, skills/accessing-cloud-storage/performance.md, skills/accessing-cloud-storage/patterns.md
+- Tests: passed (4/4 checks, review-post-fix clear pass)
+- Commit: 83ab7a5
+- Chain: .subagent-runs/das-ix8j/394a2848
+
+## 2026-03-11T10:14:51+01:00 | das-jg7i | in_progress
+
+- Path: A
+- Research: no
+- Summary: Fixed 4 broken related-skill references in analyzing-data SKILL.md (both "When NOT to use" and "Related skills" sections). Functional fix verified; gate uncertain due to missing chain artifacts.
+- Files: skills/analyzing-data/SKILL.md
+- Tests: uncertain (review-post-fix gate uncertain)
+- Commit: 7f3afce
+- Chain: .subagent-runs/das-jg7i/2f6694e5
+- Blocker: Post-fix review gate "Uncertain" - anchor-context.md and implementation.md missing at expected path (.subagent-runs/das-jg7i/2f6694e5/). Functional objective (fix broken refs) verified complete, but procedural gate not cleared.

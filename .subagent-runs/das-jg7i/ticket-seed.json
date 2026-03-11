@@ -1,0 +1,20 @@
+{
+  "ticket_id": "das-jg7i",
+  "primary_terms": ["analyzing-data", "EDA", "visualization", "data-science"],
+  "secondary_terms": ["skill-refactor", "merging", "deduplication", "related-skills"],
+  "file_hints": ["skills/analyzing-data/SKILL.md", "eval/analyzing-data.json"],
+  "change_scope": "analyzing-data skill - fix broken related-skill references to use current skill names",
+  "ticket_summary": "Fix broken related-skill refs in analyzing-data: references future skills (working-in-notebooks, building-data-apps, engineering-ml-features, evaluating-ml-models) that don't exist yet; must use current names (data-science-notebooks, data-science-interactive-apps, data-science-feature-engineering, data-science-model-evaluation)",
+  "dependency_status": "All deps closed (das-llsd, das-qee5, das-qdy8, das-3wu8)",
+  "current_state": {
+    "analyzing_data_exists": true,
+    "eval_exists": true,
+    "references_exist": true,
+    "broken_refs": [
+      "building-data-apps -> should be data-science-interactive-apps",
+      "engineering-ml-features -> should be data-science-feature-engineering",
+      "evaluating-ml-models -> should be data-science-model-evaluation",
+      "working-in-notebooks -> should be data-science-notebooks"
+    ]
+  }
+}

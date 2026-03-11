@@ -41,3 +41,9 @@ Discovered in: das-s0yk (2026-03-11)
 When merging multiple skills into one, systematically verify all unique content from each source skill is preserved before deleting source directories. Create a checklist of unique sections (workflows, anti-patterns, tool options, examples) and cross-reference against the merged skill. Common oversights include: EDA-specific workflows (duplicates, class imbalance, temporal patterns), specialized tool options (interactive exploration, large-data handling), and domain-specific anti-patterns (MCAR/MAR/MNAR for missing data).
 
 Discovered in: das-3wu8 (2026-03-11)
+
+## Lesson: Library Selection Layer Cohesion
+
+When creating skills that help users choose between similar libraries (e.g., fsspec vs pyarrow.fs vs obstore), inline the library deep-dives into the main SKILL.md rather than keeping them as separate files. This creates a cohesive "library selection and usage" layer where users can: (1) see the comparison table, (2) immediately read detailed usage guidance for their chosen library, all without navigating between multiple skill files. Reserve separate reference files for supplementary topics like performance patterns or common recipes.
+
+Discovered in: das-ix8j (2026-03-11)

@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-ix8j",
+  "primary_terms": ["fsspec", "pyarrow.fs", "obstore", "accessing-cloud-storage", "library-selection"],
+  "secondary_terms": ["remote-access", "cloud-storage", "consolidation", "colocation", "direct-link-style"],
+  "file_hints": [".tf/skills/", "skills/", "data-engineering-storage-remote-access"],
+  "change_scope": "remote-access library skill files and references",
+  "ticket_summary": "Consolidate fsspec, pyarrow.fs, and obstore guidance into one coherent library layer in the accessing-cloud-storage skill"
+}

@@ -1,0 +1,19 @@
+{
+  "ticket_id": "das-n3x8",
+  "primary_terms": ["orchestrating-data-pipelines", "Prefect", "Dagster", "dbt", "orchestration"],
+  "secondary_terms": ["scheduling", "retries", "deployment", "operational patterns", "workflow management", "data pipelines", "skill-refactor"],
+  "file_hints": [
+    ".pi/agent/skills/orchestrating-data-pipelines/",
+    "~/.pi/agent/skills/data-engineering-orchestration/",
+    "~/.pi/agent/skills/data-engineering-orchestration/SKILL.md",
+    "~/.pi/agent/skills/data-engineering-orchestration/prefect.md",
+    "~/.pi/agent/skills/data-engineering-orchestration/dagster.md",
+    "~/.pi/agent/skills/data-engineering-orchestration/dbt.md"
+  ],
+  "change_scope": "Create new orchestrating-data-pipelines skill in project scope, consolidating orchestration guidance from existing data-engineering-orchestration skill",
+  "ticket_summary": "Create new orchestrating-data-pipelines skill for Prefect, Dagster, dbt orchestration with scheduling, retries, deployment patterns",
+  "existing_skill": {
+    "path": "~/.pi/agent/skills/data-engineering-orchestration/",
+    "files": ["SKILL.md", "prefect.md", "dagster.md", "dbt.md", "integrations/"]
+  }
+}
