@@ -1,0 +1,17 @@
+{
+  "ticket_id": "das-s0yk",
+  "primary_terms": ["accessing-cloud-storage", "data-engineering-storage-authentication", "AWS", "GCP", "Azure", "provider auth"],
+  "secondary_terms": ["IAM roles", "service principals", "managed identities", "workload identity", "credential management", "direct references"],
+  "file_hints": [
+    "skills/data-engineering-storage-authentication/",
+    "skills/data-engineering-storage-authentication/SKILL.md",
+    "skills/data-engineering-storage-authentication/aws.md",
+    "skills/data-engineering-storage-authentication/gcp.md",
+    "skills/data-engineering-storage-authentication/azure.md",
+    "skills/data-engineering-storage-authentication/patterns.md",
+    "skills/data-engineering-storage-authentication/testing.md",
+    "skills/accessing-cloud-storage/ (to be created)"
+  ],
+  "change_scope": "Create new accessing-cloud-storage skill and merge data-engineering-storage-authentication content into it. The auth skill will be deprecated/removed after content migration.",
+  "ticket_summary": "Merge AWS, GCP, and Azure provider auth guidance from data-engineering-storage-authentication into the new accessing-cloud-storage skill. Ensure direct links replace indirect routing."
+}
