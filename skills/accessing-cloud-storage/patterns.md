@@ -169,6 +169,6 @@ def resilient_copy(src_fs, src_path, dst_fs, dst_path):
 
 ## References
 
-- `@data-engineering-storage-authentication` - Cloud authentication patterns
+- `SKILL.md` in this skill - Library guides (fsspec, obstore)
 - `@data-engineering-core` - DuckDB/MERGE for metadata tracking
 - `@data-engineering-observability` - Monitoring long-running copy jobs

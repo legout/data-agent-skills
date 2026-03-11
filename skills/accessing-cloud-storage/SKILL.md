@@ -1,6 +1,6 @@
 ---
 name: accessing-cloud-storage
-description: "Access cloud storage (S3, GCS, Azure) in Python using fsspec, pyarrow.fs, or obstore. Includes performance optimization, patterns for incremental loading, partitioned writes, and cross-cloud copy."
+description: "Access cloud storage (S3, GCS, Azure) in Python using fsspec, pyarrow.fs, or obstore. Includes DataFrame integrations (Polars, DuckDB, Pandas, PyArrow), performance optimization, patterns for incremental loading, partitioned writes, and cross-cloud copy."
 dependsOn: ["@data-engineering-core", "@data-engineering-storage-authentication", "@data-engineering-storage-formats"]
 ---
 
@@ -40,17 +40,61 @@ Comprehensive guide to accessing cloud storage (S3, GCS, Azure) and remote files
 - You want minimal dependencies (Rust-based)
 - Working with large-scale data ingestion/egestion
 
+## Skill Dependencies
+
+Prerequisites:
+- `@data-engineering-core` - Polars, DuckDB, PyArrow basics
+- `@data-engineering-storage-authentication` - AWS, GCP, Azure auth patterns
+- `@data-engineering-storage-formats` - Parquet, Arrow, Lance, Zarr, Avro, ORC
+
+Related:
+- `@data-engineering-storage-lakehouse` - Delta Lake, Iceberg on cloud storage
+- `@data-engineering-orchestration` - dbt with cloud storage
+
+---
+
+## Detailed Guides
+
+### Library Deep Dives
+This skill contains detailed guidance for all three libraries:
+- **fsspec** - See [fsspec Library Guide](#fsspec-library-guide) below
+- **pyarrow.fs** - See [PyArrow Filesystem Guide](#pyarrow-filesystem-guide) below  
+- **obstore** - See [obstore Library Guide](#obstore-library-guide) below
+
+### DataFrame Integrations
+- **Polars** - Native `s3://`, `gs://`, `az://` URIs with lazy evaluation and predicate pushdown
+- **DuckDB** - HTTPFS extension for SQL queries directly on remote Parquet/JSON/CSV
+- **Pandas** - fsspec auto-detection for transparent cloud URI handling
+- **PyArrow** - Native filesystem with dataset scanning and batch processing
+
+For detailed patterns, see [DataFrame Integration](#dataframe-integration) below. For Delta Lake and Iceberg:
+- `@data-engineering-storage-remote-access-integrations-delta-lake` - Delta on S3/GCS/Azure
+- `@data-engineering-storage-remote-access-integrations-iceberg` - Iceberg with cloud catalogs
+
+### Infrastructure Patterns
+- `@data-engineering-storage-authentication` - AWS, GCP, Azure auth patterns, IAM roles, service principals
+- See `performance.md` in this skill - Caching, concurrency, async
+- See `patterns.md` in this skill - Incremental loading, partitioned writes, cross-cloud copy
+
+### Storage Formats
+- `@data-engineering-storage-formats` - Parquet, Arrow/Feather, Lance, Zarr, Avro, ORC
+
+---
+
 ## Quick Start Example
+
+### Library Approaches
 
 ```python
 import fsspec
 import pyarrow.fs as fs
+import pyarrow.parquet as pq
 import obstore as obs
 
 # Method 1: fsspec (universal)
 s3_fs = fsspec.filesystem('s3')
 with s3_fs.open('s3://bucket/data.parquet', 'rb') as f:
-    df = pl.read_parquet(f)
+    data = f.read()
 
 # Method 2: pyarrow.fs (Arrow-native)
 s3_pa = fs.S3FileSystem(region='us-east-1')
@@ -60,17 +104,35 @@ table = pq.read_table("bucket/data.parquet", filesystem=s3_pa)
 from obstore.store import S3Store
 store = S3Store(bucket='my-bucket', region='us-east-1')
 data = obs.get(store, 'data.parquet').bytes()
+```
+
+### DataFrame Approaches
+
+```python
+import polars as pl
+import duckdb
+
+# Polars: Native cloud URI (simplest)
+df = pl.read_parquet("s3://bucket/data.parquet")
+lazy_df = pl.scan_parquet("s3://bucket/dataset/**/*.parquet")
+
+# DuckDB: SQL on remote files
+con = duckdb.connect()
+con.execute("INSTALL httpfs; LOAD httpfs;")
+df = con.sql("SELECT * FROM read_parquet('s3://bucket/data.parquet')").pl()
 
 # All approaches work - choose based on your performance and ecosystem needs
 ```
 
 ---
 
-## fsspec: Universal Filesystem Interface
+## Library Guides
+
+### fsspec Library Guide
 
 fsspec provides a unified API for local and remote filesystems, integrating seamlessly with pandas, xarray, Dask, and many other Python data tools.
 
-### Installation
+#### Installation
 
 ```bash
 # Core only (no remote support)
@@ -85,7 +147,7 @@ pip install fsspec[s3,gcs,azure]  # Multiple backends
 pip install s3fs gcsfs adlfs
 ```
 
-### Basic Usage
+#### Basic Usage
 
 ```python
 import fsspec
@@ -102,7 +164,7 @@ gcs_fs = fsspec.filesystem('gcs')             # Uses GCP credentials
 
 # Basic operations
 s3_fs.ls('my-bucket/data/')                   # List files
-s3_fs.exists('my-bucket/data/file.csv')       # Check existence
+s3_fs.exists('s3://my-bucket/data/file.csv')       # Check existence
 s3_fs.mkdir('my-bucket/new-folder')           # Create directory
 
 # Read file as bytes
@@ -114,7 +176,7 @@ with s3_fs.open('s3://my-bucket/data/large.csv', 'rb') as f:
     df = pd.read_csv(f, compression='gzip')
 ```
 
-### Protocol Chaining & Caching
+#### Protocol Chaining & Caching
 
 ```python
 # SimpleCache: Cache remote files locally for faster repeated access
@@ -140,7 +202,7 @@ with fsspec.open(
 # - "zip::" - Zip file access
 ```
 
-### Advanced S3 Features
+#### Advanced S3 Features
 
 ```python
 import s3fs
@@ -182,377 +244,373 @@ fs.du('my-bucket/data')                   # Disk usage
 fs.rm('my-bucket/temp/', recursive=True)  # Recursive delete
 ```
 
-### Performance Considerations
+#### When to Use fsspec
 
-- Use `filecache::` instead of `simplecache::` for persistent caching across sessions
-- Increase `max_pool_connections` for high concurrency
-- Use async API for many concurrent small file operations
-- For pure Parquet workflows with high throughput, consider `pyarrow.fs` instead
-- For maximum performance on large concurrent operations, consider `obstore`
+Choose fsspec when:
+- You need broad ecosystem compatibility (pandas, xarray, Dask)
+- Working with multiple storage backends (S3, GCS, Azure, HTTP)
+- You need protocol chaining and caching features
+- Your workflow involves diverse data formats beyond Parquet
+
+#### Performance Considerations
+
+- ✅ Use `filecache::` instead of `simplecache::` for persistent caching across sessions
+- ✅ Increase `max_pool_connections` for high concurrency
+- ✅ Use async API for many concurrent small file operations
+- ⚠️ For pure Parquet workflows with high throughput, consider `pyarrow.fs` instead
+- ⚠️ For maximum performance on large concurrent operations, consider `obstore`
 
 ---
 
-## PyArrow.fs: Native Arrow Filesystems
+### PyArrow Filesystem Guide
 
-PyArrow provides its own filesystem abstraction optimized for Arrow/Parquet workflows with zero-copy integration.
+PyArrow provides native filesystem integration optimized for Arrow and Parquet workflows.
 
-### Installation
+#### Installation
 
 ```bash
-# Bundled with PyArrow - no extra deps
 pip install pyarrow
 ```
 
-### Basic Usage
+#### Basic Usage
 
 ```python
 import pyarrow.fs as fs
-from pyarrow import parquet as pq
+import pyarrow.parquet as pq
+import pyarrow.dataset as ds
 
-# From URI - auto-detects filesystem type
-s3_fs, path = fs.FileSystem.from_uri("s3://bucket/path/to/data/")
-print(type(s3_fs))  # <class 'pyarrow._fs.S3FileSystem'>
-print(path)         # 'path/to/data/'
+# Create filesystem instances
+s3_fs = fs.S3FileSystem(region='us-east-1')
+gcs_fs = fs.GcsFileSystem()
+local_fs = fs.LocalFileSystem()
 
-# GCS via URI
-gcs_fs, path = fs.FileSystem.from_uri("gs://my-bucket/data/")
-
-# Local filesystem
-local_fs, path = fs.FileSystem.from_uri("file:///home/user/data/")
-```
-
-### S3 Configuration
-
-```python
-import pyarrow.fs as fs
-from pyarrow.fs import S3FileSystem
-
-# Method 1: From URI with options
-s3_fs = S3FileSystem(
-    access_key='AKIA...',
-    secret_key='...',
-    session_token='...',           # For temporary credentials
-    region='us-west-2',
-    endpoint_override='https://minio.local:9000',  # S3-compatible
-    scheme='https',
-    proxy_options={'scheme': 'http', 'host': 'proxy.company.com', 'port': 8080},
-    allow_bucket_creation=True,
-    retry_strategy=fs.AwsStandardS3RetryStrategy(max_attempts=5)
+# Read Parquet with column pruning
+table = pq.read_table(
+    "bucket/data.parquet",
+    filesystem=s3_fs,
+    columns=["id", "value"]  # Only read needed columns
 )
 
-# Method 2: From URI (reads from environment/AWS config)
-s3_fs, path = fs.FileSystem.from_uri("s3://my-bucket/data/")
-
-# File operations (bucket/key paths, not s3:// URIs)
-info = s3_fs.get_file_info("bucket/file.parquet")
-print(info.size)           # File size in bytes
-print(info.mtime)          # Modification time
-
-# Open input stream
-with s3_fs.open_input_stream("bucket/file.parquet") as f:
-    data = f.read()
-
-# Open output stream for writing
-with s3_fs.open_output_stream("bucket/output.parquet") as f:
-    f.write(parquet_bytes)
-
-# Copy and delete
-s3_fs.copy_file("bucket/src.parquet", "bucket/dst.parquet")
-s3_fs.delete_file("bucket/old.parquet")
-```
-
-### Working with Parquet Datasets
-
-```python
-import pyarrow.dataset as ds
-import pyarrow.fs as fs
-
-# Create S3 filesystem
-s3_fs = fs.S3FileSystem(region='us-east-1')
-
-# Load partitioned dataset
+# Dataset scanning with predicate pushdown
 dataset = ds.dataset(
     "bucket/dataset/",
     filesystem=s3_fs,
-    format="parquet",
     partitioning=ds.HivePartitioning.discover()
 )
 
-print(dataset.schema)
-print(f"Rows: {dataset.count_rows()}")
-
-# Filter pushdown (only reads relevant files)
+# Filter at storage layer
 table = dataset.to_table(
-    filter=(ds.field("year") == 2024) & (ds.field("month") > 6),
-    columns=["id", "value", "timestamp"]  # Column pruning
+    filter=(ds.field("year") == 2024) & (ds.field("value") > 100),
+    columns=["id", "value"]
+)
+```
+
+#### When to Use pyarrow.fs
+
+Choose pyarrow.fs when:
+- Your pipeline is Arrow/Parquet-native
+- You need zero-copy integration with PyArrow datasets
+- Predicate pushdown and column pruning are critical
+- Working with partitioned Parquet datasets
+
+#### Performance Considerations
+
+- ✅ Excellent for Parquet workflows with high throughput
+- ✅ Zero-copy data transfer with Arrow-native tools
+- ✅ Efficient predicate pushdown and column pruning
+- ⚠️ Limited async support compared to obstore
+- ⚠️ Fewer protocol options than fsspec
+
+---
+
+### obstore Library Guide
+
+obstore is a high-performance Rust-based library for cloud storage access with native async support.
+
+#### Installation
+
+```bash
+pip install obstore
+```
+
+#### Basic Usage
+
+```python
+import obstore as obs
+from obstore.store import S3Store, GCSStore, AzureStore
+
+# Create store instances
+s3_store = S3Store(bucket='my-bucket', region='us-east-1')
+gcs_store = GCSStore(bucket='my-bucket')
+azure_store = AzureStore(container='my-container', account='myaccount')
+
+# Get object bytes
+data = obs.get(s3_store, 'path/to/file.parquet').bytes()
+
+# List objects
+objects = obs.list(s3_store, prefix='data/2024')
+for obj in objects:
+    print(obj["path"], obj["size"])
+
+# Put object
+obs.put(s3_store, 'output/data.parquet', data_bytes)
+```
+
+#### Async Operations
+
+```python
+import asyncio
+import obstore as obs
+
+async def fetch_multiple():
+    store = S3Store(bucket='my-bucket', region='us-east-1')
+    
+    # Concurrent fetches
+    results = await asyncio.gather(
+        obs.get_async(store, 'file1.parquet'),
+        obs.get_async(store, 'file2.parquet'),
+        obs.get_async(store, 'file3.parquet')
+    )
+    return results
+
+# Run async
+results = asyncio.run(fetch_multiple())
+```
+
+#### When to Use obstore
+
+Choose obstore when:
+- Performance is paramount (many small files, high concurrency)
+- You need async/await support for concurrent operations
+- You want minimal dependencies (Rust-based)
+- Working with large-scale data ingestion/egestion
+
+#### Performance Considerations
+
+- ✅ **9x faster** for concurrent operations vs fsspec
+- ✅ Native sync/async support
+- ✅ Zero Python dependencies
+- ✅ Rust-based implementation
+- ⚠️ Newer library (2025), rapidly evolving
+- ⚠️ Smaller ecosystem than fsspec
+
+---
+
+## DataFrame Integration
+
+DataFrame libraries provide high-level abstractions for cloud storage I/O. This section covers integration patterns for Polars, DuckDB, Pandas, and PyArrow.
+
+### Quick Comparison
+
+| Framework | Integration Approach | Best For |
+|-----------|---------------------|----------|
+| **Polars** | Native cloud URIs (`s3://`) + fsspec/PyArrow bridges | High-performance, lazy evaluation |
+| **DuckDB** | HTTPFS extension + SQL interface | Analytical queries, SQL workflows |
+| **Pandas** | fsspec auto-detection | Simple workflows, broad compatibility |
+| **PyArrow** | Native filesystem + dataset scanning | Arrow-native pipelines, batch processing |
+
+### When to Use Which?
+
+- **Polars**: Best for high-performance data pipelines with lazy evaluation, predicate pushdown, and memory efficiency
+- **DuckDB**: Best for SQL-centric workflows, analytical queries on remote data without loading into memory
+- **Pandas**: Best for simple scripts, small-to-medium data, maximum ecosystem compatibility
+- **PyArrow**: Best for Arrow-native workflows, batch processing, and as a foundation for other tools
+
+---
+
+### Polars
+
+Polars provides native cloud storage support via the Rust `object_store` crate, plus fsspec and PyArrow integration for broader compatibility.
+
+**Key approaches:**
+- **Native URIs**: Direct `s3://`, `gs://`, `az://` support (recommended)
+- **fsspec bridge**: For protocol chaining and caching
+- **PyArrow dataset**: For Hive-partitioned datasets with complex pushdown
+
+```python
+import polars as pl
+
+# Native cloud URIs (simplest, best performance)
+df = pl.read_parquet("s3://bucket/data.parquet")
+lazy_df = pl.scan_parquet("s3://bucket/dataset/**/*.parquet")
+
+# Lazy evaluation with predicate pushdown
+result = (
+    lazy_df
+    .filter(pl.col("date") > "2024-01-01")  # Pushed to storage layer
+    .select(["id", "value"])
+    .collect()
 )
 
-# Scan with custom options
+# Write to cloud storage
+df.write_parquet("s3://bucket/output/data.parquet")
+
+# Partitioned write (Hive-style via PyArrow)
+df.write_parquet(
+    "s3://bucket/output/",
+    partition_by=["year", "month"],
+    use_pyarrow=True
+)
+```
+
+**fsspec bridge for caching:**
+```python
+import fsspec
+
+# Cache wrapper for repeated access
+cached_fs = fsspec.filesystem(
+    "simplecache",
+    target_protocol="s3"
+)
+df = pl.read_parquet("simplecache::s3://bucket/cached.parquet")
+```
+
+**See:** `@data-engineering-core` for Polars fundamentals, `@data-engineering-storage-authentication` for credential setup.
+
+---
+
+### DuckDB
+
+DuckDB's HTTPFS extension enables direct SQL queries on remote files without loading entire datasets into memory.
+
+```python
+import duckdb
+
+con = duckdb.connect()
+con.execute("INSTALL httpfs; LOAD httpfs;")
+
+# Configure credentials (or use environment variables)
+con.execute("SET s3_region='us-east-1';")
+
+# Query Parquet directly from S3
+df = con.sql("""
+    SELECT category, SUM(value) as total
+    FROM read_parquet('s3://bucket/data/*.parquet')
+    WHERE date >= '2024-01-01'
+    GROUP BY category
+""").pl()
+
+# Copy operations
+con.sql("""
+    COPY (SELECT * FROM my_table)
+    TO 's3://bucket/output.parquet'
+    (FORMAT PARQUET)
+""")
+```
+
+**Environment-based auth (recommended):**
+```python
+import os
+os.environ['AWS_REGION'] = 'us-east-1'
+# DuckDB reads AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY automatically
+```
+
+**Delta Lake integration:**
+```python
+con.execute("INSTALL delta; LOAD delta;")
+df = con.sql("SELECT * FROM delta_scan('s3://bucket/delta-table/')").pl()
+```
+
+**See:** `@data-engineering-core` for DuckDB fundamentals, `@data-engineering-storage-authentication` for credential patterns.
+
+---
+
+### Pandas
+
+Pandas leverages fsspec for automatic cloud URI handling, making remote files transparent to use.
+
+```python
+import pandas as pd
+
+# Auto-detection via fsspec
+df = pd.read_parquet("s3://bucket/data.parquet")
+df = pd.read_csv("s3://bucket/data.csv.gz")  # Compression auto-detected
+
+# Explicit filesystem for control
+import fsspec
+fs = fsspec.filesystem("s3")
+df = pd.read_parquet(
+    "s3://bucket/data.parquet",
+    filesystem=fs,
+    columns=["id", "value"],  # Column pruning
+    filters=[("date", ">=", "2024-01-01")]  # Row group filtering
+)
+
+# Partitioned writes
+df.to_parquet(
+    "s3://bucket/output/",
+    partition_cols=["year", "month"],
+    filesystem=fs
+)
+```
+
+**PyArrow filesystem for better performance:**
+```python
+import pyarrow.fs as fs
+s3_fs = fs.S3FileSystem(region="us-east-1")
+df = pd.read_parquet("bucket/data.parquet", filesystem=s3_fs)
+```
+
+**See:** `@data-engineering-core` for pandas alternatives (Polars recommended for large data), `@data-engineering-storage-authentication` for credential setup.
+
+---
+
+### PyArrow
+
+PyArrow provides the foundation for many DataFrame libraries with native filesystem integration and efficient dataset scanning.
+
+```python
+import pyarrow.parquet as pq
+import pyarrow.dataset as ds
+import pyarrow.fs as fs
+
+# Native filesystem
+s3_fs = fs.S3FileSystem(region="us-east-1")
+
+# Read with column pruning
+table = pq.read_table(
+    "bucket/file.parquet",
+    filesystem=s3_fs,
+    columns=["id", "value"]
+)
+
+# Dataset with predicate pushdown
+dataset = ds.dataset(
+    "bucket/dataset/",
+    filesystem=s3_fs,
+    partitioning=ds.HivePartitioning.discover()
+)
+
+# Filter at storage layer
+table = dataset.to_table(
+    filter=(ds.field("year") == 2024) & (ds.field("value") > 100),
+    columns=["id", "value"]
+)
+
+# Batch scanning for large datasets
 scanner = dataset.scanner(
-    filter=ds.field("value") > 100,
-    batch_size=65536,
-    use_threads=True
+    filter=ds.field("value") > 0,
+    batch_size=65536
 )
-
 for batch in scanner.to_batches():
     process(batch)
 ```
 
-### Azure Support via FSSpec Bridge
-
+**fsspec bridge:**
 ```python
-import adlfs
-import pyarrow.fs as fs
-import pyarrow.dataset as ds
-
-# Create Azure filesystem via fsspec
-azure_fs = adlfs.AzureBlobFileSystem(
-    account_name="myaccount",
-    account_key="...",
-    tenant_id="...",
-    client_id="...",
-    client_secret="..."
-)
-
-# Wrap in PyArrow filesystem
-pa_fs = fs.PyFileSystem(fs.FSSpecHandler(azure_fs))
-
-# Use with PyArrow dataset
-dataset = ds.dataset(
-    "container/path/",
-    filesystem=pa_fs,
-    format="parquet"
-)
+import fsspec
+fs = fsspec.filesystem("s3")
+with fs.open("s3://bucket/file.parquet", "rb") as f:
+    table = pq.read_table(f)
 ```
 
-### Performance Considerations
-
-- **Column pruning**: Use `columns=` parameter to read only needed columns
-- **Predicate pushdown**: Filter at dataset level to skip reading irrelevant files
-- **Batch scanning**: Use `scanner.to_batches()` for large datasets
-- **Threading**: Enable `use_threads=True` for CPU-bound operations
-- For ecosystem integration (pandas, Dask, etc.), fsspec may be more convenient
-- For maximum async performance with many small files, consider obstore
+**See:** `@data-engineering-core` for PyArrow fundamentals, `@data-engineering-storage-authentication` for credential patterns.
 
 ---
 
-## obstore: High-Performance Rust-Based Storage
+### Format Considerations
 
-obstore (released 2025) provides a minimal, stateless API built on Rust's `object_store` crate, offering superior performance for concurrent operations (up to 9x faster than Python-based alternatives).
-
-### Installation
-
-```bash
-pip install obstore
-
-# Or with conda
-conda install -c conda-forge obstore
-```
-
-### Core Concepts
-
-obstore uses **top-level functions** (not methods) and a functional API. All operations are functions like `obs.get(store, path)`, not `store.get(path)`.
-
-### Creating Stores
-
-```python
-import obstore as obs
-from obstore.store import S3Store, GCSStore, AzureStore, LocalStore
-
-# S3 Store
-s3 = S3Store(
-    bucket="my-bucket",
-    region="us-east-1",
-    access_key_id="AKIA...",
-    secret_access_key="...",
-    # Or use environment credentials
-)
-
-# GCS Store
-gcs = GCSStore(
-    bucket="my-bucket",
-    # Uses GOOGLE_APPLICATION_CREDENTIALS by default
-)
-
-# Azure Store
-azure = AzureStore(
-    container="my-container",
-    account_name="myaccount",
-    account_key="...",
-    # Or use DefaultAzureCredential
-)
-
-# Local filesystem
-local = LocalStore("/path/to/root")
-
-# From environment (picks up standard env vars)
-s3 = S3Store.from_env(bucket="my-bucket")
-gcs = GCSStore.from_env(bucket="my-bucket")
-```
-
-### Basic Operations
-
-```python
-import obstore as obs
-
-store = S3Store(bucket="my-bucket", region="us-east-1")
-
-# Put object (bytes)
-obs.put(store, "hello.txt", b"Hello, World!")
-
-# Put from file
-with open("local-file.csv", "rb") as f:
-    obs.put(store, "data/file.csv", f)
-
-# Get object
-response = obs.get(store, "hello.txt")
-print(response.bytes())   # b"Hello, World!"
-print(response.meta)      # Object metadata (size, mtime, etag, etc.)
-
-# Get range (efficient partial reads)
-partial = obs.get_range(store, "large-file.bin", offset=0, length=1024)
-
-# Stream download
-stream = obs.get(store, "large-file.bin")
-for chunk in stream.stream(min_chunk_size=8 * 1024 * 1024):
-    process(chunk)
-
-# List objects (streaming, no pagination needed!)
-for obj in obs.list(store, prefix="data/2024/"):
-    print(f"{obj['path']}: {obj['size']} bytes")
-
-# List with delimiter (like directory listing)
-result = obs.list_with_delimiter(store, prefix="data/")
-print(result["common_prefixes"])  # "directories"
-print(result["objects"])          # files
-
-# Delete
-obs.delete(store, "old-file.txt")
-
-# Copy within same store
-obs.copy(store, "src/file.txt", "dst/file.txt")
-
-# Rename/move
-obs.rename(store, "old-name.txt", "new-name.txt")
-
-# Check existence (via head)
-try:
-    meta = obs.head(store, "file.txt")
-    print(f"Exists: {meta['size']} bytes")
-except obs.NotFoundError:
-    print("File not found")
-```
-
-### Async API
-
-```python
-import asyncio
-import obstore as obs
-from obstore.store import S3Store
-
-async def main():
-    store = S3Store(bucket="my-bucket", region="us-east-1")
-
-    # Concurrent uploads
-    await asyncio.gather(
-        obs.put_async(store, "file1.txt", b"content1"),
-        obs.put_async(store, "file2.txt", b"content2"),
-        obs.put_async(store, "file3.txt", b"content3"),
-    )
-
-    # Concurrent downloads
-    responses = await asyncio.gather(
-        obs.get_async(store, "file1.txt"),
-        obs.get_async(store, "file2.txt"),
-        obs.get_async(store, "file3.txt"),
-    )
-
-    for resp in responses:
-        print(await resp.bytes_async())
-
-asyncio.run(main())
-```
-
-### Streaming Uploads
-
-```python
-import asyncio
-import obstore as obs
-from obstore.store import S3Store
-
-store = S3Store(bucket="my-bucket")
-
-# Upload from generator (streaming, memory-efficient)
-def data_generator():
-    for i in range(1000):
-        yield f"Row {i}\n".encode()
-
-obs.put(store, "output.txt", data_generator())
-
-# Upload from async iterator
-async def async_data():
-    for i in range(1000):
-        await asyncio.sleep(0)
-        yield f"Row {i}\n".encode()
-
-async def upload_async():
-    await obs.put_async(store, "output-async.txt", async_data())
-
-asyncio.run(upload_async())
-
-# Automatic multipart upload for large files
-# (triggered automatically based on size)
-with open("huge-file.bin", "rb") as f:
-    obs.put(store, "huge-file.bin", f)  # Multi-part automatically
-```
-
-### Arrow Integration
-
-```python
-import obstore as obs
-from obstore.store import S3Store
-
-store = S3Store(bucket="my-bucket")
-
-# Return list results as Arrow table (faster, more memory-efficient)
-arrow_table = obs.list(store, prefix="data/", return_arrow=True)
-print(arrow_table.schema)
-# pyarrow.Schema
-# ├── path: string
-# ├── size: int64
-# ├── last_modified: timestamp[ns]
-# └── etag: string
-
-# Process with PyArrow/Polars
-import polars as pl
-df = pl.from_arrow(arrow_table)
-```
-
-### fsspec Compatibility
-
-obstore provides an fsspec-compatible wrapper:
-
-```python
-from obstore.fsspec import FsspecStore, register
-import pyarrow.parquet as pq
-
-# Method 1: Register as default handler for protocols
-register()
-# Now fsspec uses obstore internally
-import fsspec
-fs = fsspec.filesystem("s3", region="us-east-1")
-
-# Method 2: Use FsspecStore directly
-fs = FsspecStore("s3", bucket="my-bucket", region="us-east-1")
-# or
-fs = FsspecStore.from_store(s3_store_object)
-
-# Use with PyArrow
-parquet_file = pq.ParquetFile(
-    "s3://bucket/data/file.parquet",
-    filesystem=fs
-)
-```
+For detailed information on storage formats (Parquet, Arrow, Lance, Zarr, Avro, ORC), including compression, schema evolution, and format selection guidance, see **`@data-engineering-storage-formats`**. This section focuses on I/O patterns, not format internals.
 
 ---
 
@@ -570,32 +628,7 @@ Key strategies:
 - **Predicate pushdown**: Filter at storage layer using partitioning
 - **Column pruning**: Read only required columns
 
-**See:** `performance.md` in this skill
-
-## Common Patterns
-
-- **Incremental loading**: Load only new files based on checkpoint pattern
-- **Partitioned writes**: Hive-partitioned datasets for efficient querying
-- **Cross-cloud copy**: Copy data between S3, GCS, Azure
-
-**See:** `patterns.md` in this skill
-
----
-
-## Related Skills
-
-### DataFrame Integrations
-- `@data-engineering-storage-remote-access-integrations-polars` - Polars + cloud URIs
-- `@data-engineering-storage-remote-access-integrations-duckdb` - DuckDB HTTPFS extension
-- `@data-engineering-storage-remote-access-integrations-pandas` - Pandas + remote files
-- `@data-engineering-storage-remote-access-integrations-pyarrow` - PyArrow datasets
-- `@data-engineering-storage-remote-access-integrations-delta-lake` - Delta on S3/GCS/Azure
-- `@data-engineering-storage-remote-access-integrations-iceberg` - Iceberg with cloud catalogs
-
-### Infrastructure & Formats
-- `@data-engineering-storage-authentication` - AWS, GCP, Azure auth patterns, IAM roles, service principals
-- `@data-engineering-storage-formats` - Parquet, Arrow, Lance, Zarr, Avro, ORC
-- `@data-engineering-storage-lakehouse` - Delta Lake, Iceberg on cloud storage
+**See:** `performance.md` in this skill for detailed guidance.
 
 ---
 

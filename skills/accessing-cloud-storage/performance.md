@@ -159,6 +159,5 @@ for batch in scan.to_batches():
 
 ## References
 
-- `@data-engineering-storage-authentication` - Cloud authentication patterns
-- `@data-engineering-storage-formats` - Parquet optimization
+- `SKILL.md` in this skill - Library guides (fsspec, obstore, pyarrow.fs)
 - `@data-engineering-core` - Polars lazy evaluation for pushdown
