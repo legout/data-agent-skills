@@ -15,6 +15,9 @@ Use this skill for exploratory data analysis and visualization: understanding da
 - Statistical hypothesis testing — validate assumptions about data
 - Creating publication-quality figures or exploratory charts
 - Large dataset exploration — sampling and aggregation strategies
+- Understanding missing value mechanisms (MCAR/MAR/MNAR)
+- Before feature engineering — understand variable relationships
+- Model preparation — validate assumptions about data
 
 ## When NOT to use this skill
 
@@ -28,10 +31,12 @@ Use this skill for exploratory data analysis and visualization: understanding da
 | Task | Default choice | Notes |
 |---|---|---|
 | Automated profiling | **ydata-profiling / pandas-profiling** | Fast comprehensive reports |
+| Interactive exploration | **ipywidgets + plotly** | Drill-down capability |
 | Statistical visualization | **Seaborn** | Quick EDA with statistical defaults |
 | Publication-quality static plots | **Matplotlib** | Fine control over every element |
 | Interactive web charts | **Plotly** | Easy interactive dashboards |
 | Large datasets (100k+ points) | **hvPlot + Datashader** | Automatic rasterization |
+| Large-data EDA (memory-efficient) | **Polars + lazy** | Memory-efficient operations |
 | Declarative grammar | **Altair** | Vega-Lite transformations |
 | Statistical tests | **scipy.stats** | Normality, correlations, t-tests |
 
@@ -53,12 +58,19 @@ Use this skill for exploratory data analysis and visualization: understanding da
    - Target-variable relationships
    - Statistical significance tests
 
-4. **Visualize for insight**
+4. **Identify issues**
+   - Outliers and anomalies (document, don't auto-remove)
+   - **Duplicates** — check for duplicate rows/keys
+   - **Class imbalance** — for classification, check target distribution
+   - **Temporal patterns** — for time series, check seasonality, trends, gaps
+   - **Inconsistencies** — conflicting values, broken referential integrity
+
+5. **Visualize for insight**
    - Match chart type to question
    - Maximize data-ink ratio
    - Choose appropriate interactivity level
 
-5. **Validate and document**
+6. **Validate and document**
    - Check assumptions against domain knowledge
    - Document findings for team
    - Flag issues for investigation
@@ -93,7 +105,7 @@ Use this skill for exploratory data analysis and visualization: understanding da
 ### Match chart to question
 
 | Question | Chart Type |
-|---|---|
+|---|---|---|
 | Distribution? | Histogram, KDE, boxplot, violin |
 | Relationship? | Scatter, line, heatmap |
 | Comparison? | Bar, grouped bar, dot plot |
@@ -118,12 +130,22 @@ Use this skill for exploratory data analysis and visualization: understanding da
 
 - ❌ Skipping profiling and jumping to modeling
 - ❌ Treating all outliers as errors (some are valid signals)
+- ❌ Ignoring missing value mechanisms (MCAR/MAR/MNAR)
 - ❌ Pie charts with many slices (use bar charts instead)
 - ❌ Dual y-axes (hard to read, try normalization)
 - ❌ 3D charts (distorts perception)
 - ❌ Rainbow colormaps (use perceptually uniform: viridis, plasma)
 - ❌ Overplotting large datasets without handling
 - ❌ Not documenting findings for team
+
+## Common issues and solutions
+
+| Problem | Solution |
+|---|---|
+| Overplotting (100k+ points) | Use Datashader (rasterization), hexbin, or 2D histogram |
+| Slow interactivity | Reduce data points, use WebGL (Plotly), or pre-aggregate |
+| Large file size | Save as JSON (Plotly/Altair) or use static images |
+| Color blindness | Use colorblind-friendly palettes (viridis, colorbrewer) |
 
 ## Progressive disclosure
 
