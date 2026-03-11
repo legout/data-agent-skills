@@ -1,5 +1,5 @@
 ---
-name: flowerpower
+name: using-flowerpower
 description: "Create and manage data pipelines using the FlowerPower framework with Hamilton DAGs and uv. Lightweight orchestration for batch ETL, data transformation, and ML pipelines. Integrates with Delta Lake, DuckDB, Polars, and cloud storage."
 dependsOn: ["@data-engineering-core", "@designing-data-storage", "@data-engineering-storage-remote-access", "@assuring-data-pipelines", "@data-engineering-best-practices"]
 ---
@@ -14,7 +14,32 @@ dependsOn: ["@data-engineering-core", "@designing-data-storage", "@data-engineer
 - Projects needing configurable parameters and multiple executors
 - Rapid prototyping and batch processing
 
-**For production orchestration** with scheduling, state persistence, and reliability features, see `@data-engineering-orchestration` (Prefect, Dagster, dbt).
+**For production orchestration** with scheduling, state persistence, and reliability features, see `orchestrating-data-pipelines` (Prefect, Dagster, dbt).
+
+---
+
+## Skill Boundaries
+
+### vs. `building-data-pipelines`
+| `building-data-pipelines` | `@using-flowerpower` |
+|---------------------------|----------------------|
+| **Raw ETL patterns** with Polars/DuckDB/PyArrow | **Framework-wrapped** ETL with Hamilton DAGs |
+| Individual transformation functions | **Orchestrated** multi-node pipeline definitions |
+| Manual pipeline glue code | **Configuration-driven** parameters and executors |
+| General-purpose ETL guidance | **FlowerPower-specific** setup and best practices |
+
+Use `building-data-pipelines` for learning ETL patterns, tool selection, and writing raw Polars/DuckDB code. Use `@using-flowerpower` when you want to structure those operations into reusable, configurable Hamilton DAG pipelines.
+
+### vs. `orchestrating-data-pipelines`
+| `orchestrating-data-pipelines` | `@using-flowerpower` |
+|--------------------------------|----------------------|
+| **Production** orchestration (Prefect, Dagster, dbt) | **Lightweight** batch scripts, no infrastructure |
+| **Scheduling** with cron, intervals, sensors | **No built-in scheduler** (use cron/systemd) |
+| **State persistence** across runs via database | **Ephemeral** execution, no state tracking |
+| **Rich observability** dashboards, alerts | Basic Hamilton UI only |
+| **Retries, SLA guarantees**, team-scale workflows | Simple batch jobs, single-team pipelines |
+
+**Rule of thumb**: Start with `@using-flowerpower` for batch ETL prototypes and lightweight DAGs. Move to `orchestrating-data-pipelines` when you need scheduling, production reliability, multi-team coordination, or SLA guarantees.
 
 ---
 
@@ -317,12 +342,13 @@ def process_files(list_s3_files: list[str]) -> pl.LazyFrame:
 
 ## See Also
 
+- **`building-data-pipelines`** - General ETL patterns, tool selection, and raw Polars/DuckDB code
+- **`orchestrating-data-pipelines`** - Production orchestration (Prefect, Dagster, dbt) when you need scheduling, retries, and SLA guarantees
 - **`@data-engineering-best-practices`** - Medallion architecture, incremental loads, partitioning, file sizing
 - **`@designing-data-storage`** - Delta Lake, Iceberg table formats and operations
 - **`@data-engineering-storage-remote-access`** - Cloud storage backends (S3, GCS) and libraries
 - **`@assuring-data-pipelines`** - Data validation frameworks (Pandera, Great Expectations)
 - **`@data-engineering-catalogs`** - Data catalog systems for discovery and governance
-- **`@data-engineering-orchestration`** - Production orchestration (Prefect, Dagster, dbt) when you need more than FlowerPower
 
 ---
 
@@ -331,4 +357,4 @@ def process_files(list_s3_files: list[str]) -> pl.LazyFrame:
 - [FlowerPower Documentation](https://legout.github.io/flowerpower/)
 - [Hamilton Framework](https://hamilton.apache.org/)
 - [FlowerPower GitHub](https://github.com/legout/flowerpower)
-- `@data-engineering-orchestration` - Comparison of orchestration tools
+- `orchestrating-data-pipelines` - Comparison of orchestration tools
