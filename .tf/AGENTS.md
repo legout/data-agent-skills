@@ -59,3 +59,9 @@ Discovered in: das-nd1t (2026-03-11)
 When consolidating skills and creating deprecation stubs, verify that the new canonical skill does NOT reference the deprecated skills in its content. This creates "circular deprecation" where users following the canonical entry point are sent back to deprecated content. After creating deprecation stubs, audit the new skill's references to ensure all pointers point to current/active skills only.
 
 Discovered in: das-g8hg (2026-03-11)
+
+## Lesson: Search for Dangling References After Skill Deletion
+
+When deleting deprecated skill directories, search the entire codebase for references to the deleted skills (using grep/find), not just in obvious SKILL.md files. References may exist in migration guides, comparison tables, documentation, or cross-skill notes. Update all found references to point to canonical replacements before committing the deletion.
+
+Discovered in: das-9jfk (2026-03-11)

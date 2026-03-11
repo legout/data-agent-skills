@@ -293,3 +293,13 @@
 - Tests: passed (review-post-fix clear pass)
 - Commit: bcde9ea
 - Chain: .subagent-runs/das-2rye/e9223d1d
+
+## 2026-03-11T14:29:19+01:00 | das-9jfk | closed
+
+- Path: A
+- Research: no
+- Summary: Completed storage-design merge by relocating Delta/Iceberg integration content, updating references from "designing-data-storage" to "@data-engineering-storage-lakehouse", and fixing dangling migration references in remote-access skill.
+- Files: skills/building-data-pipelines/SKILL.md, skills/building-data-pipelines/references/*.md (2), skills/data-engineering-storage-remote-access/SKILL.md, skills/data-engineering-storage-remote-access-integrations-delta-lake/SKILL.md (deleted), skills/data-engineering-storage-remote-access-integrations-iceberg/SKILL.md (deleted)
+- Tests: passed (review-post-fix clear pass)
+- Commit: bd2b407
+- Chain: .subagent-runs/das-9jfk/1bac4ab2
