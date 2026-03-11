@@ -1,0 +1,8 @@
+{
+  "ticket_id": "das-0p8u",
+  "primary_terms": ["data-engineering", "skill-refactor", "workflow-centered"],
+  "secondary_terms": ["skills", "fragmentation", "consolidation", "architecture"],
+  "file_hints": ["skills/", ".tickets/"],
+  "change_scope": "Finalize epic by documenting refactoring completion and closing ticket",
+  "ticket_summary": "Epic: Refactor data-engineering skills into workflow-centered architecture - all 9 dependencies closed, finalize and close"
+}

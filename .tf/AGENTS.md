@@ -95,3 +95,9 @@ Discovered in: das-y3ig (2026-03-11)
 When documenting refactoring work in changelogs, distinguish between completed work and planned target state. Use explicit markers like "(Planned)" or future-tense wording for items not yet delivered. Avoid presenting target-state goals as completed facts, which misleads users during migration and creates trust issues. Scope claims to what is actually in the commit, defer roadmap items to dedicated sections.
 
 Discovered in: das-t14p (2026-03-11)
+
+## Lesson: Lint Scope for Cleanup Tickets
+
+When a ticket's acceptance criteria includes "zero lint errors/warnings" but the work is a cleanup/refactoring task (deleting skills, migrating references), the lint criterion should be scoped to only issues introduced by the changes, not pre-existing issues. Alternatively, run a baseline lint before starting to document pre-existing issues. Cleanup tickets should not be blocked by unrelated lint debt that requires a separate remediation effort.
+
+Discovered in: das-01dp (2026-03-11)
