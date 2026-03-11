@@ -32,16 +32,17 @@ Apache XTable and Delta UniForm (2024+) enable cross-format reads without conver
 
 ## Related Skills
 
-- `@data-engineering-storage-remote-access/integrations/delta-lake` - Delta Lake on S3/GCS/Azure
-- `@data-engineering-storage-remote-access/integrations/iceberg` - Iceberg with cloud catalogs
+- `@data-engineering-storage-lakehouse/delta-lake.md` - Delta Lake detailed guide (pure-Python, PySpark, time travel)
+- `@data-engineering-storage-lakehouse/iceberg.md` - Apache Iceberg detailed guide (catalogs, schema evolution)
+- `@data-engineering-storage-lakehouse/hudi.md` - Apache Hudi detailed guide (CDC, streaming)
 - `@data-engineering-orchestration/dbt` - dbt adapters for Delta/Iceberg
-- `@data-engineering-storage-remote-access` - fsspec, PyArrow filesystem for cloud access
+- `@accessing-cloud-storage` - fsspec, PyArrow filesystem for cloud access
 
 ## Skill Dependencies
 
 This skill assumes familiarity with:
 - `@data-engineering-core` - Polars, DuckDB, PyArrow basics
-- `@data-engineering-storage-remote-access` - Cloud storage access patterns
+- `@accessing-cloud-storage` - Cloud storage access patterns
 
 ---
 

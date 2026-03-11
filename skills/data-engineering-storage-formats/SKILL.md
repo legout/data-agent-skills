@@ -59,7 +59,7 @@ Comprehensive guide to modern data serialization formats for analytics and machi
 ## Skill Dependencies
 
 - `@data-engineering-core` - Polars/DuckDB to read/write these formats
-- `@data-engineering-storage-remote-access` - Cloud storage backends
+- `@accessing-cloud-storage` - Cloud storage backends
 - `@data-engineering-storage-lakehouse` - Table formats (Delta/Iceberg/Hudi) built on these
 
 ---
@@ -451,5 +451,5 @@ z = zarr.open(
 - [Apache Avro Specification](https://avro.apache.org/docs/current/spec.html)
 - `@data-engineering-core` - Reading/writing with Polars/DuckDB
 - `@data-engineering-storage-lakehouse` - Table formats built on these (Delta/Iceberg)
-- `@data-engineering-storage-remote-access` - Using these formats with cloud storage backends (S3, GCS, Azure)
+- `@accessing-cloud-storage` - Using these formats with cloud storage backends (S3, GCS, Azure)
 - `@data-engineering-storage-authentication` - Credential patterns for accessing cloud storage

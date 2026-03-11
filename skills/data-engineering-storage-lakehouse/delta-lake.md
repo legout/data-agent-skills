@@ -147,7 +147,7 @@ delta_table.vacuum(24)  # Retain 24 hours
 
 ## Cloud Storage Integration
 
-See `@data-engineering-storage-remote-access/integrations/delta-lake` for S3, GCS, Azure configuration using `storage_options` or PyArrow filesystem.
+See `@accessing-cloud-storage` for S3, GCS, Azure configuration using `storage_options` or PyArrow filesystem with Delta Lake.
 
 ## Best Practices
 

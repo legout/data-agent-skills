@@ -165,7 +165,7 @@ table.delete(delete_filter="id IN (1, 2, 3)")
 
 ## Cloud Storage Integration
 
-See `@data-engineering-storage-remote-access/integrations/iceberg` for S3/GCS/Azure catalog configuration details.
+See `@accessing-cloud-storage` for S3/GCS/Azure configuration using `storage_options` or PyArrow filesystem with Iceberg.
 
 ## Comparison with Delta Lake
 
