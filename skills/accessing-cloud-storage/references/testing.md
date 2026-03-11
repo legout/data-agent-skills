@@ -355,4 +355,4 @@ jobs:
 - [MinIO Quickstart](https://min.io/docs/minio/container/index.html)
 - [Azurite GitHub](https://github.com/Azure/Azurite)
 - [LocalStack](https://localstack.cloud/)
-- `@data-engineering-storage-authentication/patterns.md` - Secret rotation patterns
+- `patterns.md` - Secret rotation patterns

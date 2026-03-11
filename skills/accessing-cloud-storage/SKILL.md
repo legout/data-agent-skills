@@ -1,12 +1,28 @@
 ---
-name: data-engineering-storage-authentication
-description: "Cloud storage authentication patterns: AWS, GCP, Azure credentials, IAM roles, service principals, secret management, and secure credential handling for data pipelines."
-dependsOn: []
+name: accessing-cloud-storage
+description: "Cloud storage authentication and access patterns: AWS S3, Google Cloud Storage, Azure Blob. Covers IAM roles, service principals, credential management, and secure access for data pipelines."
 ---
 
-# Cloud Storage Authentication
+# Accessing Cloud Storage
 
-Secure authentication patterns for accessing cloud storage (S3, GCS, Azure Blob) and cloud services in data pipelines. Covers IAM roles, service principals, secret managers, and best practices for credential management.
+Secure authentication and access patterns for cloud storage services (S3, GCS, Azure Blob) in data pipelines. Covers IAM roles, managed identities, service principals, secret management, and best practices for credential handling.
+
+## When to use this skill
+
+Use this skill when:
+- Configuring authentication for AWS S3, Google Cloud Storage, or Azure Blob Storage
+- Setting up IAM roles, service principals, or managed identities
+- Managing credentials securely in data pipelines
+- Implementing cross-account or cross-cloud access patterns
+- Setting up CI/CD authentication for cloud storage
+
+For the actual storage operations (reading/writing data), see the data access library skills:
+- `data-engineering-storage-remote-access-libraries-fsspec`
+- `data-engineering-storage-remote-access-libraries-pyarrow-fs`
+- `data-engineering-storage-remote-access-libraries-obstore`
+
+For lakehouse table formats (Delta Lake, Iceberg), see:
+- `data-engineering-storage-lakehouse`
 
 ## Quick Reference
 
@@ -34,21 +50,12 @@ Secure authentication patterns for accessing cloud storage (S3, GCS, Azure Blob)
 - **Third-party integrations**: Service principals with scoped permissions
 - **Cross-account access**: Role assumption (AWS), workload identity (GCP), service principal (Azure)
 
-## Skill Dependencies
-
-This skill is foundational for:
-- `@data-engineering-storage-remote-access` - All cloud storage backends
-- `@data-engineering-storage-lakehouse` - Delta Lake/Iceberg with cloud catalogs
-- `@data-engineering-streaming` - Kafka connectors with cloud auth
-- `@data-engineering-ai-ml` - OpenAI, vector DBs with cloud storage
-- `@data-engineering-orchestration` - dbt, Prefect, Dagster cloud connectors
-
 ---
 
 ## Detailed Guides
 
 ### AWS Authentication
-See: `aws.md`
+See: `references/aws.md`
 
 - IAM roles (EC2 instance profiles, ECS task roles, Lambda execution roles)
 - IAM users with access keys (discouraged for production)
@@ -59,7 +66,7 @@ See: `aws.md`
 - Environment variable resolution (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN`)
 
 ### Google Cloud Platform
-See: `gcp.md`
+See: `references/gcp.md`
 
 - Service accounts (JSON keys)
 - Workload Identity Federation (no keys needed!)
@@ -70,7 +77,7 @@ See: `gcp.md`
 - GCP workload identity for GKE, Cloud Run, Compute Engine
 
 ### Azure
-See: `azure.md`
+See: `references/azure.md`
 
 - Managed Identities (system-assigned, user-assigned)
 - Service Principals (client secret, certificate)
@@ -80,7 +87,7 @@ See: `azure.md`
 - Azure AD workload identity for AKS, App Service, VMs
 
 ### Patterns & Best Practices
-See: `patterns.md`
+See: `references/patterns.md`
 
 - Secret rotation automation
 - Multi-environment credential management
@@ -90,7 +97,7 @@ See: `patterns.md`
 - Credential leakage prevention (.gitignore, pre-commit hooks)
 
 ### Testing Strategies
-See: `testing.md`
+See: `references/testing.md`
 
 - Mocking cloud services for unit tests
 - Using local emulators (MinIO, Azurite, LocalStack)
@@ -142,12 +149,23 @@ az login
 
 ## Common Pitfalls
 
-❌ **Hardcoding credentials** - Committing to git → rotate immediately
-❌ **Using root/admin accounts** - Create scoped users/service principals
-❌ **Long-lived keys** - Rotate every 90 days or less
-❌ **Over-permissive roles** - Grant `s3:GetObject` not `s3:*`
-❌ **Missing environment separation** - Dev credentials in prod
-❌ **Disabling TLS verification** - Except for local MinIO testing only
+❌ **Hardcoding credentials** - Committing to git → rotate immediately  
+❌ **Using root/admin accounts** - Create scoped users/service principals  
+❌ **Long-lived keys** - Rotate every 90 days or less  
+❌ **Over-permissive roles** - Grant `s3:GetObject` not `s3:*`  
+❌ **Missing environment separation** - Dev credentials in prod  
+❌ **Disabling TLS verification** - Except for local MinIO testing only  
+
+---
+
+## Related Skills
+
+- `data-engineering-storage-remote-access-libraries-fsspec` - fsspec/s3fs/gcsfs/adlfs integration
+- `data-engineering-storage-remote-access-libraries-pyarrow-fs` - PyArrow filesystem integration
+- `data-engineering-storage-remote-access-libraries-obstore` - obstore Rust-based storage
+- `data-engineering-storage-lakehouse` - Delta Lake, Iceberg table formats
+- `data-engineering-orchestration` - Prefect, Dagster, dbt cloud connectors
+- `data-engineering-core` - Polars, DuckDB, PyArrow data processing
 
 ---
 
@@ -157,4 +175,3 @@ az login
 - [GCP Workload Identity](https://cloud.google.com/iam/docs/workload-identity-federation)
 - [Azure Managed Identities](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
 - [HashiCorp Vault](https://developer.hashicorp.com/vault/docs)
-- Legacy `@data-engineering-storage-remote-access` auth notes are deprecated; use this skill as the source of truth.
