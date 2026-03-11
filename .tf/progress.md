@@ -172,3 +172,13 @@
 - Tests: passed (review-post-fix clear pass)
 - Commit: abd6665
 - Chain: .subagent-runs/das-3wu8/10f26fcd
+
+## 2026-03-11T08:54:56+01:00 | das-ekec | closed
+
+- Path: A
+- Research: no
+- Summary: Merged data-engineering-quality and data-engineering-observability into assuring-data-pipelines skill using "two pillars" organizational pattern (quality + observability). Updated 13 files with reference migration, fixed 2 missed references post-review.
+- Files: skills/assuring-data-pipelines/SKILL.md (new), skills/data-engineering*/SKILL.md (13 updated)
+- Tests: passed (review-post-fix clear pass)
+- Commit: 973d0d6
+- Chain: .subagent-runs/das-ekec/eafd987a
