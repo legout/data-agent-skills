@@ -21,10 +21,10 @@ Use this skill for exploratory data analysis and visualization: understanding da
 
 ## When NOT to use this skill
 
-- Building interactive dashboards or data applications → use `building-data-apps`
-- Feature engineering for ML pipelines → use `engineering-ml-features`
-- Model evaluation and comparison → use `evaluating-ml-models`
-- Notebook-specific workflows (Jupyter/marimo setup) → use `working-in-notebooks`
+- Building interactive dashboards or data applications → use `data-science-interactive-apps`
+- Feature engineering for ML pipelines → use `data-science-feature-engineering`
+- Model evaluation and comparison → use `data-science-model-evaluation`
+- Notebook-specific workflows (Jupyter/marimo setup) → use `data-science-notebooks`
 
 ## Quick tool selection
 
@@ -156,10 +156,10 @@ Use this skill for exploratory data analysis and visualization: understanding da
 
 ## Related skills
 
-- `engineering-ml-features` — Next step: transform insights into model features
-- `evaluating-ml-models` — Validate modeling assumptions with proper evaluation
-- `building-data-apps` — Build interactive dashboards from analysis results
-- `working-in-notebooks` — Notebook-specific workflows and reproducibility
+- `data-science-feature-engineering` — Next step: transform insights into model features
+- `data-science-model-evaluation` — Validate modeling assumptions with proper evaluation
+- `data-science-interactive-apps` — Build interactive dashboards from analysis results
+- `data-science-notebooks` — Notebook-specific workflows and reproducibility
 
 ## References
 
